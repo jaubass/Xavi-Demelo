@@ -1,0 +1,53 @@
+# Created by https://www.toptal.com/developers/gitignore/api/wordpress
+# Edit at https://www.toptal.com/developers/gitignore?templates=wordpress
+
+/conf/
+/logs/
+
+### WordPress ###
+# Core
+#
+# Note: if you want to stage/commit WP core files
+# you can delete this whole section/until Configuration.
+app/public/wp-admin/
+app/public/wp-content/index.php
+app/public/wp-content/languages
+app/public/wp-content/plugins/index.php
+app/public/wp-content/themes/index.php
+app/public/wp-includes/
+app/public/index.php
+app/public/license.txt
+app/public/readme.html
+app/public/wp-*.php
+app/public/xmlrpc.php
+
+# Configuration
+app/publicwp-config.php
+
+# Example themes
+app/public/wp-content/themes/twenty*/
+
+# Example plugin
+app/public/wp-content/plugins/hello.php
+
+# Uploads
+app/public/wp-content/uploads/
+
+# Log files
+*.log
+
+# htaccess
+app/public/.htaccess
+
+# All plugins
+# Note: If you wish to whitelist plugins,
+# uncomment the next line
+app/public/wp-content/plugins
+
+# All themes
+# Note: If you wish to whitelist themes,
+# uncomment the next line
+#/wp-content/themes
+
+
+# End of https://www.toptal.com/developers/gitignore/api/wordpress
