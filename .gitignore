@@ -49,5 +49,7 @@ app/public/wp-content/plugins
 # uncomment the next line
 #/wp-content/themes
 
+# npm
+node_modules/*
 
-# End of https://www.toptal.com/developers/gitignore/api/wordpress
+# End

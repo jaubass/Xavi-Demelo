@@ -1,0 +1,67 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;900&display=swap');
+
+:root {
+    /** Fuentes **/
+    --fuente-principal: 'Montserrat', sans-serif;
+
+    /** Colores **/
+    --blanco: #fff;
+    --negro: #000;
+    --naranja: #F55536;
+}
+
+/** Globales */
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuente-principal);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/** Utilidades */
+[class$="__contenedor"] {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto; 
+}
+
+/** Fuentes */
+p {
+    font-size: 1.6rem;
+}
+
+a {
+    font-size: 1.6rem;
+}
+
+h1 {
+    font-size: 4.2rem;
+}
+
+
+
+/** ESPECTACLES CARDS **/
+.espectacles ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+
+@import 'header/header';

@@ -1,0 +1,117 @@
+@charset "UTF-8";
+/*
+Theme Name: Xavi Demelo
+Theme URI: https://bububass.com
+Author: Jaume Fité
+Author URI: https://bububass.com
+Description: Tema para Xavi Demelo.
+Requires at least: 6.1
+Tested up to: 6.4
+Requires PHP: 7.4
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+Text Domain: xavidemelo
+Tags: music, theatre
+*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;900&display=swap");
+:root {
+  /** Fuentes **/
+  --fuente-principal: "Montserrat", sans-serif;
+  /** Colores **/
+  --blanco: #fff;
+  --negro: #000;
+  --naranja: #F55536;
+}
+
+/** Globales */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--fuente-principal);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/** Utilidades */
+[class$=__contenedor] {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+/** Fuentes */
+p {
+  font-size: 1.6rem;
+}
+
+a {
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 4.2rem;
+}
+
+/** HEADER **/
+.header {
+  padding: 2rem 0;
+  box-shadow: 0px 5px 0px rgba(255, 0, 0, 0.2), 0px 10px 0px rgba(255, 165, 0, 0.2), 0px 15px 0px rgba(255, 255, 0, 0.2), 0px 20px 0px rgba(0, 128, 0, 0.1), 0px 25px 0px rgba(0, 0, 255, 0.05);
+}
+
+.menu-principal .menu {
+  list-style: none;
+  display: flex;
+}
+
+.menu-principal .menu a {
+  padding: 1rem 1rem;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--negro);
+}
+
+.menu-principal .current_page_item {
+  border-bottom: 1px solid var(--naranja);
+}
+
+.menu__contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .menu__contenedor {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.menu__contenedor img {
+  width: 18rem;
+}
+
+/** ESPECTACLES CARDS **/
+.espectacles ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+body {
+  background-color: red;
+}
