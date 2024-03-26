@@ -6,8 +6,8 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <header class="header">
-        <div class="menu__contenedor">
+    <header class="header header-inicio">
+        <div class="contenido-header contenedor">
             <div class="logo">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/Xavi_demelo-Logo.webp">
 

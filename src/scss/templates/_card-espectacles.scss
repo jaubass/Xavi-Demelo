@@ -1,0 +1,163 @@
+@use '../base/variables' as v;
+
+.espectacles__card {
+  position: relative;
+  display: block;
+  height: 100%;
+  border-radius: 0 0 v.$curve v.$curve; /* Mantenemos el borde redondeado en la parte inferior */
+  overflow: hidden;
+  margin-bottom: 20px; /* Ajusta según necesites */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; /* Agregamos sombra */
+  border-radius: v.$curve;
+}
+
+.espectacles__card img {
+  width: 100%;
+  height: auto;
+  max-height: 600px; /* Limitamos la altura máxima de la imagen */
+  object-fit: cover;
+}
+
+.espectacles__contenido {
+  position: relative;
+  padding: 10px;
+}
+
+/* Estilos para el título visible */
+.espectacles__titulo {
+  font-size: 2.6rem; /* Ajusta según necesites */
+  margin-bottom: 10px; /* Ajusta según necesites */
+  color: #000;
+  text-transform: capitalize;
+  transition: transform 0.4s ease-in-out; /* Agregamos una transición */
+  text-align: center;
+}
+
+/* Estilos para el título al hacer hover */
+.espectacles__card:hover .espectacles__titulo .espectacles__categorias {
+  transform: translateY(-100%);
+  display: none;
+}
+
+.espectacles__categorias {
+  list-style: none; /* Elimina los puntos de las listas */
+  display: flex;
+  padding: .3rem;
+  margin: 0;
+}
+
+/* Estilos para el contenedor del contenido que se muestra al hacer hover */
+.espectacles__hover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border-radius: v.$curve; 
+  background-color: v.$blanco;
+  transform: translateY(100%);
+  transition: .4s ease-in-out;
+  padding: 10px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.espectacles__hover h3 {
+  text-align: center;
+  color: #000;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+/* Estilos para la tarjeta al hacer hover */
+.espectacles__card:hover .espectacles__hover {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.espectacles__titulo:hover {
+  display: none;
+}
+
+.espectacles__descripcion {
+  padding: 1rem 0;
+  color: v.$negro;
+  font-family: v.$text-secondary;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  text-align: center;
+}
+
+.espectacles__boton {
+  padding: 8px 16px;
+  font-size: 14px; /* Ajusta según necesites */
+  background-color: #6A515E;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.espectacles__boton:hover {
+  background-color: #4D3947;
+}
+
+/* Estilos para las categorías */
+.espectacles__categorias {
+  display: flex;
+  gap: 5px;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  flex-wrap: wrap; /* Permite que las categorías se envuelvan si no caben en una sola línea */
+}
+
+/* Estilos para las categorías individuales */
+.espectacles__categoria {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px; /* Esto crea la forma de píldora */
+  font-size: 14px;
+}
+
+/* Estilos para las categorías */
+.espectacles__categoria--teatre {
+  background-color: #FFD3B6; /* Melocotón pastel */
+}
+
+.espectacles__categoria--musica {
+  background-color: #B8E0D2; /* Aguamarina pastel */
+}
+
+.espectacles__categoria--infantil {
+  background-color: #FFB7C3; /* Rosa pastel */
+}
+
+.espectacles__categoria--contes {
+  background-color: #FFDAC1; /* Naranja pastel */
+}
+
+.espectacles__categoria--monoleg {
+  background-color: #C3E5EB; /* Azul cielo pastel */
+}
+
+.espectacles__categoria--lgtbiq {
+  background-color: #F5D4E5; /* Lila pastel */
+}
+
+.espectacles__categoria--feminisme {
+  background-color: #D3F0F0; /* Verde menta pastel */
+}
+
+.espectacles__categoria--igualtat {
+  background-color: #FFD8D8; /* Rosa pastel claro */
+}
+
+.espectacles__categoria--ecologia {
+  background-color: #A2D2FF; /* Azul pastel */
+}
+
+.espectacles__categoria--magia {
+  background-color: #FFE5CC; /* Amarillo pastel */
+}

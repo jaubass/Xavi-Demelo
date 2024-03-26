@@ -1,6 +1,6 @@
-# Xavi-Demelo - Wordpress project
+# Xavi Demelo - WordPress Project
 
-Este proyecto está dedicado al desarrollo de un tema personalizado para Wordpress llamado Xavi-Demelo. El tema se construirá desde cero para adaptarse a las necesidades específicas del proyecto.
+Este proyecto está dedicado al desarrollo de un tema personalizado para Wordpress llamado Xavi Demelo. El tema se construirá desde cero para adaptarse a las necesidades específicas del proyecto.
 
 ## Crear un tema personalizado
 
@@ -14,7 +14,7 @@ El objetivo principal de este proyecto es crear un tema personalizado para Wordp
 
 Además del tema personalizado, el proyecto también incluirá la creación de tipos de publicaciones personalizados. Esto permitirá organizar y mostrar contenido específico de manera estructurada en el sitio de Wordpress. Algunos ejemplos de tipos de publicaciones personalizados pueden incluir:
 
-- **Portafolio**: Para mostrar proyectos realizados por Xavi-Demelo.
+- **Espectaculos**: Para mostrar proyectos y espectaculos disponibles.
 - **Testimonios**: Para compartir opiniones y testimonios de clientes anteriores.
 - **Eventos**: Para anunciar eventos importantes relacionados con Xavi-Demelo.
 
@@ -34,5 +34,3 @@ Para optimizar el flujo de trabajo de desarrollo y mejorar la eficiencia en la g
 2. Asegúrate de tener Node.js y npm instalados en tu sistema.
 3. Ejecuta `npm install` para instalar todas las dependencias del proyecto.
 4. Comienza a desarrollar tu tema personalizado y tipos de publicaciones personalizados.
-
- 

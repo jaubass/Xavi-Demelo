@@ -37,3 +37,12 @@ function xavidemelo_scripts_styles() {
 add_action('wp_enqueue_scripts', 'xavidemelo_scripts_styles');
 
 
+// Fuentes
+function enqueue_custom_fonts() {
+    // Cargar Google Fonts
+    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat&display=swap', array(), null);
+    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap', array(), null);
+
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_fonts');
+

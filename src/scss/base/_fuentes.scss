@@ -1,0 +1,30 @@
+//@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@use 'variables' as v;
+
+body {
+    font-family: v.$text-primary;
+    font-size: 1.6rem;
+}
+
+p {
+    font-family: v.$text-primary;
+    font-size: 1.6rem;
+    color: v.$negro;
+}
+
+h1, h2, h3 {
+    margin: 0 0 v.$margen 0;
+    font-family: v.$text-primary;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+}

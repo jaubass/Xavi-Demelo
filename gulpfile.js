@@ -1,47 +1,60 @@
 const { src, dest, watch, series, parallel } = require('gulp');
-// Importa el compilador Sass y lo inicializa con la implementación de Dart Sass
+
+// CSS Y SASS
 const sass = require('gulp-sass')(require('sass'));
-// Importa el plugin para renombrar archivos
 const rename = require('gulp-rename');
-// Importa el plugin para minificar CSS
 const cleanCSS = require('gulp-clean-css');
-// Importa gulp-postcss y autoprefixer para agregar prefijos de navegador
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 
-// Función para compilar y minificar los estilos CSS
+// IMAGENES
+const imagemin = require('gulp-imagemin');
+const webp = require('gulp-webp');
+
 function css(done) {
     // Compilar SASS
     src('src/scss/app.scss')
-        // Manejar errores de compilación de Sass y registrarlos en la consola
+        // Manejar errores de compilación de Sass
         .pipe(sass().on('error', sass.logError))
-        // Aplicar autoprefixer para agregar prefijos de navegador
-        .pipe(postcss([autoprefixer()]))
-        // Compilar Sass y comprimir los estilos
+        // Adapta el código a diferentes navegadores
+        .pipe(postcss ([ autoprefixer() ]))
+        // Compilar Sass y comprimir los estilos (expanded o compressed)
         .pipe(sass({ outputStyle: 'compressed' }))
-        // Renombrar el archivo compilado agregando el sufijo '.min'
+        // Renombrar el archivo compilado
         .pipe(rename({ suffix: '.min' }))
         // Minificar el CSS
         .pipe(cleanCSS())
         // Guardar el archivo compilado en la ubicación deseada
-        .pipe(dest('app/public/wp-content/themes/xaviDemelo/css'));
-
-    // Indicar a Gulp que la tarea ha finalizado
-    done();
+        .pipe(dest('app/public/wp-content/themes/xaviDemelo/css'))
+        
+        done();
 }
 
-// Función para observar cambios en los archivos SCSS y ejecutar la tarea 'css' cuando ocurran
+function imagenes() {
+    return src('src/img/**/*')
+        .pipe(imagemin({ optimizationLevel: 3 }))
+        .pipe( dest('app/public/wp-content/themes/xaviDemelo/img'));
+}
+
+function versionWebp( done ) {
+    src('src/img/**/*.(png,jpg)')
+        .pipe( webp() )
+        .pipe( dest('app/public/wp-content/themes/xaviDemelo/img'))
+        done();
+    }
+
 function dev() {
     watch('src/scss/**/*.scss', css);
+    watch('src/img/**/*', imagenes);
 }
 
-// Función por defecto que se ejecuta cuando se inicia Gulp sin argumentos
-function defaultTask() {
-    // Ejecutar la tarea 'css' seguida de la tarea 'dev'
-    return series(css, dev);
+function dedaultTask() {
+
 }
 
-// Exportar las funciones como tareas de Gulp
-exports.dev = dev; // Tarea para desarrollo
-exports.css = css; // Tarea para compilar y minificar los estilos CSS
-exports.default = defaultTask; // Tarea por defecto
+exports.dev = dev;
+exports.css = css;
+exports.imagenes = imagenes;
+exports.versionWebp = versionWebp;
+// Tareas por defaul arrancan con gulp
+exports.default = series( imagenes, versionWebp, css, dev );

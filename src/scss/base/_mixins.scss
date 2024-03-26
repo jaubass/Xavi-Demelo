@@ -1,0 +1,20 @@
+@use 'variables' as v;
+
+@mixin phone {
+    @media (min-witdh: v.$phone) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-witdh: v.$tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-witdh: v.$desktop) {
+        @content;
+    }
+}
+
