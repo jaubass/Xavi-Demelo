@@ -1,8 +1,8 @@
 @media (min-width: 768px) {
     .listado-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 4rem;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 40px;
     }
 }
 

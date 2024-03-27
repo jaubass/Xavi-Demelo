@@ -30,9 +30,11 @@ add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
 
 function xavidemelo_scripts_styles() {
     // Enqueue normalize.css
-    wp_enqueue_style('normalize', get_template_directory_uri() . '/normalize.css', array(), '8.0.1');
+    // wp_enqueue_style('normalize', get_template_directory_uri() . '/normalize.css', array(), '8.0.1');
     // Enqueue style.css, dependiendo de normalize.css
     wp_enqueue_style('style', get_stylesheet_uri(), array('normalize'), '1.0.0');
+    // Enqueue JS
+    wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.js', array(), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'xavidemelo_scripts_styles');
 
@@ -40,9 +42,13 @@ add_action('wp_enqueue_scripts', 'xavidemelo_scripts_styles');
 // Fuentes
 function enqueue_custom_fonts() {
     // Cargar Google Fonts
-    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat&display=swap', array(), null);
-    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap', array(), null);
-
+    wp_enqueue_style('google-fonts-poppins', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap', array(), null);
+    wp_enqueue_style('google-fonts-playfair', 'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap', array(), null);
 }
+
 add_action('wp_enqueue_scripts', 'enqueue_custom_fonts');
+
+
+
+
 

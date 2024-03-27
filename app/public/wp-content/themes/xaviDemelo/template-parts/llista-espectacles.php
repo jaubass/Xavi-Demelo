@@ -6,7 +6,7 @@ $args = array(
 $clases = new WP_Query($args);
 
 if ($clases->have_posts()): ?>
-    <h1>Template Part - Llista espectacles</h1>
+    <h1 class="text-center">Template Part - Llista espectacles</h1>
 
     <div class="contenedor espectacles">
         <ul class="listado-grid">
@@ -19,6 +19,7 @@ if ($clases->have_posts()): ?>
                         <a href="<?php the_permalink(); ?>">
                             <h3 class="espectacles__titulo"><?php the_title(); ?></h3>
                         </a>
+                        <hr class="separador">
                         <?php $categorias = get_the_category(); ?>
                         <?php if ($categorias): ?>
                             <ul class="espectacles__categorias">
@@ -32,7 +33,10 @@ if ($clases->have_posts()): ?>
                         <div class="espectacles__hover">
                             <a href="<?php the_permalink(); ?>">
                                 <h3 class="espectacles__titulo-hover"><?php the_title(); ?></h3>
+                                <p class="espectacles__autor"><?php the_field('companyia');?></p>
+                                
                             </a>
+                            <hr class="separador">
                             <?php if ($categorias): ?>
                                 <ul class="espectacles__categorias">
                                     <?php foreach ($categorias as $categoria): ?>
@@ -42,7 +46,7 @@ if ($clases->have_posts()): ?>
                                     <?php endforeach; ?>
                                 </ul>
                             <?php endif; ?>
-                            <p class="espectacles__descripcion"><?php the_field('descripcio')?></p>
+                            <p class="espectacles__descripcion"><?php the_field( 'descripcio' ); ?></p>
                             <?php $archivo_pdf = get_field('fitxer'); ?>
                             <?php if (!empty($archivo_pdf)): ?>
                                 <a href="<?php echo esc_url($archivo_pdf['url']); ?>" download>

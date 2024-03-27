@@ -1,0 +1,24 @@
+@use '../base/variables' as v;
+
+.hero {
+    height: 60vh;
+}
+
+.home-hero {
+    //background-image: url('../assets/img/Hero-01.webp');
+    background-size: cover; /* Ajusta la imagen para cubrir el área completa */
+    background-position: center; /* Centra la imagen */
+    /* Puedes agregar más estilos según sea necesario */
+}
+
+.hero__content {
+    max-width: 90rem;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.hero__content h1, p {
+    color: v.$blanco;
+}

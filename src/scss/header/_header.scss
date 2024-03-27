@@ -1,17 +1,15 @@
 @use 'base/mixins' as m;
 
-.contenido-header {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 0;
-    @include m.tablet {
-        flex-direction: row;
-    }
-    @include m.desktop {
-    }
+.header {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
 }
 
-
+.contenido-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
 
 .contenido-header ul {
     display: flex;
@@ -20,6 +18,13 @@
     list-style-type: none;
 }
 
-.menu-principal {
-
+.header__menu {
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-transform: uppercase;
 }
+
+.header__menu a {
+    padding-left: 3rem;
+}
+

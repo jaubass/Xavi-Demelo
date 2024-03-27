@@ -1,4 +1,5 @@
 @use '../base/variables' as v;
+@use '../base/utilidades' as u;
 
 .espectacles__card {
   position: relative;
@@ -6,7 +7,7 @@
   height: 100%;
   border-radius: 0 0 v.$curve v.$curve; /* Mantenemos el borde redondeado en la parte inferior */
   overflow: hidden;
-  margin-bottom: 20px; /* Ajusta según necesites */
+  margin-bottom: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; /* Agregamos sombra */
   border-radius: v.$curve;
 }
@@ -30,6 +31,12 @@
   color: #000;
   text-transform: capitalize;
   transition: transform 0.4s ease-in-out; /* Agregamos una transición */
+  text-align: center;
+}
+
+.espectacles__autor {
+  font-size: 1.2rem;
+  font-weight: 300;
   text-align: center;
 }
 

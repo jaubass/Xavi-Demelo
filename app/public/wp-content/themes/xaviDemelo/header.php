@@ -12,16 +12,21 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/img/Xavi_demelo-Logo.webp">
 
             </div>
+            <div class="header__menu">
+                <?php
+                    $args = array(
+                        'theme_location' => 'menu-principal',
+                        'container' => 'nav', 
+                        'container_class' => 'menu-principal' 
+                    );
 
-            <?php
-                $args = array(
-                    'theme_location' => 'menu-principal',
-                    'container' => 'nav', 
-                    'container_class' => 'menu-principal' 
-                );
+                    wp_nav_menu($args);
+                ?>
+            </div>
+            <div class="header__contacte">
+               <button class="espectacles__btn">Contacte</button>
 
-                wp_nav_menu($args);
-            ?>
+            </div>            
         </div>       
     </header>   
 </body>
