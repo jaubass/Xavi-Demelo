@@ -1,13 +1,16 @@
 @use '../base/variables' as v;
+@use '../base/mixins' as m;
 
 .hero {
-    height: 60vh;
+    height: 80vh;
+    display: grid;
 }
 
 .home-hero {
     //background-image: url('../assets/img/Hero-01.webp');
     background-size: cover; /* Ajusta la imagen para cubrir el área completa */
-    background-position: center; /* Centra la imagen */
+    background-position: bottom; /* Centra la imagen */
+    background-repeat: no-repeat;
     /* Puedes agregar más estilos según sea necesario */
 }
 
@@ -18,7 +21,97 @@
     text-align: center;
 }
 
+.hero__content h1 {
+    font-family: v.$text-primary;
+    font-size: 7rem;
+}
+
+.hero__content p {
+    font-size: 3rem;
+    font-weight: 400;
+}
 
 .hero__content h1, p {
-    color: v.$blanco;
+    color: v.$negro;
+}
+
+/* Qui som section */
+.quisom__section {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    
+}
+
+.quisom__contenedor {
+    max-width: 140rem;
+    width: 95%;
+    margin: 0 auto;
+    padding: 8rem 0;
+}
+
+.quisom__contenedor span {
+    font-weight: 700;
+}
+
+.quisom__two-columns {    
+    align-items: center;
+
+    @include m.desktop {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 120px;
+    }
+
+}
+
+.quisom__two-columns h1 {
+    color: v.$negro;
+}
+
+.quisom__two-columns p {
+    color: v.$negro;
+}
+
+.quisom__column--one {
+    padding-top: 5rem;
+}
+
+.quisom__column--one p {
+    font-size: 3rem;
+}
+
+.quisom__column--two h2 {
+    font-size: 6rem;
+}
+
+.quisom__column--two p {
+    font-size: 2rem;
+    line-height: 2.8rem;
+}
+
+/* Espectacles section */
+.espectacles__section {
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+}
+
+.espectacles__contenedor {
+    max-width: 140rem;
+    width: 95%;
+    margin: 0 auto;
+    padding: 8rem 0;
+}
+
+.espectacles__two-columns {
+    align-items: center;
+
+    @include m.desktop {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 120px;
+    }
 }

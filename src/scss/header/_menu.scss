@@ -1,0 +1,132 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.header {
+    position: fixed; // Hace que el menú se quede pegado arriba
+    width: 100%; // Establece el ancho completo del menú
+    background-color: v.$blanco;
+    transition: height 0.3s, padding 0.3s; 
+
+    .header__espectacles p {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 2rem;
+    }
+
+    .contenido-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+
+        .logo {
+            // Estilos para el logo
+            img {
+                width: 160px; // Ajusta el ancho del logo según tu diseño
+            }
+        }
+    }
+
+    &.scroll-activo {
+        height: 5rem; // Altura más pequeña cuando se ha hecho scroll
+        padding: 0.5rem 0; // Menos relleno cuando se ha hecho scroll
+
+        p {
+            font-size: 1.4rem;
+        }
+
+        .logo {
+            width: 120px;
+        }
+
+        .header {
+            background-color: v.$blanco;
+            padding: .5rem;
+        }
+
+        .contenido-header {
+            padding: 0; // Elimina el padding cuando se ha hecho scroll
+        }
+
+        .header__separador {
+            height: .5rem; /* Establece la altura de la línea */
+            background-color: v.$negro;; /* Color de la línea */
+            margin: 0; /* Elimina el margen predeterminado del hr */
+        }
+    }
+
+    .hamburguesa {
+        display: block;
+        cursor: pointer;
+        margin-right: 20px;
+
+        .pildora-menu {
+            display: flex;
+            align-items: center;
+            gap: 10px; // Espacio entre el texto y las líneas
+            cursor: pointer; // Cambiar cursor al puntero al pasar sobre el botón
+
+            .pildora__texto {
+                font-size: 2rem; // Tamaño de la fuente del texto "Menú"
+            }
+
+            .pildora__tresRallas {
+                width: 40px;
+                height: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .linea {
+                    width: 100%;
+                    height: 2px;
+                    background-color: #333;
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+    }
+
+    .menu-desplegable {
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #ffffff;
+        width: 100%;
+        height: 0; // Altura inicial cero para ocultar el menú
+        overflow-x: hidden;
+        overflow-y: auto; // Permitir desplazamiento vertical si el contenido del menú es más largo que la altura del viewport
+        transition: height 0.5s; // Transición suave para la altura del menú
+
+        nav {
+            padding: 20px; // Ajusta el relleno según tu diseño
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                margin-bottom: 10px; // Espacio entre elementos del menú
+            }
+
+            a {
+                text-decoration: none;
+                color: #333; // Color del texto del menú
+                font-size: 16px; // Tamaño de la fuente del menú
+            }
+        }
+    }
+
+    .menu-desplegable.activo {
+        height: 100vh; // Cambia la altura al 100% del viewport height al menú activo
+    }
+}
+
+.header__separador {
+    border: none; /* Elimina el borde predeterminado del hr */
+    height: 1rem; /* Establece la altura de la línea */
+    background-color: v.$negro;; /* Color de la línea */
+    margin: 0; /* Elimina el margen predeterminado del hr */
+}

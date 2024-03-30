@@ -1,0 +1,148 @@
+@use 'base/variables' as v;
+
+.menu-desplegable {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2rem 0;
+    overflow-y: auto;
+    background-color: v.$orange;
+    transition: transform 0.5s ease-in-out, opacity 0.2s ease-in-out;
+    transform: translateY(-100%);
+    opacity: 0;
+    z-index: 1000;
+
+    &.activo {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .zona-superior {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .col-central {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .zona-central {
+        padding: 1rem;
+    }
+
+    .zona-inferior {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 1rem;
+        background-color: v.$orange;
+    }
+
+    .logo-grande {
+        img {
+            max-width: 160px;
+        }
+    }
+}
+
+.pildora-menu-desplegado {
+    display: flex;
+    align-items: center;
+    gap: 10px; // Espacio entre el texto y las líneas
+    cursor: pointer;
+    background-color: v.$orange;
+
+    .pildora__texto-desplegado p {
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: v.$gris;
+    }
+
+    .pildora__tresRallas-desplegado {
+        width: 40px;
+        height: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+        .linea {
+            width: 100%;
+            height: 2px;
+            background-color: v.$gris;
+            transition: all 0.3s ease;
+        }
+    
+        .linea:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 4px); // Ajustamos la posición para formar la parte superior de la X
+        }
+    
+        .linea:nth-child(2) {
+            display: none; // Ocultamos la segunda línea para formar la X
+        }
+    
+        .linea:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -4px); // Ajustamos la posición para formar la parte inferior de la X
+        }
+    }
+    
+    
+}
+
+.logo {
+    img {
+        width: 160px;
+    }
+}
+
+.link__espectacles p {
+    color: v.$gris;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.menu__des {
+    padding-top: 5%;
+
+    li {
+        color: v.$gris;
+        font-size: 5rem;
+        font-weight: 600;
+        letter-spacing: .5;
+        padding-top: .5rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        list-style: none;
+        text-align: center;
+    }
+
+    li:hover {
+        color: v.$orange;
+        background-color: v.$gris;
+    }
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+.logo-grande {
+    padding-top: 5%;
+}
+
+.redes-sociales {
+    display: flex;
+    align-items: center;
+}
+
+.redes-sociales a {
+    color: v.$gris;
+    padding-right: 1rem;
+}
