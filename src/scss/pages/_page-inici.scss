@@ -2,7 +2,7 @@
 @use '../base/mixins' as m;
 
 .hero {
-    height: 80vh;
+    height: 90vh;
     display: grid;
 }
 
@@ -28,12 +28,17 @@
 
 .hero__content p {
     font-size: 3rem;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .hero__content h1, p {
     color: v.$negro;
 }
+
+.hero__content--btn {
+    padding-top: 5rem;
+}
+
 
 /* Qui som section */
 .quisom__section {

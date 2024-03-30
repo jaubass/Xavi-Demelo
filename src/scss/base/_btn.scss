@@ -1,0 +1,41 @@
+@use '../base/variables' as v;
+
+/* CSS */
+.btn {
+    background-color: v.$orange;
+    border: 2px solid v.$negro;
+    border-radius: 30px;
+    box-shadow: v.$negro 4px 4px 0 0;
+    color: v.$blanco;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    text-transform: uppercase;
+
+}
+
+.btn:hover {
+  background-color: v.$blanco;
+  color: v.$negro;
+}
+
+.btn:active {
+  box-shadow: v.$negro 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .btn {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}

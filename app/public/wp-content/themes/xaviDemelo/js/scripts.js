@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
     pildoraMenuDesplegado.addEventListener('click', toggleScroll);
 });
 
-
+// Sticky header
 window.addEventListener('scroll', function() {
     const header = document.querySelector('.header');
     if (window.scrollY > 0) {
@@ -32,3 +32,5 @@ window.addEventListener('scroll', function() {
         header.classList.remove('scroll-activo');
     }
 });
+
+  
