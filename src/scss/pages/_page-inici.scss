@@ -2,7 +2,7 @@
 @use '../base/mixins' as m;
 
 .hero {
-    height: 90vh;
+    height: 98vh;
     display: grid;
 }
 
@@ -23,20 +23,37 @@
 
 .hero__content h1 {
     font-family: v.$text-primary;
-    font-size: 7rem;
+    
+
+    @include m.phone {
+        font-size: 4rem;
+        font-weight: 900;
+    }
+
+    @include m.desktop {
+        font-size: 7rem;
+        font-weight: 900;
+    }
 }
 
-.hero__content p {
+.hero__content--subtitle {
+    font-family: v.$text-primary;
     font-size: 3rem;
-    font-weight: 300;
+    font-weight: 200;
+    font-style: italic;
 }
 
 .hero__content h1, p {
     color: v.$negro;
 }
 
+.hero__content--text {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
 .hero__content--btn {
-    padding-top: 5rem;
+    padding-top: 2rem;
 }
 
 
@@ -66,7 +83,7 @@
     @include m.desktop {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        column-gap: 120px;
+        column-gap: 40px;
     }
 
 }
@@ -80,11 +97,12 @@
 }
 
 .quisom__column--one {
-    padding-top: 5rem;
+    padding-top: 7rem;
 }
 
 .quisom__column--one p {
-    font-size: 3rem;
+    font-size: 4rem;
+    font-weight: 500;
 }
 
 .quisom__column--two h2 {
@@ -93,7 +111,7 @@
 
 .quisom__column--two p {
     font-size: 2rem;
-    line-height: 2.8rem;
+    line-height: 3rem;
 }
 
 /* Espectacles section */

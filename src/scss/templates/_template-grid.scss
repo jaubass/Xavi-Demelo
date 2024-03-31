@@ -1,8 +1,14 @@
 @media (min-width: 768px) {
     .listado-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 40px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 40px;
+        row-gap: 40px; /* Añade espacio entre las filas */
+        padding: 3rem 0;
+    }
+
+    .espectacles__card {
+        margin-bottom: 40px; /* Añade margen inferior para separar las filas */
     }
 }
 

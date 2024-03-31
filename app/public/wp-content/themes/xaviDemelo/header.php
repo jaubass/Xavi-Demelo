@@ -33,11 +33,13 @@
         <hr class="header__separador">
     </div>
 </header>
+
 <div class="menu-desplegable">
     <div class="zona-superior contenedor">
         <div class="logo">
             <img src="<?php echo get_template_directory_uri(); ?>/img/Xavi_demelo-Log01.png">
         </div>
+        
         <div class="col-central">
             <div class="pildora-menu-desplegado">
                 <div class="pildora__texto-desplegado">
@@ -77,6 +79,9 @@
             <a href="https://www.instagram.com/espectacles_xavi_demelo/" target="_blank">INSTAGRAM</a>
             <a href="https://www.youtube.com/channel/UCf4ZLSfA9y6PrhGQLw_JSAw" target="_blank">YOUTUBE</a>
             <a href="https://www.linkedin.com/in/★-xavi-demelo-0487b843/" target="_blank">LINKEDIN</a>
+    </div>
+    <div class="header__p--special text-center">
+        <p>FEMINISME IGUALTAT ECOLOGISME homofòbia sensibilització música ciberassetjament LGTBIQ</p>
     </div>
 </div>
 

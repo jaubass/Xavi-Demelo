@@ -8,7 +8,7 @@
     height: 100%;
     padding: 2rem 0;
     overflow-y: auto;
-    background-color: v.$orange;
+    background-color: v.$rosa;
     transition: transform 0.5s ease-in-out, opacity 0.2s ease-in-out;
     transform: translateY(-100%);
     opacity: 0;
@@ -33,7 +33,7 @@
     }
 
     .zona-central {
-        padding: 1rem;
+        padding: .5rem;
     }
 
     .zona-inferior {
@@ -41,7 +41,7 @@
         justify-content: center;
         align-items: flex-end;
         padding: 1rem;
-        background-color: v.$orange;
+        background-color: v.$rosa;
     }
 
     .logo-grande {
@@ -56,13 +56,13 @@
     align-items: center;
     gap: 10px; // Espacio entre el texto y las líneas
     cursor: pointer;
-    background-color: v.$orange;
+    background-color: v.$rosa;
 
     .pildora__texto-desplegado p {
         font-size: 2rem;
         font-weight: bold;
         text-transform: uppercase;
-        color: v.$gris;
+        color: v.$verde;
     }
 
     .pildora__tresRallas-desplegado {
@@ -75,7 +75,7 @@
         .linea {
             width: 100%;
             height: 2px;
-            background-color: v.$gris;
+            background-color: v.$verde;
             transition: all 0.3s ease;
         }
     
@@ -102,7 +102,7 @@
 }
 
 .link__espectacles p {
-    color: v.$gris;
+    color: v.$verde;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 2rem;
@@ -112,7 +112,7 @@
     padding-top: 5%;
 
     li {
-        color: v.$gris;
+        color: v.$verde;
         font-size: 5rem;
         font-weight: 600;
         letter-spacing: .5;
@@ -124,8 +124,8 @@
     }
 
     li:hover {
-        color: v.$orange;
-        background-color: v.$gris;
+        color: v.$rosa;
+        background-color: v.$verde;
     }
 }
 
@@ -143,6 +143,17 @@ body.no-scroll {
 }
 
 .redes-sociales a {
-    color: v.$gris;
+    color: v.$verde;
     padding-right: 1rem;
+}
+
+.header__p--special p {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px v.$verde; /* Grosor del borde */
+    text-stroke: 1px v.$verde; /* Grosor del borde */
+    -webkit-background-clip: text;
+    background-clip: text;
 }

@@ -5,13 +5,14 @@
     get_header();
 ?>
     <main>
-    <section class="home-hero" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/img/Hero-03.webp' ); ?>');">
+    <section class="home-hero" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/img/Hero-09.webp' ); ?>');">
     <div class="contenedor">
         <div class="hero">
         <img src="<?php the_field('imagen_hero')?>">
             <div class="hero__content">
-                <h1>Espectacles i tallers <br>de sensibilització social.</h1>
-                <p>Especialistes en propostes per a la igualtat i contra la violència de gènere.</p>
+                <h1 class="hero__content--title">Espectacles i tallers <br>de sensibilització social.</h1>
+                <p class="hero__content--subtitle">Especialistes en propostes per a la igualtat i contra la violència de gènere.</p>
+                <p class="hero__content--text">Dintre del nostre catàleg d'espectacles tambè pots trobar temes com el feminisme, l'ecologisme, propostes teatre, música, clown, tallers, ciberassetjament...</p>
                 <div class="hero__content--btn">
                     <button class="btn" role="button">Veure Espectacles</button>
                 </div>      
@@ -25,9 +26,7 @@
             <div class="quisom__two-columns">
                 <div class="quisom__column--one">
                     <p>
-                        Tenim <span>propostes per a totes les edats</span>, però sempre insisteixo en la importància de treballar amb públic infantil, adolescent i jove, fent bona la màxima de 
-                        <br><br>
-                        <i>“si eduquem al nen, no haurem de castigar a l’adult”.</i>
+                        Tenim propostes per a totes les edats, però sempre insisteixo en la importància de treballar amb públic infantil, adolescent i jove, fent bona la màxima de "si eduquem al nen, no haurem de castigar a l’adult”.</i>
                     </p>
                 </div>
                 <div class="quisom__column--two">

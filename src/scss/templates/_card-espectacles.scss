@@ -10,6 +10,8 @@
   margin-bottom: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; /* Agregamos sombra */
   border-radius: v.$curve;
+  transition: opacity 0.4s ease-in-out;
+  margin-bottom: 20p;
 }
 
 .espectacles__card img {
@@ -98,18 +100,11 @@
   text-align: center;
 }
 
-.espectacles__boton {
-  padding: 8px 16px;
-  font-size: 14px; /* Ajusta según necesites */
-  background-color: #6A515E;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.espectacles__boton:hover {
-  background-color: #4D3947;
+.espectacles__boton-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  margin-top: 10px; /* Ajusta según sea necesario */
 }
 
 /* Estilos para las categorías */
@@ -130,6 +125,10 @@
 }
 
 /* Estilos para las categorías */
+.espectacles__categoria--todos {
+  background-color: #E0E0E0; /* Gris */
+}
+
 .espectacles__categoria--teatre {
   background-color: #FFD3B6; /* Melocotón pastel */
 }
@@ -169,3 +168,12 @@
 .espectacles__categoria--magia {
   background-color: #FFE5CC; /* Amarillo pastel */
 }
+
+.espectacles__categoria--infantil {
+  background-color: #FFB7C3; /* Rosa pastel */
+}
+
+.espectacles__categoria--adults {
+  background-color: #B9E36A; /* Lima pastel */
+}
+

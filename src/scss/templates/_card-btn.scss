@@ -1,64 +1,25 @@
 @use '../base/variables' as v;
 
-/* CARD BTN */
-/* CSS */
-.espectacles__btn {
-  appearance: none;
-  backface-visibility: hidden;
-  background-color: v.$azul;
-  border-radius: 10px;
-  border-style: none;
-  box-shadow: none;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
+.espectacles__boton {
+  
   display: inline-block;
-  font-family: v.$text-secondary;
-  font-size: 15px;
-  font-weight: 300;
-  height: 50px;
-  letter-spacing: normal;
-  line-height: 1.5;
-  outline: none;
-  overflow: hidden;
-  padding: 14px 30px;
-  position: relative;
-  text-align: center;
-  text-transform: uppercase;
-  transform: translate3d(0, 0, 0);
-  transition: all .3s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: top;
-  white-space: nowrap;
+  outline: 0;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 5rem;
+  color: #000;
+  background: #fff;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 12px 20px;
+  text-align:center;
+  transition-duration: .15s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
 }
 
-.espectacles__btn:hover {
-  background-color: v.$orange;
-  box-shadow: rgba(0, 0, 0, .05) 0 5px 30px, rgba(0, 0, 0, .05) 0 1px 4px;
-  opacity: 1;
-  transform: translateY(0);
-  transition-duration: .35s;
-}
-
-.espectacles__btn:hover:after {
-  opacity: .5;
-}
-
-.espectacles__btn:active {
-  box-shadow: rgba(0, 0, 0, .1) 0 3px 6px 0, rgba(0, 0, 0, .1) 0 0 10px 0, rgba(0, 0, 0, .1) 0 1px 4px -1px;
-  transform: translateY(2px);
-  transition-duration: .35s;
-}
-
-.espectacles__btn:active:after {
-  opacity: 1;
-}
-
-@media (min-width: 768px) {
-  .espectacles__btn {
-    padding: 14px 22px;
-    width: 176px;
-  }
+.espectacles__boton:hover {
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 8%);
+  background: rgba(248,248,248,1);
 }

@@ -24,5 +24,8 @@
   "browserslist": [
     "last 2 version",
     "> 1%"
-  ]
+  ],
+  "dependencies": {
+    "scrollmagic": "^2.0.8"
+  }
 }

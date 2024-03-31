@@ -4,13 +4,26 @@ $args = array(
 );
 
 $clases = new WP_Query($args);
+?>
 
-if ($clases->have_posts()): ?>
-    <h1 class="text-center">Template Part - Llista espectacles</h1>
-
-    <div class="contenedor espectacles">
-        <ul class="listado-grid">
-            <?php while ($clases->have_posts()): $clases->the_post(); ?>
+<div class="contenedor espectacles">
+    <div class="filtros">
+        <button class="filtro-btn" data-categoria="todas">Todas</button>
+        <?php
+        $categorias = get_categories(array(
+            'taxonomy' => 'category', // Cambiar 'category' por el nombre de la taxonomía de tus custom post types
+            'exclude' => get_cat_ID('Uncategorized')
+        ));
+        foreach ($categorias as $categoria) {
+            echo '<button class="filtro-btn espectacles__categoria--' . $categoria->slug . '" data-categoria="' . $categoria->slug . '">' . $categoria->name . '</button>';
+        }
+        ?>
+    </div>
+    <ul class="listado-grid" id="publicaciones-container">
+        <?php
+        if ($clases->have_posts()): 
+            while ($clases->have_posts()): $clases->the_post();
+        ?>
                 <li class="espectacles__card">
                     <div class="espectacles__card--img">
                         <?php the_post_thumbnail(); ?>
@@ -49,17 +62,19 @@ if ($clases->have_posts()): ?>
                             <p class="espectacles__descripcion"><?php the_field( 'descripcio' ); ?></p>
                             <?php $archivo_pdf = get_field('fitxer'); ?>
                             <?php if (!empty($archivo_pdf)): ?>
-                                <a href="<?php echo esc_url($archivo_pdf['url']); ?>" download>
-                                    <button class="espectacles__btn" role="button">Descarregar PDF</button>
-                                </a>
+                                <div class="espectacles__boton-container">
+                                    <a href="<?php echo esc_url($archivo_pdf['url']); ?>" download>
+                                        <button class="espectacles__boton" role="button">Descarregar PDF</button>
+                                    </a>
+                                </div>
                             <?php endif; ?>
                         </div>
                     </div>
                 </li>
-            <?php endwhile; ?>
-        </ul>
-    </div>
-<?php
-    wp_reset_postdata();
-endif;
-?>
+        <?php
+            endwhile;
+            wp_reset_postdata();
+        endif;
+        ?>
+    </ul>
+</div>

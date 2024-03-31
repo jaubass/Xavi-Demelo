@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'Nombre-de-la-fuente';
+    src: url('../fonts/ClashDisplay-Bold.ttf') format('truetype'), /* Cambia 'tufuente.ttf' por el nombre de tu archivo de fuente */
+         url('../fonts/ClashDisplay-Bold.woff') format('woff'); /* Puedes agregar más formatos si los tienes */
+    /* Puedes agregar más propiedades como font-weight y font-style según lo necesites */
+}
