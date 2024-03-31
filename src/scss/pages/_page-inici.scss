@@ -23,7 +23,7 @@
 
 .hero__content h1 {
     font-family: v.$text-primary;
-    
+    margin: 0;
 
     @include m.phone {
         font-size: 4rem;
@@ -63,7 +63,6 @@
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;
-    
 }
 
 .quisom__contenedor {
@@ -102,7 +101,8 @@
 
 .quisom__column--one p {
     font-size: 4rem;
-    font-weight: 500;
+    font-weight: 600;
+    font-family: v.$text-primary;
 }
 
 .quisom__column--two h2 {

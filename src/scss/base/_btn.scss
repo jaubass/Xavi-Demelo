@@ -2,11 +2,11 @@
 
 /* CSS */
 .btn {
-    background-color: v.$orange;
+    background-color: v.$verde;
     border: 2px solid v.$negro;
-    border-radius: 30px;
+    border-radius: 4px;
     box-shadow: v.$negro 4px 4px 0 0;
-    color: v.$blanco;
+    color: v.$negro;
     cursor: pointer;
     display: inline-block;
     font-weight: 400;
@@ -24,7 +24,7 @@
 }
 
 .btn:hover {
-  background-color: v.$blanco;
+  background-color: v.$rosa;
   color: v.$negro;
 }
 

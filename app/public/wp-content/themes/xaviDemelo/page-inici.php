@@ -10,9 +10,8 @@
         <div class="hero">
         <img src="<?php the_field('imagen_hero')?>">
             <div class="hero__content">
-                <h1 class="hero__content--title">Espectacles i tallers <br>de sensibilització social.</h1>
+                <h1 class="hero__content--title"><span>E</span>spectacles i tallers <br>de sensibilització social.</h1>
                 <p class="hero__content--subtitle">Especialistes en propostes per a la igualtat i contra la violència de gènere.</p>
-                <p class="hero__content--text">Dintre del nostre catàleg d'espectacles tambè pots trobar temes com el feminisme, l'ecologisme, propostes teatre, música, clown, tallers, ciberassetjament...</p>
                 <div class="hero__content--btn">
                     <button class="btn" role="button">Veure Espectacles</button>
                 </div>      
@@ -30,7 +29,7 @@
                     </p>
                 </div>
                 <div class="quisom__column--two">
-                    <h2>Qui som?</h2>
+                    <h2 class="subrayado">Qui som?</h2>
                     <p>Espectacles Xavi Demelo és una aposta per fer arribar <span>missatges de sensibilització </span>al públic d’una manera artística, entretinguda i divertida. Es per a això que utilitzem diferents llenguatges, com la música, la paraula, la dansa, el text, les animacions, la improvisació pautada, la imatge, el clown, etc. I sovint les barregem per aconseguir millors resultats.
                     <br><br>
                     Des dels començaments, cap a l’any 1999, <span>ens hem especialitzat en tractar temes de gènere, igualtat, feminismes, violències masclistes</span> i, en els últims anys, hem inclòs el ciberassetjament, les discriminacions cap als col.lectius LGTBIQ, l’homofòbia i l’abús sexual infantil, sense oblidar-nos d’aspectes més globals, com el canvi climàtic, la immigració, les desigualtats Nord – Sud, la globalització, etc.</p>

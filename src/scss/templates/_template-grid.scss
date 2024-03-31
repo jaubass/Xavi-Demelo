@@ -1,14 +1,26 @@
-@media (min-width: 768px) {
-    .listado-grid {
+@use '../base/mixins' as m;
+
+.listado-grid {
+
+    @include m.phone {
+        display: block;
+        padding: 3rem 0;
+    }
+
+    @include m.tablet {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         column-gap: 40px;
         row-gap: 40px; /* Añade espacio entre las filas */
         padding: 3rem 0;
     }
 
-    .espectacles__card {
-        margin-bottom: 40px; /* Añade margen inferior para separar las filas */
+    @include m.desktop {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 40px;
+        row-gap: 40px; /* Añade espacio entre las filas */
+        padding: 3rem 0;
     }
 }
 

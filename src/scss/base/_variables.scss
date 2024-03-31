@@ -1,17 +1,15 @@
 // Fuentes
 // $text-primary: "Titillium Web", sans-serif;
-$text-primary: "Playfair Display", serif;
+// $text-secondary: "Playfair Display", serif;
+$text-primary: 'ClashDisplay', sans-serif;
 // $text-secondary: "Montserrat", sans-serif;
 // $text-secondary: "Titillium Web", sans-serif;
 $text-secondary: "Roboto", sans-serif;
 
-
-
-
 // Media Queries
 $phone: 480px;
 $tablet: 768px;
-$desktop: 1024px;
+$desktop: 1100px;
 
 
 // Colors
@@ -27,5 +25,8 @@ $verde: #C6DF76;
 // Unidades
 $margen: 5rem;
 
-// Otros
-$curve: 2rem
+// Broder Radius Cards
+$curve: 2rem;
+
+// Border Radious Filtros
+$radius: .5re

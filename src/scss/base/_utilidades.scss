@@ -5,11 +5,17 @@
 }
 
 .bg-primario {
-    background-color: v.$orange;
+    background-color: v.$verde;
 }
 
 .separador { 
     border: 0;
     height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
+
+.subrayado {
+    background-color: v.$verde;
+    padding: 1rem;
+    border: 2px solid v.$negro;
+} 

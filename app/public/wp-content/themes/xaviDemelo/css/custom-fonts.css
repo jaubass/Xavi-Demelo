@@ -1,6 +1,23 @@
 @font-face {
-    font-family: 'Nombre-de-la-fuente';
-    src: url('../fonts/ClashDisplay-Bold.ttf') format('truetype'), /* Cambia 'tufuente.ttf' por el nombre de tu archivo de fuente */
-         url('../fonts/ClashDisplay-Bold.woff') format('woff'); /* Puedes agregar más formatos si los tienes */
-    /* Puedes agregar más propiedades como font-weight y font-style según lo necesites */
-}
+     font-family: 'ClashDisplay-Bold';
+     src: url('../fonts/ClashDisplay-Bold.ttf') format('truetype'),
+          url('../fonts/ClashDisplay-Bold.woff') format('woff'),
+          url('../fonts/ClashDisplay-Bold.woff2') format('woff2'),
+          url('../fonts/ClashDisplay-Bold.eot'); /* Agrega más formatos de archivo si es necesario */
+     font-weight: bold;
+     font-style: normal;
+ }
+ 
+ @font-face {
+     font-family: 'ClashDisplay-Extralight';
+     src: url('../fonts/ClashDisplay-Extralight.ttf') format('truetype'),
+          url('../fonts/ClashDisplay-Extralight.woff') format('woff'),
+          url('../fonts/ClashDisplay-Extralight.woff2') format('woff2'),
+          url('../fonts/ClashDisplay-Extralight.eot'); /* Agrega más formatos de archivo si es necesario */
+     font-weight: 200;
+     font-style: normal;
+ }
+ 
+  
+  /* Define reglas @font-face para las otras variantes de la fuente (light, regular, semibold, variable) */
+  

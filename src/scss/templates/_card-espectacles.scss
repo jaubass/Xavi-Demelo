@@ -4,6 +4,7 @@
 .espectacles__card {
   position: relative;
   display: block;
+  background-color: v.$blanco;
   height: 100%;
   border-radius: 0 0 v.$curve v.$curve; /* Mantenemos el borde redondeado en la parte inferior */
   overflow: hidden;
@@ -28,10 +29,12 @@
 
 /* Estilos para el título visible */
 .espectacles__titulo {
-  font-size: 2.6rem; /* Ajusta según necesites */
+  font-size: 2rem; /* Ajusta según necesites */
   margin-bottom: 10px; /* Ajusta según necesites */
-  color: #000;
-  text-transform: capitalize;
+  font-family: v.$text-secondary;
+  font-weight: 400;
+  color: v.$negro;
+  text-transform: uppercase;
   transition: transform 0.4s ease-in-out; /* Agregamos una transición */
   text-align: center;
 }
@@ -120,7 +123,8 @@
 .espectacles__categoria {
   display: inline-block;
   padding: 5px 10px;
-  border-radius: 20px; /* Esto crea la forma de píldora */
+  border: 1px solid v.$negro;
+  border-radius: v.$radius;
   font-size: 14px;
 }
 
@@ -170,10 +174,11 @@
 }
 
 .espectacles__categoria--infantil {
-  background-color: #FFB7C3; /* Rosa pastel */
+  background-color: #FAC3D2; /* Rosa suave */
 }
 
 .espectacles__categoria--adults {
-  background-color: #B9E36A; /* Lima pastel */
+  background-color: #C6DF76; /* Verde suave */
 }
+
 
