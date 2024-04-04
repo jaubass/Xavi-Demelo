@@ -19,3 +19,21 @@
     padding: 1rem;
     border: 2px solid v.$negro;
 } 
+
+.typing-animation-container {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+    opacity: 1; /* Opacidad inicial */
+}
+
+
+.typing-animation {
+    transition: opacity 0.5s ease; /* Transición de opacidad */
+    opacity: 0; /* Comienza con opacidad cero */
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+

@@ -39,3 +39,35 @@
     padding: 0 25px;
   }
 }
+
+.btn-sm {
+  background-color: v.$verde;
+  border: 1px solid v.$negro;
+  border-radius: v.$b-radius;
+  box-shadow: v.$negro 2px 2px 0 0;
+  color: v.$negro;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  padding: 0 9px;
+  line-height: 25px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-transform: uppercase;
+
+}
+
+.btn-sm:hover {
+background-color: v.$rosa;
+color: v.$negro;
+}
+
+.btn-sm:active {
+box-shadow: v.$negro 1px 1px 0 0;
+transform: translate(2px, 2px);
+}

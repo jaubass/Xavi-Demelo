@@ -1,35 +1,43 @@
 @use 'base/mixins' as m;
 @use 'base/variables' as v;
+@use 'base/utilidades' as u;
 
 .header {
-    position: fixed; // Hace que el menú se quede pegado arriba
-    width: 100%; // Establece el ancho completo del menú
+    width: 100%; 
     background-color: v.$blanco;
-    transition: height 0.3s, padding 0.3s; 
+    transition: height 0.4s, padding 0.4s; 
 
-    .header__espectacles p {
+    &__espectacles p {
         text-transform: uppercase;
-        font-weight: 700;
-        font-size: 2rem;
+        font-weight: 400;
+        font-size: 1.6rem;
     }
 
-    .contenido-header {
+    &__contenido {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem 0;
+        padding: 1rem 2rem;
+        border: 1px solid v.$negro;
+        border-radius: 0 0 v.$b-radius v.$b-radius;
+        border-top: 0;
+
+        &.scroll-down {
+            height: 5rem;
+            padding: 0.5rem 0;
+            // Otros estilos para el scroll hacia abajo...
+        }
 
         .logo {
-            // Estilos para el logo
             img {
-                width: 160px; // Ajusta el ancho del logo según tu diseño
+                width: 140px;
             }
         }
     }
 
     &.scroll-activo {
-        height: 5rem; // Altura más pequeña cuando se ha hecho scroll
-        padding: 0.5rem 0; // Menos relleno cuando se ha hecho scroll
+        height: 5rem;
+        padding: 0.5rem 0;
 
         p {
             font-size: 1.4rem;
@@ -45,13 +53,13 @@
         }
 
         .contenido-header {
-            padding: 0; // Elimina el padding cuando se ha hecho scroll
+            padding: 0;
         }
 
         .header__separador {
-            height: .5rem; /* Establece la altura de la línea */
-            background-color: v.$negro;; /* Color de la línea */
-            margin: 0; /* Elimina el margen predeterminado del hr */
+            height: .5rem;
+            background-color: v.$negro;
+            margin: 0;
         }
     }
 
@@ -63,11 +71,11 @@
         .pildora-menu {
             display: flex;
             align-items: center;
-            gap: 10px; // Espacio entre el texto y las líneas
-            cursor: pointer; // Cambiar cursor al puntero al pasar sobre el botón
+            gap: 10px;
+            cursor: pointer;
 
             .pildora__texto {
-                font-size: 2rem; // Tamaño de la fuente del texto "Menú"
+                font-size: 2rem;
             }
 
             .pildora__tresRallas {
@@ -86,47 +94,4 @@
             }
         }
     }
-
-    .menu-desplegable {
-        position: fixed;
-        top: 0;
-        right: 0;
-        background-color: #ffffff;
-        width: 100%;
-        height: 0; // Altura inicial cero para ocultar el menú
-        overflow-x: hidden;
-        overflow-y: auto; // Permitir desplazamiento vertical si el contenido del menú es más largo que la altura del viewport
-        transition: height 0.5s; // Transición suave para la altura del menú
-
-        nav {
-            padding: 20px; // Ajusta el relleno según tu diseño
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-
-            li {
-                margin-bottom: 10px; // Espacio entre elementos del menú
-            }
-
-            a {
-                text-decoration: none;
-                color: #333; // Color del texto del menú
-                font-size: 16px; // Tamaño de la fuente del menú
-            }
-        }
-    }
-
-    .menu-desplegable.activo {
-        height: 100vh; // Cambia la altura al 100% del viewport height al menú activo
-    }
-}
-
-.header__separador {
-    border: none; /* Elimina el borde predeterminado del hr */
-    height: 1rem; /* Establece la altura de la línea */
-    background-color: v.$negro;; /* Color de la línea */
-    margin: 0; /* Elimina el margen predeterminado del hr */
 }

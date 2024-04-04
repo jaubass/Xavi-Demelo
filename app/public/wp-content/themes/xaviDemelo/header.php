@@ -7,30 +7,27 @@
 </head>
 <body>
 <header class="header header-inicio">
-    <div class="contenido-header contenedor">
-        <div class="logo">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/Xavi_demelo-Log07.jpg">
-        </div>
-        <div class="header__menu">
-            <div class="hamburguesa">
-                <div class="pildora-menu">
-                    <div class="pildora__texto header__espectacles">
-                        <p>Menú</p>
-                    </div>
-                    <div class="pildora__tresRallas">
-                        <div class="linea"></div>
-                        <div class="linea"></div>
-                        <div class="linea"></div>
+    <div class="header__contenido contenedor">
+            <div class="logo">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/Xavi_demelo-Log07.jpg">
+            </div>
+            <div class="header__menu">
+                <div class="hamburguesa">
+                    <div class="pildora-menu">
+                        <div class="pildora__texto header__espectacles">
+                            <p>Menú</p>
+                        </div>
+                        <div class="pildora__tresRallas">
+                            <div class="linea"></div>
+                            <div class="linea"></div>
+                            <div class="linea"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="header__espectacles">
-            <p>Espectacles</p>
-        </div>
-    </div>
-    <div class="contenedor">
-        <hr class="header__separador">
+            <div class="btn-sm">
+                <a href="#">Espectacles</a>
+            </div>
     </div>
 </header>
 
@@ -86,6 +83,6 @@
 </div>
 
 
-<script src="script.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/scripts.js"></script>
 </body>
 </html>

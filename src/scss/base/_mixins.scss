@@ -18,3 +18,29 @@
     }
 }
 
+@mixin btn-base {
+    background-color: v.$verde;
+    border: 2px solid v.$negro;
+    border-radius: 4px;
+    box-shadow: v.$negro 4px 4px 0 0;
+    color: v.$negro;
+    cursor: pointer;
+    display: inline-block;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+  background-color: v.$rosa;
+  color: v.$negro;
+}
+
+.btn:active {
+  box-shadow: v.$negro 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
