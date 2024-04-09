@@ -1,9 +1,5 @@
 // Fuentes
-// $text-primary: "Titillium Web", sans-serif;
-// $text-secondary: "Playfair Display", serif;
 $text-primary: 'ClashDisplay', sans-serif;
-// $text-secondary: "Montserrat", sans-serif;
-// $text-secondary: "Titillium Web", sans-serif;
 $text-secondary: "Roboto", sans-serif;
 
 // Media Queries
@@ -18,7 +14,7 @@ $negro: #000;
 $orange: #FC5130;
 $orange-soft: #FF773D;
 $azul: #35a7ff;
-$gris: #D4F5F5;
+$gris: #E1E5EE;
 $rosa: #FE72A9;
 $verde: #C6DF76;
 
@@ -26,8 +22,8 @@ $verde: #C6DF76;
 $margen: 5rem;
 
 // Broder Radius Cards
-$curve: 2rem;
+$curve: 15px;
 
 // Border Radious Filtros
-$radius: .5re;
-$b-radius: 1.5rem;
+$radius: 5px;
+$b-radius: 15px;

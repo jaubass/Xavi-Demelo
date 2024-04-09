@@ -4,7 +4,7 @@
 .btn {
     background-color: v.$verde;
     border: 2px solid v.$negro;
-    border-radius: 4px;
+    border-radius: v.$radius;
     box-shadow: v.$negro 4px 4px 0 0;
     color: v.$negro;
     cursor: pointer;
@@ -43,7 +43,7 @@
 .btn-sm {
   background-color: v.$verde;
   border: 1px solid v.$negro;
-  border-radius: v.$b-radius;
+  border-radius: v.$radius;
   box-shadow: v.$negro 2px 2px 0 0;
   color: v.$negro;
   cursor: pointer;
@@ -63,11 +63,42 @@
 }
 
 .btn-sm:hover {
-background-color: v.$rosa;
-color: v.$negro;
+  background-color: v.$rosa;
+  color: v.$negro;
 }
 
 .btn-sm:active {
-box-shadow: v.$negro 1px 1px 0 0;
-transform: translate(2px, 2px);
+  box-shadow: v.$negro 1px 1px 0 0;
+  transform: translate(2px, 2px);
+}
+
+
+.btn-destacats {
+  margin-left: 1rem;
+  background-color: v.$verde;
+  border: 2px solid v.$negro;
+  border-radius: v.$radius;
+  box-shadow: v.$negro 4px 4px 0 0;
+  color: v.$negro;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 0 14px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-transform: uppercase;
+
+}
+
+.btn-destacats:hover {
+  background-color: v.$rosa;
+  color: v.$negro;
+  box-shadow: v.$negro 1px 1px 0 0;
+  transform: translate(1px, 1px);
 }

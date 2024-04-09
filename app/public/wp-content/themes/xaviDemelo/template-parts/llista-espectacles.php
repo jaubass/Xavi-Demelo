@@ -15,7 +15,10 @@ $clases = new WP_Query($args);
             'exclude' => get_cat_ID('Uncategorized')
         ));
         foreach ($categorias as $categoria) {
-            echo '<button class="filtro-btn espectacles__categoria--' . $categoria->slug . '" data-categoria="' . $categoria->slug . '">' . $categoria->name . '</button>';
+            // Verificar si la categoría no es "destacats" y agregar el botón del filtro
+            if ($categoria->slug !== 'destacats') {
+                echo '<button class="filtro-btn espectacles__categoria--' . $categoria->slug . '" data-categoria="' . $categoria->slug . '">' . $categoria->name . '</button>';
+            }
         }
         ?>
     </div>
@@ -37,9 +40,11 @@ $clases = new WP_Query($args);
                         <?php if ($categorias): ?>
                             <ul class="espectacles__categorias">
                                 <?php foreach ($categorias as $categoria): ?>
-                                    <li class="espectacles__categoria espectacles__categoria--<?php echo $categoria->slug; ?>">
-                                        <a href="<?php echo get_category_link($categoria->term_id); ?>"><?php echo $categoria->name; ?></a>
-                                    </li>
+                                    <?php if ($categoria->slug !== 'destacats'): ?>
+                                        <li class="espectacles__categoria espectacles__categoria--<?php echo $categoria->slug; ?>">
+                                            <a href="<?php echo get_category_link($categoria->term_id); ?>"><?php echo $categoria->name; ?></a>
+                                        </li>
+                                    <?php endif; ?>
                                 <?php endforeach; ?>
                             </ul>
                         <?php endif; ?>
@@ -51,14 +56,16 @@ $clases = new WP_Query($args);
                             </a>
                             <hr class="separador">
                             <?php if ($categorias): ?>
-                                <ul class="espectacles__categorias">
-                                    <?php foreach ($categorias as $categoria): ?>
+                            <ul class="espectacles__categorias">
+                                <?php foreach ($categorias as $categoria): ?>
+                                    <?php if ($categoria->slug !== 'destacats'): ?>
                                         <li class="espectacles__categoria espectacles__categoria--<?php echo $categoria->slug; ?>">
                                             <a href="<?php echo get_category_link($categoria->term_id); ?>"><?php echo $categoria->name; ?></a>
                                         </li>
-                                    <?php endforeach; ?>
-                                </ul>
-                            <?php endif; ?>
+                                    <?php endif; ?>
+                                <?php endforeach; ?>
+                            </ul>
+                        <?php endif; ?>
                             <p class="espectacles__descripcion"><?php the_field( 'descripcio' ); ?></p>
                             <?php $archivo_pdf = get_field('fitxer'); ?>
                             <?php if (!empty($archivo_pdf)): ?>

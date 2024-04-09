@@ -1,0 +1,28 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+@use 'base/utilidades' as u;
+
+.sticky__contenido {
+    display: none; /* Ocultamos el menú sticky inicialmente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegúrate de que el z-index sea lo suficientemente alto para que el menú esté por encima de otros elementos */
+    background-color: v.$blanco;
+    transition: height 0.4s, padding 0.4s; 
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem;
+    border: 1px solid v.$negro;
+    border-radius: 0 0 v.$b-radius v.$b-radius;
+    border-top: 0;
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+.sticky__contenido.active {
+    display: block; /* Mostramos el menú sticky cuando está activo */
+}

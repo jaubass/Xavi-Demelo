@@ -84,6 +84,7 @@
 
 /* Qui som section */
 .quisom__section {
+    margin-top: 3rem;
     height: 100vh;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -118,12 +119,13 @@
 }
 
 .quisom__column--one {
-    padding-top: 7rem;
+    padding-top: 8rem;
 }
 
 .quisom__column--one p {
     font-size: 4rem;
     font-weight: 600;
+    line-height: 4.5rem;
     font-family: v.$text-primary;
 }
 
@@ -135,4 +137,90 @@
     font-size: 2rem;
     line-height: 3rem;
 }
+
+// Destacats
+.seccio-destacats {
+    margin-top: 10rem;
+    height: 90vh;
+}
+
+.destacats__in {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.destacats-grid-container {
+    overflow-x: auto;
+    white-space: nowrap; /* Evita que los elementos se envuelvan */
+}
+
+
+.destacats-grid {
+    display: flex;
+}
+
+.destacats {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 6rem;
+    overflow-x: auto; /* Hacer que el carrusel sea desplazable horizontalmente */
+    white-space: nowrap; /* Evitar que los elementos se rompan */
+    -webkit-overflow-scrolling: touch; /* Mejorar el desplazamiento en dispositivos táctiles */
+    scroll-snap-type: x mandatory; /* Activar el snap scroll horizontal */
+    scrollbar-width: none; /* Ocultar la barra de desplazamiento en Firefox */
+
+    .listado-grid {
+        display: flex; /* Cambiar a flex para ajustar el tamaño de los elementos */
+        flex-wrap: nowrap; /* Evitar que los elementos se rompan */
+    }
+
+    .espectacles__card {
+        flex: 0 0 calc(25% - 20px); /* Ancho del elemento del carrusel (25% del ancho total menos márgenes) */
+        margin-right: 20px; /* Márgenes entre elementos del carrusel */
+        scroll-snap-align: start; /* Alinear elementos con el punto de anclaje */
+
+        // Estilos adicionales para los elementos del carrusel
+        &--img img {
+            width: 100%; /* Ajustar la imagen al contenedor */
+        }
+    }
+
+    // Estilos para ocultar la barra de desplazamiento
+    &::-webkit-scrollbar {
+        display: none; /* Ocultar la barra de desplazamiento en WebKit */
+    }
+}
+
+.espectacles__hover {
+    width: 100%; /* o ajusta el valor según sea necesario */
+}
+
+.espectacles__descripcion {
+    white-space: normal; /* permite que el texto se envuelva */
+}
+
+.destacats__titulo {
+    max-width: 70%;
+    h2 {
+        margin-bottom: 0;
+        font-size: 6rem;
+    }
+}
+
+.flecha-izquierda {
+    left: 10px;
+}
+.flecha-derecha {
+    right: 10px;
+}
+
+// CTA
+.cta {
+    height: 50vh;
+}
+
+
 

@@ -6,10 +6,10 @@
   display: block;
   background-color: v.$blanco;
   height: 100%;
-  border-radius: 0 0 v.$curve v.$curve; /* Mantenemos el borde redondeado en la parte inferior */
+  border: 1px solid v.$negro;
+  border-radius: 0 0 v.$b-radius v.$b-radius; /* Mantenemos el borde redondeado en la parte inferior */
   overflow: hidden;
   margin-bottom: 20px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; /* Agregamos sombra */
   border-radius: v.$curve;
   transition: opacity 0.4s ease-in-out;
   margin-bottom: 20p;

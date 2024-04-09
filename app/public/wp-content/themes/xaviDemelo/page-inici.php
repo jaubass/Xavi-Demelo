@@ -43,6 +43,31 @@
             </div>
         </div>
     </section>
+    <section class="cta-home">
+        <div class="cta-home" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/img/XD-interpretacion-UCDM01.webp' ); ?>');">
+    </section>
+    <section class="seccio-destacats">
+        <div class="destacats__in">
+            <div class="destacats__titulo">
+                <h2>Espectacles destacats</h2>
+                <p>Un breu recull dels espectacles que tenim ara mateix disponibles,<br> si en voleu veure més feu clic al següent enllaç.</p>
+            </div>
+            <div class="destacats__btn">
+                <button class="btn-destacats flecha-izquierda">←</button>
+                <button class="btn-destacats flecha-derecha">→</button>
+            </div>
+        
+        </div>
+       
+        <div class="destacats espectacles__destacats">
+            <div class="card-destacats">
+                <?php    
+                get_template_part('template-parts/llista-destacats');
+                ?>     
+            </div>
+              
+        </div>
+    </section>
 </main>
 
 <?php get_footer(); ?>

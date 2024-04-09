@@ -6,6 +6,8 @@ const rename = require('gulp-rename');
 const cleanCSS = require('gulp-clean-css');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
 
 // IMAGENES
 const imagemin = require('gulp-imagemin');
@@ -36,16 +38,34 @@ function imagenes() {
         .pipe( dest('app/public/wp-content/themes/xaviDemelo/img'));
 }
 
-function versionWebp( done ) {
-    src('src/img/**/*.(png,jpg)')
-        .pipe( webp() )
-        .pipe( dest('app/public/wp-content/themes/xaviDemelo/img'))
-        done();
-    }
+function versionWebp(done) {
+    return src('src/img/**/*.{png,jpg}')
+        .pipe(webp())
+        .pipe(dest('app/public/wp-content/themes/xaviDemelo/img'));
+    done();
+}
+
 
 function dev() {
     watch('src/scss/**/*.scss', css);
     watch('src/img/**/*', imagenes);
+}
+
+function scripts() {
+    return src('src/js/scripts.js') // Selecciona todos los archivos .js en la carpeta src/js
+      .pipe(concat('scripts.min.js')) // Une todos los archivos en uno solo llamado scripts.min.js
+      .pipe(uglify()) // Minifica el archivo
+      .pipe(dest('app/public/wp-content/themes/xaviDemelo/js')); // Lo guarda en la carpeta dist/js
+} 
+
+function watchJs() {
+    // Observa cambios en los archivos .js en la carpeta src/js y sus subdirectorios
+    watch('src/js/**/*.js', scripts);
+}
+
+function watchScss() {
+    // Observa cambios en los archivos .scss en la carpeta src/scss y sus subdirectorios
+    watch('src/scss/**/*.scss', css);
 }
 
 function dedaultTask() {
@@ -56,5 +76,8 @@ exports.dev = dev;
 exports.css = css;
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
+exports.scripts = scripts;
+exports.watchScss = watchScss;
+exports.watchJs = watchJs;
 // Tareas por defaul arrancan con gulp
-exports.default = series( imagenes, versionWebp, css, dev );
+exports.default = series( imagenes, versionWebp, css, dev, scripts, watchScss, watchJs );

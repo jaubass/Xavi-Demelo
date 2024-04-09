@@ -1,0 +1,38 @@
+@use '../base/variables' as v;
+@use '../base/utilidades' as u;
+
+
+.destacats__btn-info {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.destacats__btn {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+
+.destacats-grid .espectacles__card {
+    position: relative;
+    display: block;
+    background-color: v.$blanco;
+    height: 100%;
+    max-width: 250px;
+    border: 1px solid v.$negro;
+    border-radius: 0 0 v.$b-radius v.$b-radius; /* Mantenemos el borde redondeado en la parte inferior */
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-radius: v.$curve;
+    transition: opacity 0.4s ease-in-out;
+    margin-bottom: 20p;
+}
+
+.destacats-grid .espectacles__card img {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Limitamos la altura máxima de la imagen */
+    object-fit: cover;
+  }
