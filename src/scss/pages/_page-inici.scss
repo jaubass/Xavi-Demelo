@@ -30,14 +30,16 @@
     background-size: cover; /* Ajusta la imagen para cubrir el área completa */
     background-position: bottom; /* Centra la imagen */
     background-repeat: no-repeat;
-    border: 1px solid v.$negro;
-    border-radius: 15px;
-    /* Puedes agregar más estilos según sea necesario */
+    border-radius: v.$b-radius;
+    border: 2px solid v.$negro;
+    box-shadow: v.$negro 1.5px 1.5px 0 0;
+    transform: translate(1.5px, 1.5px);
+    box-shadow: 0 0 rgba(0, 0, 0, 0), 0 1px .4px rgba(0, 0, 0, .03), 0 2px .8px rgba(0, 0, 0, .04), 0 3px 1.6px rgba(0, 0, 0, .043), 0 5px 2.9px rgba(0, 0, 0, .047), 0 9px 5.3px rgba(0, 0, 0, .047), 0 15px 10.4px rgba(0, 0, 0, .05), 0 31px 22.8px rgba(0, 0, 0, .055);
 }
 
 .hero__content {
     max-width: 90rem;
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     text-align: center;
 }
@@ -84,15 +86,15 @@
 
 /* Qui som section */
 .quisom__section {
-    margin-top: 5rem;
-    height: 100vh;
+    margin-top: 2rem;
+    margin-bottom: 8rem;
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: contain;
+    background-size: auto;
 }
 
 .quisom__contenedor {
-    padding: 10rem 0 0 0;
+    padding: 2rem 0 4rem 0;
 }
 
 .quisom__contenedor span {

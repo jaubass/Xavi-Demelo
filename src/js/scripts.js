@@ -1,10 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Código principal que no está en funciones separadas
-
     // MENU
     let hamburguesa = document.querySelector('.hamburguesa');
     let menuDesplegable = document.querySelector('.menu-desplegable');
-    let pildoraMenuDesplegado = document.querySelector('.pildora-menu-desplegado')
+    let pildoraMenuDesplegado = document.querySelector('.pildora-menu-desplegado');
 
     hamburguesa.addEventListener('click', function() {
         menuDesplegable.classList.toggle('activo');
@@ -46,35 +44,10 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // STYCKY HEADER
-    const stickyMenu = document.querySelector('.sticky__contenido');
-    let lastScroll = 0;
-    let scrolledDown = false;
-
-    window.addEventListener('scroll', function() {
-        const currentScroll = window.scrollY;
-
-        if (currentScroll > lastScroll) {
-            // Scroll hacia abajo
-            if (!scrolledDown) {
-                stickyMenu.classList.add('visible');
-                scrolledDown = true;
-            }
-            stickyMenu.classList.add('active');
-        } else {
-            // Scroll hacia arriba
-            stickyMenu.classList.remove('active');
-        }
-
-        lastScroll = currentScroll;
-    });
-
-
     // CARRUSEL DESTACATS
     let container = document.querySelector('.destacats-grid-container');
     let flechaIzquierda = document.querySelector('.flecha-izquierda');
     let flechaDerecha = document.querySelector('.flecha-derecha');
-
 
     flechaIzquierda.addEventListener('click', function () {
         container.scrollBy({
@@ -90,7 +63,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-
     // Obtener todas las secciones excepto la de carrusel destacado
     const sections = document.querySelectorAll(".snap-section:not(.seccio-destacats)");
 
@@ -103,7 +75,6 @@ document.addEventListener("DOMContentLoaded", function() {
             currentSection.scrollIntoView({ behavior: "smooth" });
         });
     });
-
 
     // CAMBIO COLOR TEXTO
     let lastScrollPosition = 0;
@@ -162,5 +133,8 @@ document.addEventListener("DOMContentLoaded", function() {
         "respecte & LGTBIQ+",
         "ecologisme & clown"
     ]);
+
+// STICKY
+
 
 });

@@ -5,7 +5,7 @@
     get_header();
 ?>
     <main>
-        <div class="contenedor espectacles__hero">
+        <div class="espectacles__hero">
           
        
         <div class="espectacles__sub">

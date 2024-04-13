@@ -4,7 +4,7 @@
 .btn {
     background-color: v.$verde;
     border: 2px solid v.$negro;
-    border-radius: v.$radius;
+    border-radius: v.$m-radius;
     box-shadow: v.$negro 4px 4px 0 0;
     color: v.$negro;
     cursor: pointer;
@@ -42,23 +42,22 @@
 
 .btn-sm {
   background-color: v.$verde;
-  border: 1px solid v.$negro;
-  border-radius: v.$radius;
-  box-shadow: v.$negro 2px 2px 0 0;
+  border-radius: v.$m-radius;
+  border: 2px solid v.$negro;
+  box-shadow: v.$negro 1.5px;
   color: v.$negro;
   cursor: pointer;
   display: inline-block;
   font-weight: 400;
   font-size: 1.6rem;
   text-transform: uppercase;
-  padding: 0 9px;
-  line-height: 25px;
   text-align: center;
   text-decoration: none;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   text-transform: uppercase;
+  padding: 1rem;
 
 }
 

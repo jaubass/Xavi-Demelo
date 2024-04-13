@@ -4,13 +4,15 @@
 .espectacles__card {
   position: relative;
   display: block;
-  background-color: v.$blanco;
+  background-color: v.$blanco-roto;
   height: 100%;
-  border: 1px solid v.$negro;
-  border-radius: 0 0 v.$b-radius v.$b-radius; /* Mantenemos el borde redondeado en la parte inferior */
+  border-radius: v.$b-radius;
+  border: 1.5px solid v.$negro;
+  box-shadow: v.$negro 1.5px 1.5px 0 0;
+  transform: translate(1.5px, 1.5px);
+  box-shadow: 0 0 rgba(0, 0, 0, 0), 0 1px .4px rgba(0, 0, 0, .03), 0 2px .8px rgba(0, 0, 0, .04), 0 3px 1.6px rgba(0, 0, 0, .043), 0 5px 2.9px rgba(0, 0, 0, .047), 0 9px 5.3px rgba(0, 0, 0, .047), 0 15px 10.4px rgba(0, 0, 0, .05), 0 31px 22.8px rgba(0, 0, 0, .055);
   overflow: hidden;
   margin-bottom: 20px;
-  border-radius: v.$curve;
   transition: opacity 0.4s ease-in-out;
   margin-bottom: 20p;
 }
@@ -66,8 +68,8 @@
   left: 0;
   right: 0;
   z-index: 1;
-  border-radius: v.$curve; 
-  background-color: v.$blanco;
+  border-radius: v.$m-radius; 
+  background-color: v.$blanco-roto;
   transform: translateY(100%);
   transition: .4s ease-in-out;
   padding: 10px;
@@ -130,55 +132,55 @@
 
 /* Estilos para las categorías */
 .espectacles__categoria--todos {
-  background-color: #E0E0E0; /* Gris */
+  background-color: v.$gris;
 }
 
 .espectacles__categoria--teatre {
-  background-color: #FFD3B6; /* Melocotón pastel */
+  background-color: v.$melocoton_pastel;
 }
 
 .espectacles__categoria--musica {
-  background-color: #B8E0D2; /* Aguamarina pastel */
+  background-color: v.$aguamarina_pastel;
 }
 
 .espectacles__categoria--infantil {
-  background-color: #FFB7C3; /* Rosa pastel */
+  background-color: v.$rosa_pastel;
 }
 
 .espectacles__categoria--contes {
-  background-color: #FFDAC1; /* Naranja pastel */
+  background-color: v.$naranja_pastel;
 }
 
 .espectacles__categoria--monoleg {
-  background-color: #C3E5EB; /* Azul cielo pastel */
+  background-color: v.$azul_cielo_pastel;
 }
 
 .espectacles__categoria--lgtbiq {
-  background-color: #F5D4E5; /* Lila pastel */
+  background-color: v.$lila_pastel;
 }
 
 .espectacles__categoria--feminisme {
-  background-color: #D3F0F0; /* Verde menta pastel */
+  background-color: v.$verde_menta_pastel;
 }
 
 .espectacles__categoria--igualtat {
-  background-color: #FFD8D8; /* Rosa pastel claro */
+  background-color: v.$rosa_pastel_claro;
 }
 
 .espectacles__categoria--ecologia {
-  background-color: #A2D2FF; /* Azul pastel */
+  background-color: v.$azul_pastel;
 }
 
 .espectacles__categoria--magia {
-  background-color: #FFE5CC; /* Amarillo pastel */
+  background-color: v.$amarillo_pastel;
 }
 
 .espectacles__categoria--infantil {
-  background-color: #FAC3D2; /* Rosa suave */
+  background-color: v.$rosa_suave;
 }
 
 .espectacles__categoria--adults {
-  background-color: #C6DF76; /* Verde suave */
+  background-color: v.$verde_suave;
 }
 
 

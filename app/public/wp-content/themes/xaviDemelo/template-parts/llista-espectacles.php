@@ -32,10 +32,6 @@ $clases = new WP_Query($args);
                         <?php the_post_thumbnail(); ?>
                     </div>
                     <div class="espectacles__contenido">
-                        <a href="<?php the_permalink(); ?>">
-                            <h3 class="espectacles__titulo"><?php the_title(); ?></h3>
-                        </a>
-                        <hr class="separador">
                         <?php $categorias = get_the_category(); ?>
                         <?php if ($categorias): ?>
                             <ul class="espectacles__categorias">
@@ -52,20 +48,8 @@ $clases = new WP_Query($args);
                             <a href="<?php the_permalink(); ?>">
                                 <h3 class="espectacles__titulo-hover"><?php the_title(); ?></h3>
                                 <p class="espectacles__autor"><?php the_field('companyia');?></p>
-                                
                             </a>
                             <hr class="separador">
-                            <?php if ($categorias): ?>
-                            <ul class="espectacles__categorias">
-                                <?php foreach ($categorias as $categoria): ?>
-                                    <?php if ($categoria->slug !== 'destacats'): ?>
-                                        <li class="espectacles__categoria espectacles__categoria--<?php echo $categoria->slug; ?>">
-                                            <a href="<?php echo get_category_link($categoria->term_id); ?>"><?php echo $categoria->name; ?></a>
-                                        </li>
-                                    <?php endif; ?>
-                                <?php endforeach; ?>
-                            </ul>
-                        <?php endif; ?>
                             <p class="espectacles__descripcion"><?php the_field( 'descripcio' ); ?></p>
                             <?php $archivo_pdf = get_field('fitxer'); ?>
                             <?php if (!empty($archivo_pdf)): ?>

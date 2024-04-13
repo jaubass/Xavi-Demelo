@@ -1,26 +1,233 @@
 @use '../base/variables' as v;
 
-.bento-container {
+.page-padding {
     width: 100%;
-    display: grid;
-    grid-column-gap: 2rem;
-    grid-row-gap: 2rem;
+
+    margin-bottom: 8rem;
+    width: 80%;
+}
+  
+.container {
+    z-index: 5;
+    width: 100%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+  
+.grid-12cols {
+    width: 100%;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
     grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-auto-columns: 1fr;   
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-columns: 1fr;
+    display: grid;
 }
+  
+.bento-card {
+    min-height: 200px;
+    border-radius: 25px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid v.$lila-fuerte;
+    box-shadow: v.$lila-fuerte 1.5px 1.5px 0 0;
+    transform: translate(1.5px, 1.5px);
 
-.bento-box-1 {
+    h3 {
+        margin: 0;
+        font-size: 2.8rem;
+        font-weight: bold;
+        letter-spacing: .2rem;
+        text-transform: uppercase;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+
+    p {
+        font-size: 1.6rem;
+        line-height: normal;
+    }
+  }
+  
+  .propostes-lgtbi {
+    background-color: v.$lila; /* Color pastel */
+    color: #5e4533; /* Color oscuro */
+    justify-content: space-between;
     grid-area: 1 / 1 / 3 / 2;
-    background-color: v.$lila;;
+    overflow: hidden;
+
+    h3 {
+        -webkit-text-stroke: 1px v.$lila-fuerte; /* Grosor del borde */
+        text-stroke: 1px v.$lila-fuerte; /* Grosor del borde */
+    }
+
+    h5 {
+        margin: 0;
+        margin-bottom: -40px;
+        text-transform: uppercase;
+        color: v.$lila-fuerte;
+    }
+
+    p {
+        color: v.$lila-fuerte;
+    }
+
+    .image-wrapper {
+        display: flex;
+        transition: transform 0.3s; // Añade una transición para suavizar el efecto
+
+        .img-rotate {
+            box-shadow: 0 0 rgba(0, 0, 0, 0), 0 1px .4px rgba(0, 0, 0, .03), 0 2px .8px rgba(0, 0, 0, .04), 0 3px 1.6px rgba(0, 0, 0, .043), 0 5px 2.9px rgba(0, 0, 0, .047), 0 9px 5.3px rgba(0, 0, 0, .047), 0 15px 10.4px rgba(0, 0, 0, .05), 0 31px 22.8px rgba(0, 0, 0, .055);
+            transform-style: preserve-3d;
+            transition: transform 0.3s; // Añade una transición para suavizar el efecto
+        }
+
+        .left-image {
+            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(-15deg) skew(0deg, 0deg); transform-style: preserve-3d;
+            z-index: 1;
+            transform-origin: 50% 0%;
+            top: 0%;
+            //left: 61%;
+        }
+        
+        .right-image {
+            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(1deg) skew(0deg, 0deg); transform-style: preserve-3d;
+            right: 0; /* Alinea la imagen derecha al borde derecho del contenedor */
+            z-index: 0;
+            transform-origin: 50% 100%;
+            top: 0%;
+            left: 40%;
+            transform: rotate(10deg);
+        }
+    }
+
+    // Al hacer hover sobre el contenedor, aplica una rotación a las imágenes
+    &:hover {
+        .image-wrapper {
+            .img-rotate {
+                transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(-10deg) skew(0deg, 0deg);
+            }
+        }
+    }
+
+    // Al hacer hover sobre las imágenes, aplica una rotación individual
+    .left-image:hover, .right-image:hover {
+        transform: rotate(0deg); // Restaurar la rotación a 0
+    }
 }
 
-.bento-box-2 {
-    background-color: v.$rosa;
-    color: v.$negro;
+  
+.propostes-feminisme {
+    display: grid;
+    grid-template-columns: 1fr 1fr; // Dos columnas iguales
+    background-color: v.$rosa; /* Color pastel */
+    color: #2c5447; /* Color oscuro */
     justify-content: flex-end;
+    grid-area: 1 / 2 / 2 / 4;
+    align-items: end; // Alinea verticalmente el contenido
+
+    h3 {
+        -webkit-text-stroke: 1px v.$lila-fuerte; /* Grosor del borde */
+        text-stroke: 1px v.$lila-fuerte; /* Grosor del borde */
+    }
+
+    p {
+        color: v.$lila-fuerte;
+    }
+
+    .image-wrapper {
+        display: flex;
+        justify-content: center; // Alinea horizontalmente las imágenes
+
+        .img-rotate {
+            box-shadow: 0 0 rgba(0, 0, 0, 0), 0 1px .4px rgba(0, 0, 0, .03), 0 2px .8px rgba(0, 0, 0, .04), 0 3px 1.6px rgba(0, 0, 0, .043), 0 5px 2.9px rgba(0, 0, 0, .047), 0 9px 5.3px rgba(0, 0, 0, .047), 0 15px 10.4px rgba(0, 0, 0, .05), 0 31px 22.8px rgba(0, 0, 0, .055);
+            transform-style: preserve-3d;
+            transition: transform 0.3s; // Añade una transición para suavizar el efecto
+        }
+
+        .left-image {
+            max-width: none;
+            transform-origin: 50% 100%;
+            top: -25%;
+            left: 4%;
+            transform: rotate(20deg);
+            box-shadow: 0 0 rgba(0, 0, 0, 0), 0 1px .4px rgba(0, 0, 0, .03), 0 2px .8px rgba(0, 0, 0, .04), 0 3px 1.6px rgba(0, 0, 0, .043), 0 5px 2.9px rgba(0, 0, 0, .047), 0 9px 5.3px rgba(0, 0, 0, .047), 0 15px 10.4px rgba(0, 0, 0, .05), 0 31px 22.8px rgba(0, 0, 0, .055);
+        }
+
+        .right-image {
+            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(1deg) skew(0deg, 0deg); transform-style: preserve-3d;
+            right: 0; /* Alinea la imagen derecha al borde derecho del contenedor */
+            z-index: 0;
+            transform-origin: 50% 100%;
+            top: 0%;
+            left: 41%;
+            transform: rotate(-10deg);
+        }
+    }
+
+    // Al hacer hover sobre el contenedor, aplica una rotación a las imágenes
+    &:hover {
+        .image-wrapper {
+            .img-rotate {
+                transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(-3deg) skew(0deg, 0deg);
+            }
+        }
+    }
+
+    // Eliminamos las filas adicionales
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr; // Cambiar a una columna en pantallas más pequeñas
+    }
 }
 
-.bento-box-3 {
-    grid-area: 1 / 2 / 2 / 4;
-}
+  
+  .wallet {
+    background-color: v.$verde; /* Color pastel */
+    color: #66462f; /* Color oscuro */
+    justify-content: flex-end;
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  
+  .inbox {
+    background-color: v.$amarillo; /* Color pastel */
+    color: #3b3e61; /* Color oscuro */
+    grid-area: 2 / 3 / 3 / 4;
+  }
+  
+  .gifts {
+    background-color: v.$naranja; /* Color pastel */
+    color: #5a4026; /* Color oscuro */
+    justify-content: flex-end;
+    grid-area: 3 / 1 / 4 / 3;
+  }
+  
+  .reminders {
+    background-color: v.$azul; /* Color pastel */
+    color: #5d3031; /* Color oscuro */
+    grid-area: 3 / 3 / 4 / 4;
+  }
+  
+  /* Media queries para hacer el diseño responsive */
+  @media screen and (max-width: 768px) {
+    .grid-12cols {
+      grid-template-columns: repeat(2, 1fr); /* Cambiar a 2 columnas en pantallas más pequeñas */
+    }
+    
+    .customization,
+    .scheduling,
+    .wallet,
+    .inbox,
+    .gifts,
+    .reminders {
+      grid-area: auto; /* Permitir que los elementos fluyan naturalmente en pantallas más pequeñas */
+    }
+  }
+
+
+  

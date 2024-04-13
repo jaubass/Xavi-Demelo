@@ -30,15 +30,6 @@
             </div>
     </div>
 </header>
-
-<nav class="sticky-menu contenedor">
-    <div class="">
-        <div class="sticky__contenido">
-            <p>i'm sticky</p>
-        </div>   
-    </div>
-</nav>
-
 <div class="menu-desplegable">
     <div class="zona-superior contenedor">
         <div class="logo">
@@ -87,6 +78,34 @@
     </div>
     <div class="header__p--special text-center">
         <p>FEMINISME IGUALTAT ECOLOGISME homofòbia sensibilització música ciberassetjament LGTBIQ</p>
+    </div>
+</div>
+
+
+<div class="sticky-menu" id="stickyMenu">
+    <div class="sticky__contenido">
+        <div class="header__contenido contenedor">
+            <div class="logo">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/Xavi_demelo-Log07.jpg">
+            </div>
+            <div class="header__menu">
+                <div class="hamburguesa">
+                    <div class="pildora-menu">
+                        <div class="pildora__texto header__espectacles">
+                            <p>Menú</p>
+                        </div>
+                        <div class="pildora__tresRallas">
+                            <div class="linea"></div>
+                            <div class="linea"></div>
+                            <div class="linea"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-sm">
+                <a href="#">Espectacles</a>
+            </div>
+        </div>
     </div>
 </div>
 

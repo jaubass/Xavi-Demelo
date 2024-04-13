@@ -8,14 +8,14 @@
 <main>
     <div class="snap-scroll-container" id="snap-scroll-container">    
         <section class="home-hero hero-wrap contenedor snap-scroll-section">
-            <div class="hero__bg" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/img/Hero-09.webp' ); ?>');">
+            <div class="hero__bg" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/img/Hero-11.webp' ); ?>');">
                 <div class="contenedor">
                     <div class="hero">
                         <img src="<?php the_field('imagen_hero')?>">
                         <div class="hero__content">
                             <h1 class="hero__content--title" id="title">Espectacles i tallers de<br><span>sensibilització social.</span></h1>
                             <div class="typing-animation-container">
-                                <p class="hero__content--subtitle">Especialistes en propostes per a la<br> igualtat i contra la violència de gènere.</p>
+                                <p class="hero__content--subtitle">Especialistes en propostes per a la igualtat i contra la violència de gènere, però no només.</p>
                                 <div class="typing-animation"></div>
                             </div>
                             <div class="hero__content--btn">
@@ -27,8 +27,8 @@
             </div>
         </section>
         </div>
-        <section class="quisom__section contenedor snap-scroll-section" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/img/HBGXD-01.png' ); ?>');">
-            <div class="quisom__contenedor snap-section">
+        <section class="quisom__section snap-scroll-section">
+            <div class="quisom__contenedor contenedor snap-section">
                 <div class="quisom__two-columns">
                     <div class="quisom__column--one">
                         <p>
@@ -44,12 +44,10 @@
                 </div>
             </div>
         </section>
-        <section class="cta-home">
-            <div class="separador__home">
-                <div class="header__p--special text-center">
-                    <p>FEMINISME IGUALTAT ECOLOGISME homofòbia sensibilització música ciberassetjament LGTBIQ</p>
-                </div>
-            </div>
+        <section class="tematiques">
+        <?php    
+            get_template_part('template-parts/bento-home');
+        ?>  
         </section>
         <section class="seccio-destacats contenedor snap-section snap-scroll-section">
             <div class="destacats__in">
@@ -71,10 +69,7 @@
                 </div>
                 
             </div>
-        </section>
-        <?php    
-            get_template_part('template-parts/bento-home');
-            ?>   
+        </section> 
     </div>
 </main>
 
