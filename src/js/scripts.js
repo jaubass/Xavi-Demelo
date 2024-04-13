@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-// Código principal que no está en funciones separadas
+    // Código principal que no está en funciones separadas
 
     // MENU
     let hamburguesa = document.querySelector('.hamburguesa');
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    /** STYCKY HEADER
+    // STYCKY HEADER
     const stickyMenu = document.querySelector('.sticky__contenido');
     let lastScroll = 0;
     let scrolledDown = false;
@@ -68,12 +68,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
         lastScroll = currentScroll;
     });
-    */
+
 
     // CARRUSEL DESTACATS
     let container = document.querySelector('.destacats-grid-container');
     let flechaIzquierda = document.querySelector('.flecha-izquierda');
     let flechaDerecha = document.querySelector('.flecha-derecha');
+
 
     flechaIzquierda.addEventListener('click', function () {
         container.scrollBy({
@@ -88,6 +89,21 @@ document.addEventListener("DOMContentLoaded", function() {
             behavior: 'smooth' // Hace el desplazamiento suave
         });
     });
+
+
+    // Obtener todas las secciones excepto la de carrusel destacado
+    const sections = document.querySelectorAll(".snap-section:not(.seccio-destacats)");
+
+    sections.forEach(section => {
+        section.addEventListener("click", function() {
+            // Calcular la sección activa
+            let currentSection = this;
+
+            // Hacer scroll suave a la sección actual
+            currentSection.scrollIntoView({ behavior: "smooth" });
+        });
+    });
+
 
     // CAMBIO COLOR TEXTO
     let lastScrollPosition = 0;
@@ -146,4 +162,5 @@ document.addEventListener("DOMContentLoaded", function() {
         "respecte & LGTBIQ+",
         "ecologisme & clown"
     ]);
+
 });

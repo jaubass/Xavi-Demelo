@@ -6,13 +6,13 @@
   outline: 0;
   cursor: pointer;
   border: 1px solid #000;
-  border-radius: 5rem;
+  border-radius: v.$radius;
   color: #000;
   background: #fff;
   font-size: 1.4rem;
   font-weight: 400;
-  line-height: 20px;
-  padding: 12px 20px;
+  line-height: 26px;
+  padding: 8px 14px;
   text-align:center;
   transition-duration: .15s;
   transition-property: all;
@@ -22,4 +22,5 @@
 .espectacles__boton:hover {
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 8%);
   background: rgba(248,248,248,1);
+  
 }

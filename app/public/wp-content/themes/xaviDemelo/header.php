@@ -31,8 +31,8 @@
     </div>
 </header>
 
-<nav class="sticky-menu">
-    <div class="contenedor">
+<nav class="sticky-menu contenedor">
+    <div class="">
         <div class="sticky__contenido">
             <p>i'm sticky</p>
         </div>   

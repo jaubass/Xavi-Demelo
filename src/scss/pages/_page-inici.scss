@@ -84,7 +84,7 @@
 
 /* Qui som section */
 .quisom__section {
-    margin-top: 3rem;
+    margin-top: 5rem;
     height: 100vh;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -140,7 +140,6 @@
 
 // Destacats
 .seccio-destacats {
-    margin-top: 10rem;
     height: 90vh;
 }
 
@@ -222,5 +221,20 @@
     height: 50vh;
 }
 
+.cta-home {
+    margin-top: 10rem;
+    margin-bottom: 1rem;
+    padding: 5px 0;
+    background-color: v.$rosa;
+}
 
 
+.snap-scroll-section {
+    scroll-snap-align: start;
+}
+
+/* Opcional: Estilo para el contenedor de desplazamiento */
+.snap-scroll-container {
+    overflow-y: scroll;
+    height: 100vh; /* Ajusta la altura según sea necesario */
+}

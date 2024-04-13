@@ -6,8 +6,10 @@
     display: none; /* Ocultamos el menú sticky inicialmente */
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 50%; /* Coloca el borde izquierdo del elemento en el 50% del ancho del viewport */
+    transform: translateX(-50%); /* Desplaza el elemento -50% de su propio ancho hacia la izquierda */
+    max-width: 1400px;
+    width: 90%;
     z-index: 1000; /* Asegúrate de que el z-index sea lo suficientemente alto para que el menú esté por encima de otros elementos */
     background-color: v.$blanco;
     transition: height 0.4s, padding 0.4s; 
