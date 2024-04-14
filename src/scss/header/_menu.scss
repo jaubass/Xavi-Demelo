@@ -101,15 +101,3 @@
         }
     }
 }
-
-.header.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: tra;
-    z-index: 1000;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-/* Agrega cualquier otro estilo que necesites para el menú pegajoso */

@@ -3,21 +3,65 @@
 @use 'base/utilidades' as u;
 
 .sticky-menu {
-    position: fixed;
-    left: 0;
+    /* Estilos anteriores... */
     width: 100%;
-    background-color: #ffffff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    transition: bottom 0.3s ease;
-    visibility: hidden;
+    position: -webkit-sticky; /* Sticky para navegadores basados en WebKit */
+    position: sticky;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: .5rem;
+    top: auto;
+    visibility: hidden; // Establece la visibilidad inicial como oculta
+    z-index: 1001;
+    align-items: center;
+    transition: opacity 0.5s ease, height 0.5s ease;
+  
+    &.show-menu {
+      visibility: visible; // Muestra el menú cuando tiene la clase show-menu
+    }
 }
 
-.sticky-menu.show {
-    bottom: 0; /* Muestra el menú cuando se hace scroll */
+.sticky__contenido .header__contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: .5rem;
+    padding: 0rem 2rem;
+    background-color: v.$blanco-roto;
+    border-radius: v.$b-radius;
+    border: 2px solid v.$negro;
+    box-shadow: v.$negro 1.5px 1.5px 0 0;
+    transform: translate(1.5px, 1.5px);
+        box-shadow: 0 0 rgba(0, 0, 0, 0), 0 1px .4px rgba(0, 0, 0, .03), 0 2px .8px rgba(0, 0, 0, .04), 0 3px 1.6px rgba(0, 0, 0, .043), 0 5px 2.9px rgba(0, 0, 0, .047), 0 9px 5.3px rgba(0, 0, 0, .047), 0 15px 10.4px rgba(0, 0, 0, .05), 0 31px 22.8px rgba(0, 0, 0, .055);
+
+    .logo {
+        width: 100px;
+    }
+
+    .btn-sm {
+        background-color: v.$verde;
+        border-radius: v.$m-radius;
+        border: 2px solid v.$negro;
+        box-shadow: v.$negro 1.5px;
+        color: v.$negro;
+        cursor: pointer;
+        display: inline-block;
+        font-weight: 400;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        text-align: center;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        text-transform: uppercase;
+        padding: .6rem;
+
+    }
+    
 }
 
-.sticky__contenido {
-    padding: 10px 0;
+.btn-sm:hover {
+    background-color: v.$rosa;
+    color: v.$negro;
 }
-

@@ -92,12 +92,7 @@
                 <div class="hamburguesa">
                     <div class="pildora-menu">
                         <div class="pildora__texto header__espectacles">
-                            <p>Menú</p>
-                        </div>
-                        <div class="pildora__tresRallas">
-                            <div class="linea"></div>
-                            <div class="linea"></div>
-                            <div class="linea"></div>
+                            <p id="menu-inferior">Menú</p>
                         </div>
                     </div>
                 </div>

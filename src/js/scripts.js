@@ -135,6 +135,28 @@ document.addEventListener("DOMContentLoaded", function() {
     ]);
 
 // STICKY
+const stickyMenu = document.getElementById('stickyMenu');
+let lastScrollTop = 0;
+const windowHeight = window.innerHeight;
+const initialMenuOffset = document.querySelector('.sticky-menu').offsetTop;
 
+// Función para manejar el scroll
+window.addEventListener('scroll', function() {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  // Controlamos el desplazamiento hacia abajo
+  if (scrollTop > lastScrollTop && scrollTop > windowHeight / 2) {
+    stickyMenu.classList.add('show-menu'); // Añadimos clase para mostrar el menú
+  } 
+  // Controlamos el desplazamiento hacia arriba
+  else {
+    // Ocultamos el menú si estamos a 100px del principio o si volvemos a la posición inicial del menú
+    if (scrollTop <= 200) {
+      stickyMenu.classList.remove('show-menu'); // Eliminamos clase para ocultar el menú
+    }
+  }
+  
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Aseguramos que no haya valores negativos
+});
 
 });
