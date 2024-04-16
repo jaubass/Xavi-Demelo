@@ -91,8 +91,10 @@
             <div class="header__menu">
                 <div class="hamburguesa">
                     <div class="pildora-menu">
-                        <div class="pildora__texto header__espectacles">
-                            <p id="menu-inferior">Menú</p>
+                        <div class="pildora__texto header__espectacles menu-sticky">
+                            <a href="#" class="btn-sticky" id="menu-inferior">TALLERS</a>
+                            <a href="#" id="menu-inferior">ESPECTACLES</a>
+                            <a href="#" id="menu-inferior">CONTACTE</a>
                         </div>
                     </div>
                 </div>

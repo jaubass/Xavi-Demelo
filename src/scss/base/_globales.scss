@@ -5,6 +5,11 @@ html {
     font-size: 62.5%;
 }
 
+body {
+    transition: background-color 1s ease;
+    background-color: v.$blanco-roto;
+}
+
 *, *:before, *:after {
     box-sizing: inherit;
 }
@@ -29,5 +34,6 @@ img {
 ul, menu, dir {
     padding-inline-start: 0px;
 }
+
 
 

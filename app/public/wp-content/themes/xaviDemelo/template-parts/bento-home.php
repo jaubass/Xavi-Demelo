@@ -1,6 +1,9 @@
 <section>
     <div class="page-padding contenedor">
         <div class="container">
+            <div class="bento__title">
+                <h2>Quins temes tractem?</h2>
+            </div>
             <div class="grid-12cols">
             <div class="bento-card propostes-lgtbi">
                 <h5>propostes</h5>

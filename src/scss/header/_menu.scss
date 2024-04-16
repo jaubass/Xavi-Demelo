@@ -4,7 +4,7 @@
 
 .header {
     width: 100%; 
-    background-color: v.$blanco;
+    background-color: v.$blanco-roto;
     transition: height 0.4s, padding 0.4s; 
     
 
@@ -54,7 +54,7 @@
         }
 
         .header {
-            background-color: v.$blanco;
+            background-color: transparent;
             padding: .5rem;
         }
 

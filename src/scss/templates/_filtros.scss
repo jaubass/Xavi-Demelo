@@ -23,14 +23,18 @@
     -webkit-user-select: none;
     touch-action: manipulation;
     text-transform: uppercase;
+    transition-property: background;
+    transition-duration: .2s;
 }
 
 .filtro-btn:hover {
     background-color: v.$rosa;
     color: v.$negro;
+    transition-property: background;
+    transition-duration: .4s;
   }
   
   .filtro-btn:active {
-    box-shadow: v.$negro 2px 2px 0 0;
+    box-shadow: v.$negro 1px 1px 0 0;
     transform: translate(2px, 2px);
   }

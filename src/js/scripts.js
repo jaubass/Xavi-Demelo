@@ -90,19 +90,18 @@ document.addEventListener("DOMContentLoaded", function() {
         isScrollingUp = scrollPosition < lastScrollPosition;
 
         if (isScrollingUp && scrollPosition > 0) {
-            span.style.color = '#C6DF76';
+            span.style.color = '#c9da8f';
         } else {
             if (scrollPosition >= 0 && scrollPosition <= greenThreshold) {
-                span.style.color = '#C6DF76';
+                span.style.color = '#c9da8f';
             } else {
-                span.style.color = '#FE72A9';
+                span.style.color = '#f682a5';
             }
         }
 
         lastScrollPosition = scrollPosition;
     });
 
-    // ANIMATE TEXT
     const textoAnimacion = document.querySelector('.typing-animation');
 
     function animateFadingText(words, index = 0) {
@@ -110,22 +109,24 @@ document.addEventListener("DOMContentLoaded", function() {
         const fadeInDuration = 2000;
         const fadeOutDuration = 2000;
         const pauseDuration = 2000;
-
+    
         function fadeOut() {
             textoAnimacion.style.opacity = 0;
             setTimeout(fadeIn, fadeOutDuration);
         }
-
+    
         function fadeIn() {
             index = (index + 1) % words.length;
             textoAnimacion.textContent = words[index];
+            textoAnimacion.classList = ''; // Eliminar todas las clases
+            textoAnimacion.classList.add('texto-animado', 'estilo-' + index); // Agregar clases relevantes
             textoAnimacion.style.opacity = 1;
             setTimeout(fadeOut, pauseDuration);
         }
-
+    
         fadeIn();
     }
-
+    
     animateFadingText([
         "igualtat & música",
         "drets & infància",
@@ -133,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function() {
         "respecte & LGTBIQ+",
         "ecologisme & clown"
     ]);
-
+    
 // STICKY
 const stickyMenu = document.getElementById('stickyMenu');
 let lastScrollTop = 0;
@@ -158,6 +159,28 @@ window.addEventListener('scroll', function() {
   
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Aseguramos que no haya valores negativos
 });
+
+
+// BACKGROUND ANIMATION
+var panels = document.querySelectorAll('.panel');
+
+function changeColor() {
+    var scroll = window.scrollY + (window.innerHeight / 3);
+
+    panels.forEach(function(panel) {
+        var top = panel.offsetTop;
+        var bottom = top + panel.offsetHeight;
+
+        if (top <= scroll && bottom > scroll) {
+            document.body.className = 'color-' + panel.getAttribute('data-color');
+        }
+    });
+}
+
+window.addEventListener('scroll', changeColor);
+changeColor(); 
+
+
 
 
 

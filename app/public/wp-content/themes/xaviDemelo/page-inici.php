@@ -5,9 +5,8 @@
     get_header();
 ?>
 
-<main>
-    <div class="snap-scroll-container" id="snap-scroll-container">    
-        <section class="home-hero hero-wrap contenedor snap-scroll-section">
+<main class="snap-scroll-container-parent">  
+        <section class="home-hero hero-wrap contenedor snap-scroll-section panel panel-custom">
             <div class="hero__bg" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/img/Hero-11.webp' ); ?>');">
                 <div class="contenedor">
                     <div class="hero">
@@ -27,7 +26,7 @@
             </div>
         </section>
         </div>
-        <section class="quisom__section snap-scroll-section">
+        <section class="quisom__section snap-scroll-section panel panel-custom" data-color="green">
             <div class="quisom__contenedor contenedor snap-section">
                 <div class="quisom__two-columns">
                     <div class="quisom__column--one">
@@ -44,12 +43,12 @@
                 </div>
             </div>
         </section>
-        <section class="tematiques">
+        <section class="tematiques snap-scroll-section panel panel-custom">
         <?php    
             get_template_part('template-parts/bento-home');
         ?>  
         </section>
-        <section class="seccio-destacats contenedor snap-section snap-scroll-section">
+        <section class="seccio-destacats contenedor snap-section snap-scroll-section panel panel-custom" data-color="yellow">
             <div class="destacats__in">
                 <div class="destacats__titulo">
                     <h2>Espectacles destacats</h2>
@@ -70,7 +69,6 @@
                 
             </div>
         </section> 
-    </div>
 </main>
 
 <?php get_footer(); ?>

@@ -24,12 +24,18 @@
     }
 }
 
+.menu-sticky {
+    a {
+        padding: .8rem 1.6rem;
+    }
+}
+
 .sticky__contenido .header__contenido {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: .5rem;
-    padding: 0rem 2rem;
+    padding: 1.5rem 2rem;
     background-color: v.$blanco-roto;
     border-radius: v.$b-radius;
     border: 2px solid v.$negro;
@@ -67,4 +73,24 @@
 .btn-sm:hover {
     background-color: v.$rosa;
     color: v.$negro;
+}
+
+.btn-sticky {
+    background-color: v.$verde;
+    border-radius: v.$m-radius;
+    border: 1px solid v.$negro;
+    box-shadow: v.$negro 1.5px;
+    color: v.$negro;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    text-transform: uppercase;
+    padding: .6rem;
 }
