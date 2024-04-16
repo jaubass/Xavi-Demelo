@@ -14,10 +14,13 @@
     visibility: hidden; // Establece la visibilidad inicial como oculta
     z-index: 1001;
     align-items: center;
+    transition-duration: 3s;
     transition: opacity 0.5s ease, height 0.5s ease;
   
     &.show-menu {
       visibility: visible; // Muestra el menú cuando tiene la clase show-menu
+      transition: opacity 0.5s ease, height 0.5s ease;
+
     }
 }
 

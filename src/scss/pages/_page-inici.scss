@@ -61,6 +61,8 @@
 
 .hero__content--title span {
     color: v.$verde;
+    background: linear-gradient(90deg, v.$verde, v.$rosa);	color: transparent;
+	-webkit-background-clip: text;
 }
 
 .hero__content--subtitle {
