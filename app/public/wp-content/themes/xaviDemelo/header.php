@@ -100,7 +100,7 @@
                 </div>
             </div>
             <div class="btn-sm">
-                <a href="#">Espectacles</a>
+                <a href="#">MAIL</a>
             </div>
         </div>
     </div>

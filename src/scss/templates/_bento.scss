@@ -15,6 +15,18 @@
     margin-right: auto;
     position: relative;
 }
+
+.bento__title h2 {
+    font-size: 4.8rem;
+    color: v.$lila-fuerte;
+    background-color: v.$rosa;
+    padding: 1rem;
+    border-radius: v.$curve;
+    border: 2px solid v.$negro;
+    box-shadow: v.$negro 1.5px 1.5px 0 0;
+    transform: translate(1.5px, 1.5px);
+    box-shadow: 0 0 rgba(0, 0, 0, 0), 0 1px .4px rgba(0, 0, 0, .03), 0 2px .8px rgba(0, 0, 0, .04), 0 3px 1.6px rgba(0, 0, 0, .043), 0 5px 2.9px rgba(0, 0, 0, .047), 0 9px 5.3px rgba(0, 0, 0, .047), 0 15px 10.4px rgba(0, 0, 0, .05), 0 31px 22.8px rgba(0, 0, 0, .055);
+}
   
 .grid-12cols {
     width: 100%;
@@ -40,7 +52,7 @@
 
     h3 {
         margin: 0;
-        font-size: 2.8rem;
+        font-size: 4.8rem;
         font-weight: bold;
         letter-spacing: .2rem;
         text-transform: uppercase;
@@ -63,6 +75,7 @@
     overflow: hidden;
 
     h3 {
+        font-size: 2.4rem;
         -webkit-text-stroke: 1px v.$lila-fuerte; /* Grosor del borde */
         text-stroke: 1px v.$lila-fuerte; /* Grosor del borde */
     }
@@ -126,7 +139,7 @@
 .propostes-feminisme {
     display: grid;
     grid-template-columns: 1fr 1fr; // Dos columnas iguales
-    background-color: v.$rosa; /* Color pastel */
+    background-color: v.$azul; /* Color pastel */
     color: #2c5447; /* Color oscuro */
     justify-content: flex-end;
     grid-area: 1 / 2 / 2 / 4;
