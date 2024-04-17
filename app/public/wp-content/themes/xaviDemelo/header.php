@@ -92,15 +92,18 @@
                 <div class="hamburguesa">
                     <div class="pildora-menu">
                         <div class="pildora__texto header__espectacles menu-sticky">
-                            <a href="#" class="btn-sticky" id="menu-inferior">TALLERS</a>
+                            <a href="#" class="btn-sticky" id="menu-inferior">INICIO</a>
+                            <a href="#" id="menu-inferior">TALLERS</a>
                             <a href="#" id="menu-inferior">ESPECTACLES</a>
                             <a href="#" id="menu-inferior">CONTACTE</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="btn-sm">
-                <a href="#">MAIL</a>
+            <div class="btn-sm" id="btnScrollToTop">
+            <button class="flecha-arriba" title="Volver arriba">
+                 ↑
+            </button>
             </div>
         </div>
     </div>

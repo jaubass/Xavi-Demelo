@@ -32,7 +32,7 @@
 /* Estilos para el título visible */
 .espectacles__titulo {
   font-size: 2rem; /* Ajusta según necesites */
-  margin-bottom: 10px; /* Ajusta según necesites */
+  margin-bottom: .5rem; /* Ajusta según necesites */
   font-family: v.$text-secondary;
   font-weight: 400;
   color: v.$negro;
@@ -46,6 +46,7 @@
   font-weight: 300;
   text-align: center;
   color: v.$negro;
+  margin: 0;
 }
 
 /* Estilos para el título al hacer hover */

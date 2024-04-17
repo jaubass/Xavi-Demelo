@@ -24,9 +24,11 @@
                     <img class="img-rotate left-image" src="<?php echo esc_url( get_template_directory_uri() . '/img/HBent-Hist.webp' ); ?>" alt="espectales d'estiu">
                 </div>
             </div>
-            <div class="bento-card wallet">
+            <div class="bento-card bento-3">
             <h3>TEATRE</h3>
-            
+                <div class="image-wrapper bento-3__img">
+                    <img class="img-rotate right-image" src="<?php echo esc_url( get_template_directory_uri() . '/img/HBent-APV.webp' ); ?>" alt="espectales d'estiu">
+                </div>
             </div>
             <div class="bento-card inbox">
             <h3>Infantils</h3>

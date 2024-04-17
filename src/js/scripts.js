@@ -101,39 +101,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
         lastScrollPosition = scrollPosition;
     });
-
-    const textoAnimacion = document.querySelector('.typing-animation');
-
-    function animateFadingText(words, index = 0) {
-        textoAnimacion.textContent = '';
-        const fadeInDuration = 2000;
-        const fadeOutDuration = 2000;
-        const pauseDuration = 2000;
-    
-        function fadeOut() {
-            textoAnimacion.style.opacity = 0;
-            setTimeout(fadeIn, fadeOutDuration);
-        }
-    
-        function fadeIn() {
-            index = (index + 1) % words.length;
-            textoAnimacion.textContent = words[index];
-            textoAnimacion.classList = ''; // Eliminar todas las clases
-            textoAnimacion.classList.add('texto-animado', 'estilo-' + index); // Agregar clases relevantes
-            textoAnimacion.style.opacity = 1;
-            setTimeout(fadeOut, pauseDuration);
-        }
-    
-        fadeIn();
-    }
-    
-    animateFadingText([
-        "igualtat & música",
-        "drets & infància",
-        "teatre & compromís",
-        "respecte & LGTBIQ+",
-        "ecologisme & clown"
-    ]);
     
 // STICKY
 const stickyMenu = document.getElementById('stickyMenu');
@@ -183,7 +150,24 @@ changeColor();
 
 
 
+var btnScrollToTop = document.getElementById('btnScrollToTop');
+    
+    btnScrollToTop.addEventListener('click', function(event) {
+        event.preventDefault(); // Evita el comportamiento predeterminado del botón
+        scrollToTopSmoothly();
+    });
 
+    function scrollToTopSmoothly() {
+        var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
 
+        if (currentPosition > 0) {
+            window.requestAnimationFrame(scrollToTopSmoothly);
+            window.scrollTo(0, currentPosition - currentPosition / 8);
 
+            // Si estamos cerca de la parte superior, ralentizamos el desplazamiento
+            if (currentPosition < 10) {
+                window.scrollTo(0, currentPosition - currentPosition / 16);
+            }
+        }
+    }
 });

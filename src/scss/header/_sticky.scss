@@ -94,3 +94,22 @@
     text-transform: uppercase;
     padding: .6rem;
 }
+
+#menu-inferior {
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+#menu-inferior:hover {
+    background-color: v.$verde;
+    border-radius: v.$m-radius;
+    border: 1px solid v.$negro;
+    box-shadow: v.$negro 1.5px;
+    color: v.$negro;
+
+}
+
+.flecha-arriba {
+    background-color: v.$verde;
+    border: none;
+}

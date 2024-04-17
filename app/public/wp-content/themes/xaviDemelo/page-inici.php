@@ -7,7 +7,7 @@
 
 <main class="snap-scroll-container-parent">  
         <section class="home-hero hero-wrap contenedor snap-scroll-section panel panel-custom">
-            <div class="hero__bg" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/img/Hero-11.webp' ); ?>');">
+            <div class="hero__bg" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/img/Hero-12.webp' ); ?>');">
                 <div class="contenedor">
                     <div class="hero">
                         <img src="<?php the_field('imagen_hero')?>">
@@ -15,7 +15,6 @@
                             <h1 class="hero__content--title" id="title">Espectacles i tallers de<br><span>sensibilització social.</span></h1>
                             <div class="typing-animation-container">
                                 <p class="hero__content--subtitle">Especialistes en propostes per a la igualtat i contra la violència de gènere, però no només.</p>
-                                <div class="typing-animation"></div>
                             </div>
                             <div class="hero__content--btn">
                                 <button class="btn" role="button">Veure Espectacles</button>
@@ -51,7 +50,7 @@
         <section class="seccio-destacats contenedor snap-section snap-scroll-section panel panel-custom" data-color="yellow">
             <div class="destacats__in">
                 <div class="destacats__titulo">
-                    <h2>Espectacles destacats</h2>
+                    <h2 class="subrayado">Espectacles destacats</h2>
                     <p>Un breu recull dels espectacles que tenim ara mateix disponibles,<br> si en voleu veure més feu clic al següent enllaç.</p>
                 </div>
                 <div class="destacats__btn">
