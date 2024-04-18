@@ -19,9 +19,8 @@
                     <h3>MOVIMENT LGTBI+Q</h3>
                     <p>Un recull de propostes especialment pensades per l'estiu, festes majors, nits a la fresca, pregons, entre altres...</p>
                 </div>            
-                <div class="image-wrapper">
-                    <img class="img-rotate right-image" src="<?php echo esc_url( get_template_directory_uri() . '/img/HBent-NoesNO.webp' ); ?>" alt="espectales d'estiu">
-                    <img class="img-rotate left-image" src="<?php echo esc_url( get_template_directory_uri() . '/img/HBent-Hist.webp' ); ?>" alt="espectales d'estiu">
+                <div class="image-wrapper img-nube">
+                    <img class="img-nube" src="<?php echo esc_url( get_template_directory_uri() . '/img/home/XD-Nube.webp' ); ?>" alt="nuve arcoiris">
                 </div>
             </div>
             <div class="bento-card bento-3">

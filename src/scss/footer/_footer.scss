@@ -1,21 +1,18 @@
 @use 'base/variables' as v;
 
 /* Estilos para el footer */
-.section__footer {
-    background-color: v.$verde;
-}
-
 .footer {
     padding: 15rem;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center; // Centra los elementos horizontalmente
+    background-color: v.$verde;
 }
 
 .footer__bentoGrid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     column-gap: 30px;
 }
 
@@ -55,3 +52,6 @@
 }
 
 
+.icon--fb {
+    
+}

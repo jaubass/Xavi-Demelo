@@ -10,6 +10,7 @@
     position: fixed;
     bottom: 0;
     margin-bottom: .5rem;
+    
     top: auto;
     visibility: hidden; // Establece la visibilidad inicial como oculta
     z-index: 1001;
@@ -103,7 +104,7 @@
 #menu-inferior:hover {
     background-color: v.$verde;
     border-radius: v.$m-radius;
-    border: 1px solid v.$negro;
+    box-shadow: inset 0 0 0 2px v.$negro;
     box-shadow: v.$negro 1.5px;
     color: v.$negro;
 
@@ -113,3 +114,37 @@
     background-color: v.$verde;
     border: none;
 }
+
+/* Fade in desde abajo */
+@keyframes fadeInFromBottom {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Fade out hacia abajo */
+  @keyframes fadeOutToBottom {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
+  
+  /* Agregar una transición suave */
+  .show-menu {
+    animation: fadeInFromBottom 0.5s ease forwards;
+  }
+  
+  .hide-menu {
+    animation: fadeOutToBottom 0.5s ease forwards;
+  }
+  

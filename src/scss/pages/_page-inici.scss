@@ -165,12 +165,13 @@
 
 // Destacats
 .seccio-destacats {
-    height: 90vh;
+    height: 100vh;
     width: 80%;
     max-width: 1400px;
 }
 
 .destacats__in {
+    margin-top: 12rem;
     display: flex;
     justify-content: space-between;
 }

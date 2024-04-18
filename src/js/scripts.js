@@ -108,6 +108,7 @@ const stickyMenu = document.getElementById('stickyMenu');
 let lastScrollTop = 0;
 const windowHeight = window.innerHeight;
 const initialMenuOffset = document.querySelector('.sticky-menu').offsetTop;
+let isAtBottom = false;
 
 // Función para manejar el scroll
 window.addEventListener('scroll', function() {
@@ -124,9 +125,23 @@ window.addEventListener('scroll', function() {
       stickyMenu.classList.remove('show-menu'); // Eliminamos clase para ocultar el menú
     }
   }
-  
+
+  // Si llegamos al final de la página, desplazamos el menú hacia abajo 50px con transición suave
+  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight && !isAtBottom) {
+    stickyMenu.style.transition = 'bottom 0.5s ease-in-out'; // Aplicamos la transición
+    stickyMenu.style.bottom = '50px';
+    isAtBottom = true;
+  } else if ((window.innerHeight + window.scrollY) < document.body.offsetHeight && isAtBottom) {
+    stickyMenu.style.transition = 'bottom 0.5s ease-in-out'; // Aplicamos la transición
+    stickyMenu.style.bottom = '0';
+    isAtBottom = false;
+  }
+
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Aseguramos que no haya valores negativos
 });
+
+
+
 
 
 // BACKGROUND ANIMATION
