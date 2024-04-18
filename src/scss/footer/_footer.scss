@@ -13,6 +13,31 @@
     align-items: center; // Centra los elementos horizontalmente
 }
 
+.footer__bentoGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+}
+
+.footer__cards {
+    border: 2px solid v.$negro;
+    border-radius: v.$b-radius;  
+    color: v.$negro;
+
+    &:nth-child(1) {
+        background-color: v.$lila;
+    }
+    &:nth-child(2) {
+        background-color: v.$verde;
+    }
+    &:nth-child(3) {
+        background-color: v.$azul;
+    }
+    &:nth-child(4) {
+        background-color: v.$rosa;
+    }
+}
+
 .footer__title {
     text-align: center;
     color: v.$rosa;
@@ -21,32 +46,12 @@
      }
 }
 
-.footer__contact {
-    display: flex;
-    justify-content: space-between; // Distribuye uniformemente los elementos
-    gap: 1rem; // Espacio entre elementos
-    width: 100%; // Asegura que los elementos ocupen todo el ancho disponible
-    padding: 6rem 0rem;
+.footer__social {
+    margin-top: 3rem;
+    border: 2px solid v.$negro;
+    border-radius: v.$b-radius;  
+    color: v.$negro;
+    width: 100%;
 }
-
-.footer__contact--mail a {
-    color: #000; // Cambiado el color del enlace
-    text-decoration: none; // Quitado el subrayado del enlace
-    font-weight: bold; // Hacer el texto en negrita
-    font-size: 4rem;
-}
-
-.footer__contact--mail p {
-    font-size: 3rem;
-    font-weight: bold;
-    font-family: v.$text-primary;
-
-}
-
-.footer__contact--phone p {
-    font-style: italic; // Hacer el número de teléfono en cursiva
-    font-size: 4rem;
-}
-
 
 

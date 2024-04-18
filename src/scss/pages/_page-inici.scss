@@ -212,7 +212,7 @@
 
     .espectacles__card {
         flex: 0 0 calc(25% - 20px); /* Ancho del elemento del carrusel (25% del ancho total menos márgenes) */
-        margin-right: 20px; /* Márgenes entre elementos del carrusel */
+        margin-right: 25px; /* Márgenes entre elementos del carrusel */
         scroll-snap-align: start; /* Alinear elementos con el punto de anclaje */
 
         // Estilos adicionales para los elementos del carrusel

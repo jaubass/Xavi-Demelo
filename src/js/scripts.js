@@ -51,14 +51,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     flechaIzquierda.addEventListener('click', function () {
         container.scrollBy({
-            left: -300, // Ajusta el valor según el ancho de un elemento en tu carrusel
+            left: -310, // Ajusta el valor según el ancho de un elemento en tu carrusel
             behavior: 'smooth' // Hace el desplazamiento suave
         });
     });
 
     flechaDerecha.addEventListener('click', function () {
         container.scrollBy({
-            left: 300, // Ajusta el valor según el ancho de un elemento en tu carrusel
+            left: 308, // Ajusta el valor según el ancho de un elemento en tu carrusel
             behavior: 'smooth' // Hace el desplazamiento suave
         });
     });
@@ -101,6 +101,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         lastScrollPosition = scrollPosition;
     });
+    
     
 // STICKY
 const stickyMenu = document.getElementById('stickyMenu');
@@ -148,8 +149,7 @@ window.addEventListener('scroll', changeColor);
 changeColor(); 
 
 
-
-
+// BTN SCROLL TOP
 var btnScrollToTop = document.getElementById('btnScrollToTop');
     
     btnScrollToTop.addEventListener('click', function(event) {
