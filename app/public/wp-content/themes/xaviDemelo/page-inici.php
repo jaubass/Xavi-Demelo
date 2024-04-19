@@ -44,9 +44,10 @@
         </section>
         <section class="tematiques snap-scroll-section panel panel-custom">
         <?php    
-            get_template_part('template-parts/bento-home');
+            get_template_part('template-parts/mini-bento');
         ?>  
         </section>
+
         <section class="seccio-destacats contenedor snap-section snap-scroll-section panel panel-custom" data-color="yellow">
             <div class="destacats__in">
                 <div class="destacats__titulo">
@@ -61,9 +62,7 @@
             </div>
             <div class="destacats espectacles__destacats">
                 <div class="card-destacats">
-                    <?php    
-                    get_template_part('template-parts/llista-destacats');
-                    ?>     
+                    <?php get_template_part('template-parts/llista-destacats');?>     
                 </div>
                 
             </div>

@@ -2,56 +2,21 @@
 
 /* Estilos para el footer */
 .footer {
-    padding: 15rem;
+    padding: 2rem 15rem 8rem 15rem;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center; // Centra los elementos horizontalmente
-    background-color: v.$verde;
+    align-items: center;
+    background: linear-gradient(to bottom, v.$amarillo, v.$verde); /* Puedes ajustar los colores según tus preferencias */
+    transition: background 0.5s ease;
 }
 
-.footer__bentoGrid {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    column-gap: 30px;
-}
-
-.footer__cards {
-    border: 2px solid v.$negro;
-    border-radius: v.$b-radius;  
-    color: v.$negro;
-
-    &:nth-child(1) {
-        background-color: v.$lila;
-    }
-    &:nth-child(2) {
-        background-color: v.$verde;
-    }
-    &:nth-child(3) {
-        background-color: v.$azul;
-    }
-    &:nth-child(4) {
-        background-color: v.$rosa;
-    }
-}
-
-.footer__title {
-    text-align: center;
-    color: v.$rosa;
-     h1 {
-        font-size: 6rem;
-     }
-}
-
-.footer__social {
+.footer__contenedor {
     margin-top: 3rem;
+    height: 75vh;
     border: 2px solid v.$negro;
     border-radius: v.$b-radius;  
+    background-color: v.$blanco-roto;
     color: v.$negro;
     width: 100%;
-}
-
-
-.icon--fb {
-    
 }

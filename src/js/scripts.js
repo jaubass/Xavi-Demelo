@@ -185,4 +185,25 @@ var btnScrollToTop = document.getElementById('btnScrollToTop');
             }
         }
     }
+  
+  // ScrollReveal JS
+  ScrollReveal({ distance: "30px", easing: "ease-in" });
+  
+  ScrollReveal().reveal(".title", {
+    delay: 300,
+    origin: "top",
+  });
+  
+  ScrollReveal().reveal(".paragraph", {
+    delay: 800,
+    origin: "top",
+  });
+  
+  ScrollReveal().reveal("#form", {
+    delay: 1200,
+    origin: "bottom",
+  });
+  
+  
+
 });

@@ -1,7 +1,14 @@
+@use 'base/variables' as v;
+
 .copyright-contenedor {
+    background-color: v.$verde;
+}
+
+.copy {
     display: flex;
     justify-content: space-between;
     margin-bottom: 0;
+    padding: 0 1rem;
 }
 
 .copy__legal p {

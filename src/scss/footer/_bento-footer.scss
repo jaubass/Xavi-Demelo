@@ -1,0 +1,60 @@
+@use 'base/variables' as v;
+
+.grid__col--footer {
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.bento-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px; /* Espacio entre las cajas */
+}
+
+.footer__col1 {
+    padding-right: 30px;
+}
+
+.box {
+    background-color: lightgray;
+    min-height: 200px;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid v.$negro;
+    border-radius: v.$m-radius;
+    color: v.$negro;
+    transition-property: background;
+    transition-duration: .5s;
+
+    &:hover {
+        background-color: v.$rosa;
+        transition-property: background;
+        transition-duration: .5s;
+        transition-property: box-shadow;
+        transition-duration: .5s;
+        box-shadow: v.$negro 4px 4px 0 0; 
+    }
+}
+
+.box1 {
+    grid-column: span 2;
+    background-color: v.$azul;
+}
+
+.box2 {
+    grid-column: span 1; 
+    background-color: v.$verde;
+}
+
+.box3 {
+    grid-column: span 1;
+    background-color: v.$lila;
+}
+
+.box4 {
+    grid-column: span 2;
+    background-color: v.$amarillo;
+}
+
+
