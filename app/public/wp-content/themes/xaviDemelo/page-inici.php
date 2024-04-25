@@ -42,13 +42,7 @@
                 </div>
             </div>
         </section>
-        <section class="tematiques snap-scroll-section panel panel-custom">
-        <?php    
-            get_template_part('template-parts/mini-bento');
-        ?>  
-        </section>
-
-        <section class="seccio-destacats contenedor snap-section snap-scroll-section panel panel-custom" data-color="yellow">
+        <section class="seccio-destacats contenedor snap-section snap-scroll-section panel panel-custom" data-color="violet">
             <div class="destacats__in">
                 <div class="destacats__titulo">
                     <h2 class="subrayado">Espectacles destacats</h2>

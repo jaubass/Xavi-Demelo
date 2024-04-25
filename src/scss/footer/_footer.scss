@@ -7,16 +7,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(to bottom, v.$amarillo, v.$verde); /* Puedes ajustar los colores según tus preferencias */
-    transition: background 0.5s ease;
+    transition: background-color 0.6s ease; 
 }
 
 .footer__contenedor {
     margin-top: 3rem;
     height: 75vh;
-    border: 2px solid v.$negro;
     border-radius: v.$b-radius;  
-    background-color: v.$blanco-roto;
     color: v.$negro;
     width: 100%;
 }

@@ -184,9 +184,12 @@
 .destacats__titulo {
     h2 {
         font-size: 4.8rem;
-        color: v.$amarillo;
+        color: v.$lila-fuerte;
         margin-bottom: 0;
-        text-shadow: 6px 6px 0 v.$blanco-roto;
+    }
+
+    p {
+        color: v.$lila-fuerte;
     }
 }
 
@@ -213,7 +216,7 @@
 
     .espectacles__card {
         flex: 0 0 calc(25% - 20px); /* Ancho del elemento del carrusel (25% del ancho total menos márgenes) */
-        margin-right: 25px; /* Márgenes entre elementos del carrusel */
+        margin-right: 24px; /* Márgenes entre elementos del carrusel */
         scroll-snap-align: start; /* Alinear elementos con el punto de anclaje */
 
         // Estilos adicionales para los elementos del carrusel
@@ -237,21 +240,24 @@
 }
 
 .flecha-izquierda {
-    left: 10px;
+    left: 8px;
+    border: 1px solid v.$lila-fuerte;
 }
 .flecha-derecha {
-    right: 10px;
+    right: 8px;
+    border: 1px solid v.$lila-fuerte;
+
 }
 
 /* bg colours */
 .color-violet {
-    background-color: v.$azul;
+    background-color: v.$lila;
   }
-  .color-indigo {
-    background-color: #4332CF;
+  .color-blanco {
+    background-color: v.$blanco-roto;
   }
   .color-blue {
-    background-color: #2F8FED;
+    background-color: v.$azul;
   }
   .color-green {
     background-color: v.$verde;

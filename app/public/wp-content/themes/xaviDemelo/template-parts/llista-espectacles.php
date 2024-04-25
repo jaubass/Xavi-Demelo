@@ -32,18 +32,27 @@ $clases = new WP_Query($args);
                         <?php the_post_thumbnail(); ?>
                     </div>
                     <div class="espectacles__contenido">
-                        <?php $categorias = get_the_category(); ?>
-                        <?php if ($categorias): ?>
-                            <ul class="espectacles__categorias">
-                                <?php foreach ($categorias as $categoria): ?>
-                                    <?php if ($categoria->slug !== 'destacats'): ?>
-                                        <li class="espectacles__categoria espectacles__categoria--<?php echo $categoria->slug; ?>">
-                                            <a href="<?php echo get_category_link($categoria->term_id); ?>"><?php echo $categoria->name; ?></a>
-                                        </li>
-                                    <?php endif; ?>
-                                <?php endforeach; ?>
-                            </ul>
-                        <?php endif; ?>
+
+                        <div class="peu__card">
+                            <div class="peu__card--categorias">
+                                <?php $categorias = get_the_category(); ?>
+                                <?php if ($categorias): ?>
+                                    <ul class="espectacles__categorias">
+                                        <?php foreach ($categorias as $categoria): ?>
+                                            <?php if ($categoria->slug !== 'destacats'): ?>
+                                                <li class="espectacles__categoria espectacles__categoria--<?php echo $categoria->slug; ?>">
+                                                        <div class="filtro__card--pill" href="<?php echo get_category_link($categoria->term_id); ?>"></div>
+                                                </li>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                <?php endif; ?>
+                            </div>
+                            <div class="peu__card--btn">
+                                <button>info</button>
+                            </div>
+                        </div>
+                        
                         <div class="espectacles__hover">
                             <a href="<?php the_permalink(); ?>">
                                 <h3 class="espectacles__titulo-hover"><?php the_title(); ?></h3>

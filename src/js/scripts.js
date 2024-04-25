@@ -141,27 +141,31 @@ window.addEventListener('scroll', function() {
 });
 
 
-
-
-
 // BACKGROUND ANIMATION
-var panels = document.querySelectorAll('.panel');
+let panels = document.querySelectorAll('.panel');
+let footer = document.querySelector('.footer');
 
 function changeColor() {
-    var scroll = window.scrollY + (window.innerHeight / 3);
+    let scroll = window.scrollY + (window.innerHeight / 3);
 
     panels.forEach(function(panel) {
-        var top = panel.offsetTop;
-        var bottom = top + panel.offsetHeight;
+        let top = panel.offsetTop;
+        let bottom = top + panel.offsetHeight;
 
         if (top <= scroll && bottom > scroll) {
-            document.body.className = 'color-' + panel.getAttribute('data-color');
+            let colorClass = 'color-' + panel.getAttribute('data-color');
+            document.body.className = colorClass;
+
+            // Retrasar el cambio de color del footer para que sea más suave
+            setTimeout(function() {
+                footer.style.backgroundColor = getComputedStyle(document.body).getPropertyValue('--panel-color-' + panel.getAttribute('data-color'));
+            }, 50); // Ajusta el tiempo según tus necesidades
         }
     });
 }
 
 window.addEventListener('scroll', changeColor);
-changeColor(); 
+changeColor();
 
 
 // BTN SCROLL TOP

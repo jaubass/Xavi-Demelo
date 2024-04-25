@@ -38,3 +38,11 @@
     box-shadow: v.$negro 1px 1px 0 0;
     transform: translate(2px, 2px);
   }
+
+  .filtro__card--pill {
+    padding: .3rem;
+  }
+
+  .espectacles__contenido li {
+    border-radius: v.$radius;
+  }

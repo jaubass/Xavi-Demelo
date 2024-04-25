@@ -1,4 +1,4 @@
-    <footer class="footer">
+    <footer class="footer panel panel-custom" data-color="blanco">
         <div class="footer__contenedor">
             <?php get_template_part('template-parts/bento-footer');?>   
         </div>
@@ -6,7 +6,7 @@
     <div class="copyright-contenedor">
         <div class="copy contenedor">
             <div class="copy__legal">
-                <p>design by: jaume fite</p>
+                <p>Avís legal | Política de privadesa</p>
             </div>
             <div class="copy__design">
                 <p>design by: jaume fite</p>
