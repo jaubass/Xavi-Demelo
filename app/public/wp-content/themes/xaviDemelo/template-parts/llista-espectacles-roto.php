@@ -31,24 +31,7 @@ $clases = new WP_Query($args);
                     <div class="espectacles__card--img">
                         <?php the_post_thumbnail(); ?>
                     </div>
-                    <div class="espectacles__contenido">
-
-                        <div class="peu__card">
-                            <div class="peu__card--categorias">
-                                <?php $categorias = get_the_category(); ?>
-                                <?php if ($categorias): ?>
-                                    <ul class="espectacles__categorias">
-                                        <?php foreach ($categorias as $categoria): ?>
-                                            <?php if ($categoria->slug !== 'destacats'): ?>
-                                                <li class="espectacles__categoria espectacles__categoria--<?php echo $categoria->slug; ?>">
-                                                </li>
-                                            <?php endif; ?>
-                                        <?php endforeach; ?>
-                                    </ul>
-                                <?php endif; ?>
-                            </div>
-                        </div>
-                        
+                    <div class="espectacles__contenido">                        
                         <div class="espectacles__hover">
                             <a href="<?php the_permalink(); ?>">
                                 <h3 class="espectacles__titulo-hover"><?php the_title(); ?></h3>

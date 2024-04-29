@@ -3,26 +3,19 @@
 @use 'base/utilidades' as u;
 
 .sticky-menu {
-    /* Estilos anteriores... */
-    width: 100%;
-    position: -webkit-sticky; /* Sticky para navegadores basados en WebKit */
-    position: sticky;
-    position: fixed;
-    bottom: 0;
-    margin-bottom: .5rem;
-    
-    top: auto;
-    visibility: hidden; // Establece la visibilidad inicial como oculta
-    z-index: 1001;
-    align-items: center;
-    transition-duration: 3s;
-    transition: opacity 0.5s ease, height 0.5s ease;
-  
-    &.show-menu {
-      visibility: visible; // Muestra el menú cuando tiene la clase show-menu
-      transition: opacity 0.5s ease, height 0.5s ease;
+  width: 100%;
+  position: fixed; /* Utiliza position: fixed; para que el menú se quede pegado en la parte superior de la ventana */
+  bottom: 0;
+  margin-bottom: .5rem;
+  top: auto;
+  z-index: 1001;
+  align-items: center;
+  opacity: 0; /* Inicialmente oculta el menú */
+  transition: opacity 0.5s ease; /* Agrega una transición suave para la opacidad */
 
-    }
+  &.show-menu {
+      opacity: 1; /* Muestra el menú cuando tiene la clase show-menu */
+  }
 }
 
 .menu-sticky {

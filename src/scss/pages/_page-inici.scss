@@ -48,16 +48,6 @@
 .hero__content h1 {
     font-family: v.$text-primary;
     margin: 0;
-
-    @include m.phone {
-        font-size: 4rem;
-        font-weight: 900;
-    }
-
-    @include m.desktop {
-        font-size: 7rem;
-        font-weight: 900;
-    }
 }
 
 .hero__content--title {
@@ -216,7 +206,7 @@
 
     .espectacles__card {
         flex: 0 0 calc(25% - 20px); /* Ancho del elemento del carrusel (25% del ancho total menos márgenes) */
-        margin-right: 24px; /* Márgenes entre elementos del carrusel */
+        margin-right: 26px; /* Márgenes entre elementos del carrusel */
         scroll-snap-align: start; /* Alinear elementos con el punto de anclaje */
 
         // Estilos adicionales para los elementos del carrusel

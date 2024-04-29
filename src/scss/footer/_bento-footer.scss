@@ -13,7 +13,11 @@
 }
 
 .footer__col1 {
-    padding-right: 30px;
+    padding-right: 34px;
+
+    h2 {
+        color: v.$rosa;
+    }
 }
 
 .box {
@@ -52,8 +56,8 @@
 
     h4 {
         font-family: v.$text-primary;
-        font-size: 2rem;
-        font-weight: 300;
+        font-size: 2.4rem;
+        font-weight: 500;
         margin: 0;
     }
 }
@@ -67,8 +71,6 @@
     justify-content: space-between;
 
     h4 {
-        font-size: 24px;
-        font-weight: 500;
         color: v.$azul-oscuro;
     }
 }
@@ -85,19 +87,32 @@
     }
 }
 
+.box-1-1--text {
+    width: 80% ;
+}
+
 .box2 {
     grid-column: span 1; 
     background-color: v.$verde;
+    h4 {
+        color:v.$verde-oscuro;
+    }
 }
 
 .box3 {
     grid-column: span 1;
     background-color: v.$lila;
+    h4 {
+        color:v.$lila-fuerte;
+    }
 }
 
 .box4 {
     grid-column: span 2;
     background-color: v.$amarillo;
+    h4 {
+        color:v.$amarillo-fuerte;
+    }
 }
 
 .box-1-1__btn {

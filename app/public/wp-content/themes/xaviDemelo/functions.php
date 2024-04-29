@@ -50,3 +50,9 @@ function enqueue_custom_fonts() {
 add_action('wp_enqueue_scripts', 'enqueue_custom_fonts');
 
 
+// Agregar Font Awesome al tema
+function agregar_font_awesome() {
+    wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css', array(), '5.15.4');
+}
+add_action('wp_enqueue_scripts', 'agregar_font_awesome');
+

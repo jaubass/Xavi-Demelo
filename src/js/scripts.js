@@ -101,76 +101,71 @@ document.addEventListener("DOMContentLoaded", function() {
 
         lastScrollPosition = scrollPosition;
     });
-    
-    
-// STICKY
-const stickyMenu = document.getElementById('stickyMenu');
-let lastScrollTop = 0;
-const windowHeight = window.innerHeight;
-const initialMenuOffset = document.querySelector('.sticky-menu').offsetTop;
-let isAtBottom = false;
 
-// Función para manejar el scroll
-window.addEventListener('scroll', function() {
-  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    // STICKY
+    const stickyMenu = document.getElementById('stickyMenu');
+    let lastScrollTop = 0;
+    const windowHeight = window.innerHeight;
+    const initialMenuOffset = stickyMenu.offsetTop;
+    let isAtBottom = false;
 
-  // Controlamos el desplazamiento hacia abajo
-  if (scrollTop > lastScrollTop && scrollTop > windowHeight / 2) {
-    stickyMenu.classList.add('show-menu'); // Añadimos clase para mostrar el menú
-  } 
-  // Controlamos el desplazamiento hacia arriba
-  else {
-    // Ocultamos el menú si estamos a 100px del principio o si volvemos a la posición inicial del menú
-    if (scrollTop <= 200) {
-      stickyMenu.classList.remove('show-menu'); // Eliminamos clase para ocultar el menú
-    }
-  }
+    // Función para manejar el scroll
+    window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-  // Si llegamos al final de la página, desplazamos el menú hacia abajo 50px con transición suave
-  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight && !isAtBottom) {
-    stickyMenu.style.transition = 'bottom 0.5s ease-in-out'; // Aplicamos la transición
-    stickyMenu.style.bottom = '50px';
-    isAtBottom = true;
-  } else if ((window.innerHeight + window.scrollY) < document.body.offsetHeight && isAtBottom) {
-    stickyMenu.style.transition = 'bottom 0.5s ease-in-out'; // Aplicamos la transición
-    stickyMenu.style.bottom = '0';
-    isAtBottom = false;
-  }
-
-  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Aseguramos que no haya valores negativos
-});
-
-
-// BACKGROUND ANIMATION
-let panels = document.querySelectorAll('.panel');
-let footer = document.querySelector('.footer');
-
-function changeColor() {
-    let scroll = window.scrollY + (window.innerHeight / 3);
-
-    panels.forEach(function(panel) {
-        let top = panel.offsetTop;
-        let bottom = top + panel.offsetHeight;
-
-        if (top <= scroll && bottom > scroll) {
-            let colorClass = 'color-' + panel.getAttribute('data-color');
-            document.body.className = colorClass;
-
-            // Retrasar el cambio de color del footer para que sea más suave
-            setTimeout(function() {
-                footer.style.backgroundColor = getComputedStyle(document.body).getPropertyValue('--panel-color-' + panel.getAttribute('data-color'));
-            }, 50); // Ajusta el tiempo según tus necesidades
+        // Controlamos el desplazamiento hacia abajo
+        if (scrollTop > lastScrollTop && scrollTop > windowHeight / 2) {
+            stickyMenu.classList.add('show-menu'); // Añadimos clase para mostrar el menú
+        } else {
+            // Ocultamos el menú si estamos a 100px del principio o si volvemos a la posición inicial del menú
+            if (scrollTop <= 200) {
+                stickyMenu.classList.remove('show-menu'); // Eliminamos clase para ocultar el menú
+            }
         }
+
+        // Si llegamos al final de la página, desplazamos el menú hacia abajo 50px con transición suave
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight && !isAtBottom) {
+            stickyMenu.style.transition = 'bottom 0.5s ease-in-out'; // Aplicamos la transición
+            stickyMenu.style.bottom = '50px';
+            isAtBottom = true;
+        } else if ((window.innerHeight + window.scrollY) < document.body.offsetHeight && isAtBottom) {
+            stickyMenu.style.transition = 'bottom 0.5s ease-in-out'; // Aplicamos la transición
+            stickyMenu.style.bottom = '0';
+            isAtBottom = false;
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Aseguramos que no haya valores negativos
     });
-}
 
-window.addEventListener('scroll', changeColor);
-changeColor();
+    // BACKGROUND ANIMATION
+    let panels = document.querySelectorAll('.panel');
+    let footer = document.querySelector('.footer');
 
+    function changeColor() {
+        let scroll = window.scrollY + (window.innerHeight / 3);
 
-// BTN SCROLL TOP
-var btnScrollToTop = document.getElementById('btnScrollToTop');
-    
+        panels.forEach(function(panel) {
+            let top = panel.offsetTop;
+            let bottom = top + panel.offsetHeight;
+
+            if (top <= scroll && bottom > scroll) {
+                let colorClass = 'color-' + panel.getAttribute('data-color');
+                document.body.className = colorClass;
+
+                // Retrasar el cambio de color del footer para que sea más suave
+                setTimeout(function() {
+                    footer.style.backgroundColor = getComputedStyle(document.body).getPropertyValue('--panel-color-' + panel.getAttribute('data-color'));
+                }, 50); // Ajusta el tiempo según tus necesidades
+            }
+        });
+    }
+
+    window.addEventListener('scroll', changeColor);
+    changeColor();
+
+    // BTN SCROLL TOP
+    var btnScrollToTop = document.getElementById('btnScrollToTop');
+
     btnScrollToTop.addEventListener('click', function(event) {
         event.preventDefault(); // Evita el comportamiento predeterminado del botón
         scrollToTopSmoothly();
@@ -189,25 +184,4 @@ var btnScrollToTop = document.getElementById('btnScrollToTop');
             }
         }
     }
-  
-  // ScrollReveal JS
-  ScrollReveal({ distance: "30px", easing: "ease-in" });
-  
-  ScrollReveal().reveal(".title", {
-    delay: 300,
-    origin: "top",
-  });
-  
-  ScrollReveal().reveal(".paragraph", {
-    delay: 800,
-    origin: "top",
-  });
-  
-  ScrollReveal().reveal("#form", {
-    delay: 1200,
-    origin: "bottom",
-  });
-  
-  
-
 });

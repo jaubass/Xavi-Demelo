@@ -1,7 +1,6 @@
 @use '../base/variables' as v;
 @use '../base/utilidades' as u;
 
-
 .destacats__btn-info {
     display: flex;
     align-items: center;
@@ -14,16 +13,16 @@
     text-align: center;
 }
 
-
 .destacats-grid .espectacles__card {
     position: relative;
     display: block;
-    background-color: v.$blanco;
+    background-color: v.$blanco-roto;
     height: 100%;
-    max-width: 320px;
-    border: 2px solid v.$lila-fuerte;
+    max-width: 300px;
+    border: 1px solid v.$lila-fuerte;
     border-radius: 0 0 v.$b-radius v.$b-radius; /* Mantenemos el borde redondeado en la parte inferior */
     overflow: hidden;
+    box-shadow: none;
     margin-bottom: 20px;
     border-radius: v.$curve;
     transition: opacity 0.4s ease-in-out;

@@ -5,33 +5,29 @@
   position: relative;
   display: block;
   background-color: v.$blanco-roto;
-  height: 100%;
+  // height: 100%;
   border-radius: v.$b-radius;
-  border: 1.5px solid v.$negro;
+  border: 1px solid v.$negro;
   box-shadow: v.$negro 1.5px 1.5px 0 0;
   transform: translate(1.5px, 1.5px);
   box-shadow: 0 0 rgba(0, 0, 0, 0), 0 1px .4px rgba(0, 0, 0, .03), 0 2px .8px rgba(0, 0, 0, .04), 0 3px 1.6px rgba(0, 0, 0, .043), 0 5px 2.9px rgba(0, 0, 0, .047), 0 9px 5.3px rgba(0, 0, 0, .047), 0 15px 10.4px rgba(0, 0, 0, .05), 0 31px 22.8px rgba(0, 0, 0, .055);
   overflow: hidden;
   margin-bottom: 20px;
   transition: opacity 0.4s ease-in-out;
-  margin-bottom: 20p;
+
 }
 
 .espectacles__card img {
   width: 100%;
   height: auto;
-  max-height: 600px; /* Limitamos la altura máxima de la imagen */
+  max-height: 400px;
   object-fit: cover;
+  margin-bottom: -8px;
 }
 
 .espectacles__contenido {
   position: relative;
-  padding: 4px;
-}
-
-.peu__card {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  padding: 0px;
 }
 
 /* Estilos para el título visible */
@@ -74,19 +70,20 @@
   left: 0;
   right: 0;
   z-index: 1;
+  border-top: 1px solid v.$negro;
   border-radius: v.$m-radius; 
   background-color: v.$blanco-roto;
   transform: translateY(100%);
   transition: .4s ease-in-out;
-  padding: 10px;
+  padding: 8px;
   opacity: 0;
   pointer-events: none;
 }
 
 .espectacles__hover h3 {
   text-align: center;
-  color: #000;
-  margin-bottom: 1rem;
+  color: v.$negro;
+  margin-bottom: 0rem;
   font-size: 2rem;
 }
 
@@ -130,61 +127,132 @@
 /* Estilos para las categorías individuales */
 .espectacles__categoria {
   display: inline-block;
-  padding: 5px 10px;
-  border: 1px solid v.$negro;
-  border-radius: v.$radius;
-  font-size: 14px;
+  padding: 0px 0px;
+  font-size: 0px;
 }
 
 /* Estilos para las categorías pastel */
 .espectacles__categoria--todos {
-  background-color: v.$gris;
+  background-color: v.$verde;
 }
 
+.peu__card--categorias {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// ICONOS
+.fas {
+  align-items: center;
+  padding-right: .8rem;
+}
+
+// TEATRE
 .espectacles__categoria--teatre {
-  background-color: v.$melocoton_pastel;
+  background-color: v.$naranja-pastel;
+  &:hover {
+    background-color: v.$naranja;
+  }
 }
+.fa-mask {
+  font-size: v.$icon;
+  color: v.$naranja;
+} 
 
+// MUSICA
 .espectacles__categoria--musica {
-  background-color: v.$aguamarina_pastel;
+  background-color: v.$amarillo-pastel;
+  &:hover {
+    background-color: v.$amarillo;
+  }
+}
+.fa-music {
+  font-size: v.$icon;
+  color: v.$amarillo;
 }
 
+// INFANTIL
 .espectacles__categoria--infantil {
-  background-color: v.$rosa_pastel;
+  background-color: v.$rosa-pastel;
+  &:hover {
+    background-color: v.$rosa;
+  }
 }
 
+// CONTES
 .espectacles__categoria--contes {
-  background-color: v.$naranja_pastel;
+  background-color: v.$naranja-pastel;
+  &:hover {
+    background-color: v.$naranja;
+  }
 }
 
+// MONOLEG
 .espectacles__categoria--monoleg {
-  background-color: v.$azul_cielo_pastel;
+  background-color: v.$azul-pastel;
+  &:hover {
+    background-color: v.$azul;
+  }
 }
 
+// LGTBI+Q
 .espectacles__categoria--lgtbiq {
-  background-color: v.$lila_pastel;
+  background-color: v.$rojo-pastel;
+  &:hover {
+    background-color: v.$rojo;
+  }
 }
 
+// FEMINISME
 .espectacles__categoria--feminisme {
-  background-color: v.$verde_menta_pastel;
+  background-color: v.$lila-pastel;
+  &:hover {
+    background-color: v.$lila;
+  }
 }
+.fa-heart {
+  font-size: v.$icon;
+  color: v.$lila;
+} 
 
+// IGUALTAT
 .espectacles__categoria--igualtat {
-  background-color: v.$rosa_pastel_claro;
+  background-color: v.$rosa-pastel;
+  &:hover {
+    background-color: v.$rosa;
+  }
 }
+.fa-equals {
+  font-size: v.$icon;
+  color: v.$rosa;
+} 
 
 .espectacles__categoria--ecologia {
-  background-color: v.$azul_pastel;
+  background-color: v.$azul-pastel;
+  &:hover {
+    background-color: v.$azul;
+  }
 }
 
 .espectacles__categoria--magia {
-  background-color: v.$amarillo_pastel;
+  background-color: v.$amarillo-pastel;
 }
 
 .espectacles__categoria--infantil {
-  background-color: v.$rosa_suave;
+  background-color: v.$rosa-pastel;
 }
 
 .espectacles__categoria--adults {
-  background-color: v.$verde_suave;
+  background-color: v.$verde-pastel;
+  &:hover {
+    background-color: v.$verde;
+  }
+}
+
+
+/* Estilos para los emojis */
+.emoji {
+  font-size: 16px; /* Ajusta el tamaño según sea necesario */
+  line-height: 1; /* Ajusta el espacio entre líneas si es necesario */
 }
