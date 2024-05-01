@@ -83,7 +83,6 @@
 
 
 .btn-destacats {
-  margin-left: 1rem;
   background-color: v.$rosa;
   border: 2px solid v.$lila-fuerte;
   border-radius: v.$radius;
@@ -102,7 +101,9 @@
   -webkit-user-select: none;
   touch-action: manipulation;
   text-transform: uppercase;
-
+    &:nth-child(2) {
+      margin-left: 1rem;
+    }
 }
 
 .btn-destacats:hover {

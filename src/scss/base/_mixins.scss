@@ -50,3 +50,24 @@
   box-shadow: v.$negro 2px 2px 0 0;
   transform: translate(2px, 2px);
 }
+
+@mixin border-shadow-hover {
+    cursor: pointer;
+    background-color: v.$rosa-pastel;
+    transition-property: background-color;
+    transition-duration: .5s;
+    box-shadow: v.$negro -4px 4px 0 0;
+    transition-property: box-shadow;
+    transition-duration: .4s;
+    transform-style: preserve-3d;       
+    transition: .5s ease-out;
+    transform: translate3d(4px,-4px,0);
+}
+
+@mixin border-shadow-active {
+    box-shadow: none; 
+    transition-property: background-color;
+    transition-duration: .5s;
+    transition-property: box-shadow;
+    transition-duration: .3s;
+}

@@ -34,3 +34,36 @@
     max-height: 380px; /* Limitamos la altura máxima de la imagen */
     object-fit: cover;
   }
+
+  .svg-overlay {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    z-index: 1; 
+    background-color: v.$blanco-roto;
+    border: 1px solid v.$negro;
+    border-radius: v.$m-radius;
+    color: v.$negro;
+    cursor: pointer;
+    display: inline-block;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-up {
+    transform: rotate(-90deg); /* Rotar la flecha 180 grados */
+}
+
+.fas {
+    line-height: 0;
+    padding-right: 0;
+}
+
+.fa-info-circle {
+    font-size: 1.8rem;
+    color: v.$negro;
+}

@@ -1,7 +1,8 @@
-@use 'base/variables' as v;
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
 
 .grid__col--footer {
-    padding: 3rem;
+    padding-top: 3rem;
     display: grid;
     grid-template-columns: 40% 60%;
 }
@@ -94,8 +95,12 @@
 .box2 {
     grid-column: span 1; 
     background-color: v.$verde;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     h4 {
         color:v.$verde-oscuro;
+        margin: 0;
     }
 }
 
@@ -119,5 +124,47 @@
     border: 1px solid v.$azul-oscuro;
     border-radius: v.$radius;
     padding: 1rem 1.3rem 1rem 1.3rem;
+    transition: transform 0.3s ease;
 
+    &:hover {
+        cursor: pointer;
+        background-color: v.$rosa-pastel;
+        transition-property: background-color;
+        transition-duration: .5s;
+        box-shadow: v.$negro -4px 4px 0 0;
+        transition-property: box-shadow;
+        transition-duration: .4s;
+        transform-style: preserve-3d;       
+        transition: .5s ease-out;
+        transform: translate3d(4px,-4px,0);
+    } 
+    &:active {
+        box-shadow: none; 
+        transition-property: background-color;
+        transition-duration: .5s;
+        transition-property: box-shadow;
+        transition-duration: .3s;
+    }
+}
+
+.box-1-1__btn--svg {
+    transition: transform 0.3s ease;
+    display: block;
+    width: 100%;
+    &:hover {
+        transform: rotate(-24deg);
+    }
+}
+
+
+.box-2--text p {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    color:v.$verde-oscuro;
+}
+
+.box2-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

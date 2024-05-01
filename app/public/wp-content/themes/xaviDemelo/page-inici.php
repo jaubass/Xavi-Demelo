@@ -30,7 +30,7 @@
                 <div class="quisom__two-columns">
                     <div class="quisom__column--one">
                         <p>
-                            Tenim propostes per a totes les edats, però sempre insisteixo en la importància de treballar amb públic infantil, adolescent i jove, fent bona la màxima de "si eduquem al nen, no haurem de castigar a l’adult”.</i>
+                            Tenim <span class="underline-animation">propostes per a totes les edats</span>, però sempre insisteixo en la importància de treballar amb públic infantil, adolescent i jove, fent bona la màxima de "si eduquem al nen, no haurem de castigar a l’adult”.</i>
                         </p>
                     </div>
                     <div class="quisom__column--two">
@@ -46,13 +46,12 @@
             <div class="destacats__in">
                 <div class="destacats__titulo">
                     <h2 class="subrayado">Espectacles destacats</h2>
-                    <p>Un breu recull dels espectacles que tenim ara mateix disponibles,<br> si en voleu veure més feu clic al següent enllaç.</p>
+                    <p>Aquí podeu veure algunes de les propostes que tenim actualment disponibles. En trobareu més, que utilitzen llenguatges com el teatre, la música, la paraula, la dansa, el text, les animacions, la improvisació pautada, la imatge i el clown, entre d’altres.</p>
+                    <div class="destacats__btn">
+                        <button class="btn-destacats flecha-izquierda">←</button>
+                        <button class="btn-destacats flecha-derecha">→</button>
+                    </div>
                 </div>
-                <div class="destacats__btn">
-                    <button class="btn-destacats flecha-izquierda">←</button>
-                    <button class="btn-destacats flecha-derecha">→</button>
-                </div>
-            
             </div>
             <div class="destacats espectacles__destacats">
                 <div class="card-destacats">

@@ -138,8 +138,13 @@
         line-height: 4.5rem;
         font-family: v.$text-primary;
     }
-}
 
+    span {
+        font-weight: 600;
+        text-decoration: underline;
+        text-decoration-color: v.$blanco-roto;
+    }
+}
 
 .quisom__column--two h2 {
     font-size: 4.8rem;
@@ -232,11 +237,12 @@
 .flecha-izquierda {
     left: 8px;
     border: 1px solid v.$lila-fuerte;
+    border-radius: v.$m-radius;
 }
 .flecha-derecha {
     right: 8px;
     border: 1px solid v.$lila-fuerte;
-
+    border-radius: v.$m-radius;
 }
 
 /* bg colours */

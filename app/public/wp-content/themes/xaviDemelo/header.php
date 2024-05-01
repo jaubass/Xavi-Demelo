@@ -33,7 +33,7 @@
     </div>
 </header>
 
-<!-- MENU DESCPLEGABEL -->
+<!-- MENU DESCPLEGABLE -->
 <div class="contenedor__menuDesplegable">
     <div class="menu-desplegable">
         <div class="zona-superior contenedor">

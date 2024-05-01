@@ -17,6 +17,13 @@ $clases = new WP_Query($args);
                 <div class="espectacles__card--img">
                     <?php the_post_thumbnail(); ?>
                 </div>
+                <div class="svg-overlay">
+                    <svg width="12" height="12" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow-up">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.17973 4.94461L4.82729 1.67783L5.59968 0.884766L9.92831 5.10116C9.98134 5.15276 10.0235 5.21447 10.0523 5.28264C10.0811 5.35081 10.0959 5.42406 10.0959 5.49806C10.0959 5.57205 10.0811 5.6453 10.0523 5.71347C10.0235 5.78164 9.98134 5.84335 9.92831 5.89496L5.59968 10.1113L4.82655 9.31828L8.17899 6.05224H0.884857V4.94461H8.17973Z" fill="currentColor">
+                        </path>
+                    </svg>
+                    <i class="fas fa-info-circle"></i>
+                </div>
                 <div class="destacados__contenido">
                     <?php $categorias = get_the_category(); ?>
                     <div class="espectacles__hover">
