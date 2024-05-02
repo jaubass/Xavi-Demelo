@@ -169,15 +169,27 @@
 }
 .fa-music {
   font-size: v.$icon;
-  color: v.$amarillo;
+  color: v.$amarillo-fuerte;
 }
 
-// INFANTIL
+/* INFANTIL */
 .espectacles__categoria--infantil {
-  background-color: v.$rosa-pastel;
-  &:hover {
-    background-color: v.$rosa;
-  }
+  background-color: v.$amarillo;
+  position: relative; /* Añadimos position: relative; para alinear el icono */
+  transition: background-color 0.3s ease; /* Aplicamos una transición suave al color de fondo */
+}
+/* Estilo del icono cuando no está en hover */
+.fa-children {
+  font-size: v.$icon;
+  color: v.$amarillo-fuerte;
+  transition: color 0.3s ease; /* Aplicamos una transición suave al color del icono */
+}
+/* Estilo del icono cuando está en hover */
+.espectacles__categoria--infantil:hover {
+  background-color: v.$amarillo-pastel; /* Al hacer hover, el fondo del botón toma el color del icono */
+}
+.espectacles__categoria--infantil:hover .fa-children {
+  color: v.$rojo; /* Al hacer hover, el color del icono toma el color del fondo del botón */
 }
 
 // CONTES
@@ -196,37 +208,67 @@
   }
 }
 
-// LGTBI+Q
+/* LGTBI+Q */
 .espectacles__categoria--lgtbiq {
   background-color: v.$rojo-pastel;
-  &:hover {
-    background-color: v.$rojo;
-  }
+  position: relative; /* Añadimos position: relative; para alinear el icono */
+  transition: background-color 0.3s ease; /* Aplicamos una transición suave al color de fondo */
+}
+/* Estilo del icono cuando no está en hover */
+.fa-star-of-life {
+  font-size: v.$icon;
+  color: v.$rojo;
+  transition: color 0.3s ease; /* Aplicamos una transición suave al color del icono */
+}
+/* Estilo del icono cuando está en hover */
+.espectacles__categoria--lgtbiq:hover {
+  background-color: v.$rojo; /* Al hacer hover, el fondo del botón toma el color del icono */
+}
+.espectacles__categoria--lgtbiq:hover .fa-star-of-life {
+  color: v.$rojo-pastel; /* Al hacer hover, el color del icono toma el color del fondo del botón */
 }
 
-// FEMINISME
+
+/* FEMINISME */
 .espectacles__categoria--feminisme {
   background-color: v.$lila-pastel;
-  &:hover {
-    background-color: v.$lila;
-  }
+  position: relative; /* Añadimos position: relative; para alinear el icono */
+  transition: background-color 0.3s ease; /* Aplicamos una transición suave al color de fondo */
 }
+/* Estilo del icono cuando no está en hover */
 .fa-heart {
   font-size: v.$icon;
   color: v.$lila;
-} 
+  transition: color 0.3s ease; /* Aplicamos una transición suave al color del icono */
+}
+/* Estilo del icono cuando está en hover */
+.espectacles__categoria--feminisme:hover {
+  background-color: v.$lila; /* Al hacer hover, el fondo del botón toma el color del icono */
+}
+.espectacles__categoria--feminisme:hover .fa-heart {
+  color: v.$lila-fuerte; /* Al hacer hover, el color del icono toma el color del fondo del botón */
+}
 
-// IGUALTAT
+/* IGUALTAT */
 .espectacles__categoria--igualtat {
   background-color: v.$rosa-pastel;
-  &:hover {
-    background-color: v.$rosa;
-  }
+  position: relative; /* Añadimos position: relative; para alinear el icono */
+  transition: background-color 0.3s ease; /* Aplicamos una transición suave al color de fondo */
 }
+/* Estilo del icono cuando no está en hover */
 .fa-equals {
   font-size: v.$icon;
   color: v.$rosa;
-} 
+  transition: color 0.3s ease; /* Aplicamos una transición suave al color del icono */
+}
+/* Estilo del icono cuando está en hover */
+.espectacles__categoria--igualtat:hover {
+  background-color: v.$rosa; /* Al hacer hover, el fondo del botón toma el color del icono */
+}
+.espectacles__categoria--igualtat:hover .fa-equals {
+  color: v.$rosa-pastel; /* Al hacer hover, el color del icono toma el color del fondo del botón */
+}
+
 
 .espectacles__categoria--ecologia {
   background-color: v.$azul-pastel;
@@ -239,20 +281,9 @@
   background-color: v.$amarillo-pastel;
 }
 
-.espectacles__categoria--infantil {
-  background-color: v.$rosa-pastel;
-}
-
 .espectacles__categoria--adults {
   background-color: v.$verde-pastel;
   &:hover {
     background-color: v.$verde;
   }
-}
-
-
-/* Estilos para los emojis */
-.emoji {
-  font-size: 16px; /* Ajusta el tamaño según sea necesario */
-  line-height: 1; /* Ajusta el espacio entre líneas si es necesario */
 }

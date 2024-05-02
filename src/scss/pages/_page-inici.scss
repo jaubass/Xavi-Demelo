@@ -3,12 +3,19 @@
 @use '../base/utilidades' as u;
 
 .hero {
-    height: 80vh;
+    height: 74vh;
     display: flex;
     flex-direction: column;
     //justify-content: center;
+    margin-top: 5%;
     padding-top: 10%;
     align-items: center;
+
+    @include m.tablet {
+        margin-top: 0;
+        height: 80vh;
+
+    }
 
     &-wrap {
         margin-top: 3.5rem; // Ajusta el margen superior según sea necesario
@@ -47,7 +54,14 @@
 
 .hero__content h1 {
     font-family: v.$text-primary;
+    font-size: 3rem;
     margin: 0;
+    @include m.tablet {
+        font-size: 5.4rem;
+    }
+    @include m.desktopSM {
+        font-size: 6.4rem;
+    }
 }
 
 .hero__content--title {
@@ -64,9 +78,16 @@
 }
 .hero__content--subtitle {
     font-family: v.$text-primary;
-    font-size: 3rem;
+    font-size: 2.2rem;
     font-weight: 200;
     font-style: italic;
+    line-height: 2.4rem;
+    padding: 2rem 0rem;
+    @include m.tablet {
+        font-size: 3rem;
+        line-height: 3.4rem;
+        padding: 1.4rem 0rem;
+    }
 }
 
 .hero__content h1, p {
@@ -98,7 +119,6 @@
 .quisom__section {
     margin-top: 6rem;
     margin-bottom: 2rem;
-    height: 100vh;
 }
 
 .quisom__contenedor {
@@ -112,7 +132,7 @@
 .quisom__two-columns {    
     align-items: center;
 
-    @include m.desktop {
+    @include m.desktopSM {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         column-gap: 80px;
@@ -129,8 +149,10 @@
 }
 
 .quisom__column--one {
-    padding-top: 8rem;
-
+    padding-top: 2rem;
+    @include m.tablet {
+        padding-top: 8rem;
+    }
     p {
         color: v.$verde-oscuro;
         font-size: 3.4rem;
@@ -160,7 +182,6 @@
 
 // Destacats
 .seccio-destacats {
-    height: 100vh;
     width: 80%;
     max-width: 1400px;
 }
@@ -210,10 +231,17 @@
     }
 
     .espectacles__card {
-        flex: 0 0 calc(25% - 20px); /* Ancho del elemento del carrusel (25% del ancho total menos márgenes) */
+        flex: 0 0 calc(100% - 20px); 
         margin-right: 26px; /* Márgenes entre elementos del carrusel */
         scroll-snap-align: start; /* Alinear elementos con el punto de anclaje */
 
+        @include m.tablet {
+            flex: 0 0 calc(50% - 20px); 
+        } 
+        @include m.desktopSM {
+            flex: 0 0 calc(25% - 20px); 
+        } 
+       
         // Estilos adicionales para los elementos del carrusel
         &--img img {
             width: 100%; /* Ajustar la imagen al contenedor */

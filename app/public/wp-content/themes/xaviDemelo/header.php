@@ -19,15 +19,17 @@
                         <div class="pildora__texto header__espectacles">
                             <p>Menú</p>
                         </div>
-                        <div class="pildora__tresRallas">
-                            <div class="linea"></div>
-                            <div class="linea"></div>
-                            <div class="linea"></div>
-                        </div>
+                        <div class="contenedor__hamburg--menu">
+                            <div class="pildora__tresRallas">
+                                <div class="linea"></div>
+                                <div class="linea"></div>
+                                <div class="linea"></div>
+                            </div>
+                        </div>                  
                     </div>
                 </div>
             </div>
-            <div class="btn-sm">
+            <div class="btn-sm btn__espectecles--contenedor">
                 <a href="#">Espectacles</a>
             </div>
     </div>

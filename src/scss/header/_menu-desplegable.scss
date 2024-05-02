@@ -1,10 +1,12 @@
 @use 'base/variables' as v;
+@use 'base/mixins' as m;
 
 .menu-desplegable {
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
+    width: 100%;
     padding: 2rem 0;
     overflow-y: auto;
     background-color: v.$rosa;
@@ -92,8 +94,6 @@
             transform: rotate(-45deg) translate(5px, -4px); // Ajustamos la posición para formar la parte inferior de la X
         }
     }
-    
-    
 }
 
 .logo {
@@ -109,13 +109,19 @@
     font-size: 2rem;
 }
 
+@media screen and (max-width: 500px) {
+    .link__espectacles p {
+        display: none;
+    }
+  }
+
 .menu__des {
     padding-top: 5%;
 
     li {
         color: v.$verde;
         font-family: v.$text-primary;
-        font-size: 5rem;
+        font-size: calc(1.8em + 1vw);
         font-weight: 600;
         letter-spacing: .5;
         padding-top: .5rem;

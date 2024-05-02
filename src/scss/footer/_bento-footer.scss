@@ -2,15 +2,39 @@
 @use '../base/mixins' as m;
 
 .grid__col--footer {
-    padding-top: 3rem;
-    display: grid;
-    grid-template-columns: 40% 60%;
+    @include m.phone {
+        display: flex;
+        padding-top: 3rem;
+    }
+
+    @include m.tablet {
+        padding-top: 3rem;
+        display: grid;
+    }
+
+    @include m.desktopSM {
+        grid-template-columns: 40% 60%;
+    }
 }
 
 .bento-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px; /* Espacio entre las cajas */
+
+    @include m.phone {
+        display: flex;
+        padding: 3rem 0;
+    }
+
+    @include m.tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px; 
+    }
+
+    @include m.desktopSM {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px; 
+    }
 }
 
 .footer__col1 {
@@ -63,14 +87,25 @@
     }
 }
 
+
+
 .box1 {
-    grid-column: span 2;
+
     background-color: v.$azul;
     border: 1px solid v.$azul-oscuro;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
+    @include m.tablet {
+        grid-column: span 2;
+        margin-bottom: 0px;
+    }
+}
+
+
+.box1 {
     h4 {
         color: v.$azul-oscuro;
     }
@@ -93,11 +128,17 @@
 }
 
 .box2 {
-    grid-column: span 1; 
     background-color: v.$verde;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 3rem;
+
+    @include m.tablet {
+        grid-column: span 1;
+        margin-bottom: 0px;
+    }
+
     h4 {
         color:v.$verde-oscuro;
         margin: 0;
@@ -107,6 +148,12 @@
 .box3 {
     grid-column: span 1;
     background-color: v.$lila;
+    margin-bottom: 3rem;
+
+    @include m.tablet {
+        margin-bottom: 0px;
+    }
+
     h4 {
         color:v.$lila-fuerte;
     }
@@ -115,6 +162,12 @@
 .box4 {
     grid-column: span 2;
     background-color: v.$amarillo;
+    margin-bottom: 3rem;
+
+    @include m.tablet {
+        margin-bottom: 0px;
+    }
+
     h4 {
         color:v.$amarillo-fuerte;
     }

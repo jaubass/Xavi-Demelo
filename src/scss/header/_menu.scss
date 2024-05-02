@@ -19,24 +19,32 @@
         justify-content: space-between;
         align-items: center;
         margin-top: .5rem;
-        padding: .5rem 2rem;
+        padding: 1rem .5rem;
         background-color: v.$blanco-roto;
         border-top: 0;
-        border-radius: v.$b-radius;
+        border-radius: 16px;
         border: 2px solid v.$negro;
         box-shadow: v.$negro 1.5px 1.5px 0 0;
         transform: translate(1.5px, 1.5px);
         box-shadow: 0 0 rgba(0, 0, 0, 0), 0 1px .4px rgba(0, 0, 0, .03), 0 2px .8px rgba(0, 0, 0, .04), 0 3px 1.6px rgba(0, 0, 0, .043), 0 5px 2.9px rgba(0, 0, 0, .047), 0 9px 5.3px rgba(0, 0, 0, .047), 0 15px 10.4px rgba(0, 0, 0, .05), 0 31px 22.8px rgba(0, 0, 0, .055);
 
+        @include m.tablet {
+            border-radius: v.$b-radius;
+            padding: .5rem 2rem;
+        }
+
         &.scroll-down {
             height: 5rem;
             padding: 0.5rem 0;
-            // Otros estilos para el scroll hacia abajo...
         }
 
         .logo {
             img {
                 width: 140px;
+                padding-left: 1rem;
+                @include m.tablet {
+                    padding-left: .4rem;
+                }
             }
         }
     }
@@ -78,15 +86,37 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            cursor: pointer;
-
-            .pildora__texto {
-                font-size: 2rem;
-            }
-
-            
-            
+            cursor: pointer;            
         }
+    }
+}
+
+.pildora__texto {
+    display: none;
+
+    @include m.tablet {
+        display: block;
+    }
+    
+}
+
+.btn__espectecles--contenedor {
+    display: none;
+
+    @include m.tablet {
+        display: flex;
+    }
+}
+
+.contenedor__hamburg--menu {
+    background-color: v.$verde;
+    border: 1px solid v.$negro;
+    border-radius: 8px;
+    padding: 1rem;
+    @include m.tablet {
+        background-color: transparent;
+        border: none;
+        padding: 0rem;
     }
 }
 
@@ -106,13 +136,13 @@
 }
 
 .pildora__tresRallas:hover .linea:nth-child(1) {
-    width: 80%; /* Cambia la longitud de la primera línea */
+    width: 80%; 
 }
 
 .pildora__tresRallas:hover .linea:nth-child(2) {
-    width: 50%; /* Cambia la longitud de la segunda línea */
+    width: 50%; 
 }
 
 .pildora__tresRallas:hover .linea:nth-child(3) {
-    width: 60%; /* Cambia la longitud de la tercera línea */
+    width: 60%; 
 }

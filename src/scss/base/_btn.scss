@@ -1,4 +1,6 @@
 @use '../base/variables' as v;
+@use '../base/mixins' as m;
+
 
 /* CSS */
 .btn {
@@ -13,7 +15,7 @@
     font-size: 2rem;
     text-transform: uppercase;
     padding: 0 18px;
-    line-height: 50px;
+    line-height: 30px;
     text-align: center;
     text-decoration: none;
     user-select: none;
@@ -22,8 +24,11 @@
     text-transform: uppercase;
     transition-property: background;
     transition-duration: .2s;
+    line-height: 30px;
+    @include m.tablet {
+      line-height: 50px;
 
-
+  }
 }
 
 .btn:hover {

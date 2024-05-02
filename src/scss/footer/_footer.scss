@@ -1,19 +1,38 @@
 @use 'base/variables' as v;
+@use '../base/mixins' as m;
+
 
 /* Estilos para el footer */
 .footer {
-    padding: 2rem 15rem 8rem 15rem;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: background-color 0.6s ease; 
+    @include m.phone {
+        padding: 1rem 1rem 1rem 1rem;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: background-color 0.6s ease; 
+    }
+
+    @include m.tablet {
+        padding: 0rem;
+    }
 }
 
 .footer__contenedor {
+    margin: 0 auto;
     margin-top: 3rem;
-    height: 75vh;
+    margin-bottom: 12rem;
     border-radius: v.$b-radius;  
     color: v.$negro;
-    width: 100%;
+    width: 80%;
+
+    @include m.tablet {
+        margin-bottom: 7rem;
+        height: 90vh;
+    }
+
+    @include m.desktopSM {
+        margin-bottom: 1rem;
+        height: 85vh;
+    }
 }

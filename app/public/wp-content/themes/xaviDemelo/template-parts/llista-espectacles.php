@@ -7,21 +7,29 @@ $clases = new WP_Query($args);
 ?>
 
 <div class="contenedor espectacles">
-    <div class="filtros">
-        <button class="filtro-btn" data-categoria="todas">Todas</button>
-        <?php
-        $categorias = get_categories(array(
-            'taxonomy' => 'category', // Cambiar 'category' por el nombre de la taxonomía de tus custom post types
-            'exclude' => get_cat_ID('Uncategorized')
-        ));
-        foreach ($categorias as $categoria) {
-            // Verificar si la categoría no es "destacats" y agregar el botón del filtro
-            if ($categoria->slug !== 'destacats') {
+<div class="filtros" id="filtros-container">
+    <button class="filtro-btn" data-categoria="todas">Totes</button>
+    <?php
+    $categorias = get_categories(array(
+        'taxonomy' => 'category', // Cambiar 'category' por el nombre de la taxonomía de tus custom post types
+        'exclude' => get_cat_ID('Uncategorized')
+    ));
+    foreach ($categorias as $categoria) {
+        // Verificar si la categoría no es "destacats" y agregar el botón del filtro
+        if ($categoria->slug !== 'destacats') {
+            // Obtener el icono para la categoría actual
+            $icono_categoria = obtener_icono_por_categoria($categoria->slug);
+            // Si se encontró un icono, mostrarlo dentro del botón de filtro
+            if (!empty($icono_categoria)) {
+                echo '<button class="filtro-btn espectacles__categoria--' . $categoria->slug . '" data-categoria="' . $categoria->slug . '"><i class="fas fa-' . $icono_categoria . '"></i> ' . $categoria->name . '</button>';
+            } else {
                 echo '<button class="filtro-btn espectacles__categoria--' . $categoria->slug . '" data-categoria="' . $categoria->slug . '">' . $categoria->name . '</button>';
             }
         }
-        ?>
-    </div>
+    }
+    ?>
+</div>
+
     <ul class="listado-grid" id="publicaciones-container">
         <?php
         if ($clases->have_posts()): 
@@ -120,11 +128,11 @@ function obtener_icono_por_categoria($categoria_slug) {
         case 'musica':
             return 'music'; 
         case 'infantil':
-            return 'democrat'; 
+            return 'children'; 
         case 'feminisme':
             return 'heart';
         case 'lgtbiq':
-            return 'gender';
+            return 'star-of-life';
         case 'ecologia':
             return 'pagelines';
         case 'adults':

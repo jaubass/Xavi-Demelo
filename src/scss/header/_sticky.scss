@@ -25,7 +25,12 @@
 }
 
 .sticky__contenido .header__contenido {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+    @include m.tablet {
+      display: flex;
+      }
     justify-content: space-between;
     align-items: center;
     margin-top: .5rem;
@@ -90,8 +95,15 @@
 }
 
 #menu-inferior {
-    font-weight: 400;
-    font-size: 1.4rem;
+  visibility:hidden;
+  margin: -12px 0;
+
+    @include m.tablet {
+      visibility: visible;
+      font-weight: 400;
+      font-size: 1.4rem;
+      margin: 0px;
+  }
 }
 
 #menu-inferior:hover {
