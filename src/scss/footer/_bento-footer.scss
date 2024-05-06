@@ -37,8 +37,17 @@
     }
 }
 
+.footer__bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    border-radius: v.$b-radius;
+}
+
 .footer__col1 {
-    padding-right: 34px;
+    padding: 30px;
+    display: grid;
+    justify-content: space-between;
 
     h2 {
         color: v.$rosa;

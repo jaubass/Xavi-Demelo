@@ -295,3 +295,35 @@
   .color-red {
     background-color: #F2293A;
   }
+
+  /* TALLERS */
+  .contenido--tallers {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+
+  .tallers__imagen {
+    padding-right: 2.4rem;
+    img {
+        border-radius: v.$b-radius;
+    }
+  }
+
+  .tallers__descripcion {
+    padding-left: 2.4rem;
+    background-color: rgba(0, 0, 0, 0.6); 
+    border-radius: v.$b-radius;
+    border: 1px solid v.$blanco-roto;
+
+    p, h2 {
+        color: v.$blanco-roto
+    }
+
+    h2 {
+        margin: 1rem 0rem;
+    }
+  }

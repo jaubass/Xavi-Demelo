@@ -29,12 +29,7 @@ function enqueue_custom_styles() {
 add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
 
 function xavidemelo_scripts_styles() {
-    // Enqueue normalize.css
-    // wp_enqueue_style('normalize', get_template_directory_uri() . '/normalize.css', array(), '8.0.1');
-    // Enqueue style.css, dependiendo de normalize.css
-    wp_enqueue_style('style', get_stylesheet_uri(), array('normalize'), '1.0.0');
-    // Enqueue JS
-    // wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.min.js', array(), '1.0.0', true);
+    wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.min.js', array(), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'xavidemelo_scripts_styles');
 

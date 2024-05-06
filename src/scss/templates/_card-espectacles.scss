@@ -14,7 +14,6 @@
   overflow: hidden;
   margin-bottom: 20px;
   transition: opacity 0.4s ease-in-out;
-
 }
 
 .espectacles__card img {
@@ -83,8 +82,11 @@
 .espectacles__hover h3 {
   text-align: center;
   color: v.$negro;
+  text-decoration: underline;
+  text-decoration-color: v.$rosa;
+  text-decoration-thickness: 2.4px;
   margin-bottom: 0rem;
-  font-size: 2rem;
+  font-size: 2.4rem;
 }
 
 /* Estilos para la tarjeta al hacer hover */
@@ -103,25 +105,32 @@
   color: v.$negro;
   font-family: v.$text-secondary;
   font-weight: 300;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
   text-align: center;
 }
 
 .espectacles__boton-container {
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  margin-top: 10px; /* Ajusta según sea necesario */
+  justify-content: center; 
+  align-items: center;
+  margin-top: 8px;
 }
 
 /* Estilos para las categorías */
+
 .espectacles__categorias {
   display: flex;
   gap: 5px;
-  justify-content: center; /* Centra los elementos horizontalmente */
-  align-items: center; /* Centra los elementos verticalmente */
-  flex-wrap: wrap; /* Permite que las categorías se envuelvan si no caben en una sola línea */
+  justify-content: center; 
+  align-items: center; 
+  flex-wrap: wrap; 
+}
+
+.espectacles__categorias--contenedor {
+  border: 1px solid v.$negro;
+  border-radius: v.$radius;
+  padding: .4rem;
 }
 
 /* Estilos para las categorías individuales */
@@ -142,7 +151,13 @@
   justify-content: center;
 }
 
-// ICONOS
+/* -------- ICONOS -------- */
+// TEATRE
+// MUSICA
+// INFANTIL
+// CONTES
+// MONOLEGS
+
 .fas {
   align-items: center;
   padding-right: .8rem;
@@ -150,15 +165,21 @@
 
 // TEATRE
 .espectacles__categoria--teatre {
-  background-color: v.$naranja-pastel;
-  &:hover {
-    background-color: v.$naranja;
-  }
+  background-color: v.$naranja;
+  position: relative;
+  transition: background-color 0.3s ease; 
 }
 .fa-mask {
   font-size: v.$icon;
-  color: v.$naranja;
-} 
+  color: v.$orange;
+  transition: color 0.3s ease;
+}
+.espectacles__categoria--teatre:hover {
+  background-color: v.$orange;
+}
+.espectacles__categoria--teatre:hover .fa-mask {
+  color: v.$naranja-pastel;
+}
 
 // MUSICA
 .espectacles__categoria--musica {
@@ -175,21 +196,19 @@
 /* INFANTIL */
 .espectacles__categoria--infantil {
   background-color: v.$amarillo;
-  position: relative; /* Añadimos position: relative; para alinear el icono */
-  transition: background-color 0.3s ease; /* Aplicamos una transición suave al color de fondo */
+  position: relative;
+  transition: background-color 0.3s ease; 
 }
-/* Estilo del icono cuando no está en hover */
 .fa-children {
   font-size: v.$icon;
   color: v.$amarillo-fuerte;
-  transition: color 0.3s ease; /* Aplicamos una transición suave al color del icono */
+  transition: color 0.3s ease;
 }
-/* Estilo del icono cuando está en hover */
 .espectacles__categoria--infantil:hover {
-  background-color: v.$amarillo-pastel; /* Al hacer hover, el fondo del botón toma el color del icono */
+  background-color: v.$amarillo-pastel;
 }
 .espectacles__categoria--infantil:hover .fa-children {
-  color: v.$rojo; /* Al hacer hover, el color del icono toma el color del fondo del botón */
+  color: v.$rojo;
 }
 
 // CONTES
@@ -203,50 +222,61 @@
 // MONOLEG
 .espectacles__categoria--monoleg {
   background-color: v.$azul-pastel;
-  &:hover {
-    background-color: v.$azul;
-  }
+  position: relative;
+  transition: background-color 0.3s ease; 
+}
+.fa-microphone {
+  font-size: v.$icon;
+  color: v.$azul-fuerte;
+  transition: color 0.3s ease;
+}
+.espectacles__categoria--monoleg:hover {
+  background-color: v.$azul;
+}
+.espectacles__categoria--monoleg:hover .fa-microphone {
+  color: v.$amarillo-pastel;
 }
 
 /* LGTBI+Q */
 .espectacles__categoria--lgtbiq {
   background-color: v.$rojo-pastel;
-  position: relative; /* Añadimos position: relative; para alinear el icono */
-  transition: background-color 0.3s ease; /* Aplicamos una transición suave al color de fondo */
+  position: relative;
+  transition: background-color 0.3s ease; 
 }
-/* Estilo del icono cuando no está en hover */
+
 .fa-star-of-life {
   font-size: v.$icon;
   color: v.$rojo;
-  transition: color 0.3s ease; /* Aplicamos una transición suave al color del icono */
+  transition: color 0.3s ease; 
 }
-/* Estilo del icono cuando está en hover */
+
 .espectacles__categoria--lgtbiq:hover {
-  background-color: v.$rojo; /* Al hacer hover, el fondo del botón toma el color del icono */
+  background-color: v.$rojo; 
 }
 .espectacles__categoria--lgtbiq:hover .fa-star-of-life {
-  color: v.$rojo-pastel; /* Al hacer hover, el color del icono toma el color del fondo del botón */
+  color: v.$rojo-pastel;
 }
 
 
 /* FEMINISME */
 .espectacles__categoria--feminisme {
   background-color: v.$lila-pastel;
-  position: relative; /* Añadimos position: relative; para alinear el icono */
-  transition: background-color 0.3s ease; /* Aplicamos una transición suave al color de fondo */
+  position: relative; 
+  transition: background-color 0.3s ease; 
 }
-/* Estilo del icono cuando no está en hover */
+
 .fa-heart {
   font-size: v.$icon;
-  color: v.$lila;
-  transition: color 0.3s ease; /* Aplicamos una transición suave al color del icono */
+  color: v.$lila-fuerte;
+  transition: color 0.3s ease; 
 }
-/* Estilo del icono cuando está en hover */
+
 .espectacles__categoria--feminisme:hover {
-  background-color: v.$lila; /* Al hacer hover, el fondo del botón toma el color del icono */
+  background-color: v.$lila;
 }
+
 .espectacles__categoria--feminisme:hover .fa-heart {
-  color: v.$lila-fuerte; /* Al hacer hover, el color del icono toma el color del fondo del botón */
+  color: v.$rosa; 
 }
 
 /* IGUALTAT */

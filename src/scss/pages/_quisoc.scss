@@ -1,5 +1,105 @@
-.quisoc__contendor {
-    max-width: 900px;
-    width: 70%;
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.quisoc__contenedor {
     margin: 0 auto;
+}
+
+.titulo__quisoc {
+    text-align: center;
+    padding: 4rem;
+}
+
+.card__quisoc {
+    position: sticky;
+    border: 1px solid v.$negro;
+    box-shadow: 0 0 rgba(0, 0, 0, 0), 0 1px .4px rgba(0, 0, 0, .03), 0 2px .8px rgba(0, 0, 0, .04), 0 3px 1.6px rgba(0, 0, 0, .043), 0 5px 2.9px rgba(0, 0, 0, .047), 0 9px 5.3px rgba(0, 0, 0, .047), 0 15px 10.4px rgba(0, 0, 0, .05), 0 31px 22.8px rgba(0, 0, 0, .055);
+    background-color: v.$blanco-roto;
+    color: v.$negro;
+    padding: 6rem 4rem;
+    border-radius: v.$b-radius;
+    margin-bottom: 80px;
+
+    h2 {
+        padding: 0;
+    }
+    span {
+        display: block;
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: v.$rosa;
+    }
+}
+
+.capitol__final {
+    h2 {
+        padding: 0;
+    }
+    span {
+        display: block;
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: v.$rosa;
+    }
+}
+
+.card__quisoc:nth-child(1) {
+    top: 20px;
+}
+
+.card__quisoc:nth-child(2) {
+    top: 60px;
+}
+
+.card__quisoc:nth-child(3) {
+    top: 100px; 
+}
+
+.card__quisoc:nth-child(4) {
+    top: 140px; 
+}
+
+.card__quisoc:nth-child(5) {
+    top: 180px; 
+}
+
+.card__quisoc:nth-child(6) {
+    top: 220px; 
+}
+
+.card__quisoc:nth-child(7) {
+    top: 260px; 
+}
+
+.card__quisoc--1 {
+    background-color: v.$verde;
+    h2, p {
+        color: v.$verde-oscuro;
+    }
+}
+
+.card__quisoc--2 {
+    background-color: v.$blanco-roto;
+}
+
+.card__quisoc--3 {
+    background-color: v.$lila;
+    h2, p {
+        color: v.$lila-fuerte;
+    }
+}
+
+.card__quisoc--4 {
+    background-color: v.$blanco-roto;
+}
+
+.card__quisoc--5 {
+    background-color: v.$azul;
+    h2, p {
+        color: v.$azul-oscuro;
+    }
+}
+
+.card__quisoc--6 {
+    background-color: v.$blanco-roto;
 }

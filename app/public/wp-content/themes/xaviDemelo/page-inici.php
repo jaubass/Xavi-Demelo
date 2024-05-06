@@ -42,7 +42,7 @@
                 </div>
             </div>
         </section>
-        <section class="seccio-destacats contenedor snap-section snap-scroll-section panel panel-custom" data-color="violet">
+        <section class="seccio-destacats contenedor panel panel-custom" data-color="violet">
             <div class="destacats__in">
                 <div class="destacats__titulo">
                     <h2 class="subrayado">Espectacles destacats</h2>
@@ -60,6 +60,23 @@
                 
             </div>
         </section> 
+        <section class="tallers panel panel-custom" data-color="blanco">
+        <div class="contenedor-tallers" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/img/home/XD-interpretacion-UCDM01.webp' ); ?>'); background-repeat: no-repeat; background-size: cover;">
+                <div class="contenido--tallers contenedor">
+                    <div class="tallers__imagen">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/img/home/tallers-home-01.webp' ); ?>" alt="teatre">
+                    </div>
+                    <div class="tallers__descripcion">
+                        <h2>Tallers</h2>
+                        <p>Tallers basats en la expressió artística i destinats a millorar les nostres capacitats. Com per exemple treballar la por escènica, alliberar la creativitat a través de la literatura i la gestalt, trobar l’humor dins nostre o re-aprendre a mirar les pantalles amb una mirada de gènere diferent.
+                        </p>
+                        <p>I en tenim més…!</p>
+                        <button class="btn" role="button">Veure Tallers</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
 </main>
 
 <?php get_footer(); ?>

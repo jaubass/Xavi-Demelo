@@ -14,6 +14,65 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.classList.remove('no-scroll');
     });
 
+
+    // STICKY
+    const stickyMenu = document.getElementById('stickyMenu');
+    let lastScrollTop = 0;
+    const windowHeight = window.innerHeight;
+    const initialMenuOffset = stickyMenu.offsetTop;
+    let isAtBottom = false;
+
+    // Función para manejar el scroll
+    window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Controlamos el desplazamiento hacia abajo
+        if (scrollTop > lastScrollTop && scrollTop > windowHeight / 2) {
+            stickyMenu.classList.add('show-menu'); // Añadimos clase para mostrar el menú
+        } else {
+            // Ocultamos el menú si estamos a 100px del principio o si volvemos a la posición inicial del menú
+            if (scrollTop <= 200) {
+                stickyMenu.classList.remove('show-menu'); // Eliminamos clase para ocultar el menú
+            }
+        }
+
+        // Si llegamos al final de la página, desplazamos el menú hacia abajo 50px con transición suave
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight && !isAtBottom) {
+            stickyMenu.style.transition = 'bottom 0.5s ease-in-out'; // Aplicamos la transición
+            stickyMenu.style.bottom = '50px';
+            isAtBottom = true;
+        } else if ((window.innerHeight + window.scrollY) < document.body.offsetHeight && isAtBottom) {
+            stickyMenu.style.transition = 'bottom 0.5s ease-in-out'; // Aplicamos la transición
+            stickyMenu.style.bottom = '0';
+            isAtBottom = false;
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Aseguramos que no haya valores negativos
+    });
+
+        // BTN SCROLL TOP
+        let btnScrollToTop = document.getElementById('btnScrollToTop');
+
+        btnScrollToTop.addEventListener('click', function(event) {
+            event.preventDefault(); // Evita el comportamiento predeterminado del botón
+            scrollToTopSmoothly();
+        });
+    
+        function scrollToTopSmoothly() {
+            let currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+    
+            if (currentPosition > 0) {
+                window.requestAnimationFrame(scrollToTopSmoothly);
+                window.scrollTo(0, currentPosition - currentPosition / 8);
+    
+                // Si estamos cerca de la parte superior, ralentizamos el desplazamiento
+                if (currentPosition < 10) {
+                    window.scrollTo(0, currentPosition - currentPosition / 16);
+                }
+            }
+        }
+
+
     // FILTROS
     const filtroBtns = document.querySelectorAll('.filtro-btn');
     const publicacionesContainer = document.getElementById('publicaciones-container');
@@ -102,41 +161,7 @@ document.addEventListener("DOMContentLoaded", function() {
         lastScrollPosition = scrollPosition;
     });
 
-    // STICKY
-    const stickyMenu = document.getElementById('stickyMenu');
-    let lastScrollTop = 0;
-    const windowHeight = window.innerHeight;
-    const initialMenuOffset = stickyMenu.offsetTop;
-    let isAtBottom = false;
-
-    // Función para manejar el scroll
-    window.addEventListener('scroll', function() {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        // Controlamos el desplazamiento hacia abajo
-        if (scrollTop > lastScrollTop && scrollTop > windowHeight / 2) {
-            stickyMenu.classList.add('show-menu'); // Añadimos clase para mostrar el menú
-        } else {
-            // Ocultamos el menú si estamos a 100px del principio o si volvemos a la posición inicial del menú
-            if (scrollTop <= 200) {
-                stickyMenu.classList.remove('show-menu'); // Eliminamos clase para ocultar el menú
-            }
-        }
-
-        // Si llegamos al final de la página, desplazamos el menú hacia abajo 50px con transición suave
-        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight && !isAtBottom) {
-            stickyMenu.style.transition = 'bottom 0.5s ease-in-out'; // Aplicamos la transición
-            stickyMenu.style.bottom = '50px';
-            isAtBottom = true;
-        } else if ((window.innerHeight + window.scrollY) < document.body.offsetHeight && isAtBottom) {
-            stickyMenu.style.transition = 'bottom 0.5s ease-in-out'; // Aplicamos la transición
-            stickyMenu.style.bottom = '0';
-            isAtBottom = false;
-        }
-
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Aseguramos que no haya valores negativos
-    });
-
+    
     // BACKGROUND ANIMATION
     let panels = document.querySelectorAll('.panel');
     let footer = document.querySelector('.footer');
@@ -162,26 +187,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
     window.addEventListener('scroll', changeColor);
     changeColor();
-
-    // BTN SCROLL TOP
-    var btnScrollToTop = document.getElementById('btnScrollToTop');
-
-    btnScrollToTop.addEventListener('click', function(event) {
-        event.preventDefault(); // Evita el comportamiento predeterminado del botón
-        scrollToTopSmoothly();
-    });
-
-    function scrollToTopSmoothly() {
-        var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
-
-        if (currentPosition > 0) {
-            window.requestAnimationFrame(scrollToTopSmoothly);
-            window.scrollTo(0, currentPosition - currentPosition / 8);
-
-            // Si estamos cerca de la parte superior, ralentizamos el desplazamiento
-            if (currentPosition < 10) {
-                window.scrollTo(0, currentPosition - currentPosition / 16);
-            }
-        }
-    }
 });

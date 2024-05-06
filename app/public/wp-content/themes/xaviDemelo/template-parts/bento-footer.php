@@ -2,7 +2,12 @@
         <div class="container">
             <div class="grid__col--footer">
                 <div class="footer__col1">
-                    <h2>Descobreix un món d'art compromès amb la igualtat i la diversitat.</h2>
+                    <div class="footer__col1--title">
+                        <h2>Descobreix un món d'art compromès amb la igualtat i la diversitat.</h2>
+                    </div>
+                    <div class="ooter__col1--logo">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/img/Xavi_demelo-Log07.jpg' ); ?>" alt="logotipo footer" width="240px">
+                    </div>
                 </div>
                 <div class="bento-container">
                     <div class="box box1">
@@ -47,6 +52,9 @@
                         <h4>Seguei-nos a les xarxes!</h4>
                     </div>
                 </div>        
+            </div>
+            <div class="footer--img">
+                <img src="<?php echo esc_url( get_template_directory_uri() . '/img/footer-img-01.webp' ); ?>" alt="">
             </div>
         </div>
 </section>

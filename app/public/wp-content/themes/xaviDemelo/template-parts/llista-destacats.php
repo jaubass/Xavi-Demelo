@@ -1,4 +1,3 @@
-
 <?php
 $args = array(
     'post_type' => 'xavidemelo_clases',
@@ -29,10 +28,10 @@ $clases = new WP_Query($args);
                     <div class="espectacles__hover">
                         <a href="<?php the_permalink(); ?>">
                             <h3 class="espectacles__titulo-hover"><?php the_title(); ?></h3>
-                            <p class="espectacles__autor"><?php the_field('companyia');?></p>
+                            <p class="espectacles__autor"><?php echo wp_kses_post(get_field('companyia')); ?></p>
                         </a>
                         <hr class="separador">
-                        <p class="espectacles__descripcion"><?php the_field( 'descripcio' ); ?></p>
+                        <p class="espectacles__descripcion"><?php echo wp_kses_post(get_field('descripcio')); ?></p>
                         <?php $archivo_pdf = get_field('fitxer'); ?>
                         <?php if (!empty($archivo_pdf)): ?>
                             <div class="espectacles__boton-container">
