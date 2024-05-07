@@ -155,7 +155,9 @@
 }
 
 .box3 {
-    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: v.$lila;
     margin-bottom: 3rem;
 
@@ -168,7 +170,38 @@
     }
 }
 
+.box3__2 {
+    text-align: center;
+}
+
+.box3__2 i {
+    font-size: 2.4rem;
+    margin: 0 4px; /* Espacio entre los iconos */
+    padding: .4rem;
+    border: 1px solid v.$lila-fuerte;
+    border-radius: v.$radius;
+    &:hover {
+        transition-property: background-color;
+        transition-duration: .5s;
+        background-color: v.$rosa;
+        box-shadow: v.$negro -4px 4px 0 0;
+        transition-property: box-shadow;
+        transition-duration: .4s;
+        transform-style: preserve-3d;       
+        transition: .5s ease-out;
+        transform: translate3d(4px,-4px,0);
+    }
+}
+
+.box3__2 a {
+    color: v.$negro; /* Color del enlace */
+    text-decoration: none; /* Quita el subrayado del enlace */
+}
+
 .box4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     grid-column: span 2;
     background-color: v.$amarillo;
     margin-bottom: 3rem;
@@ -179,6 +212,15 @@
 
     h4 {
         color:v.$amarillo-fuerte;
+    }
+}
+
+.box4__2 a {
+    font-size: 2rem;
+    line-height: 3rem;
+    display: block;
+    &:hover {
+        color: v.$blanco-roto;
     }
 }
 
@@ -200,6 +242,13 @@
         transition: .5s ease-out;
         transform: translate3d(4px,-4px,0);
     } 
+    &:active {
+        box-shadow: none; 
+        transition-property: background-color;
+        transition-duration: .5s;
+        transition-property: box-shadow;
+        transition-duration: .3s;
+    }
     &:active {
         box-shadow: none; 
         transition-property: background-color;

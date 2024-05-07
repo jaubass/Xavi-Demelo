@@ -46,10 +46,36 @@
                         </div>
                     </div>
                     <div class="box box3">
-                        <h4>Contacte</h4>
+                        <div class="box3__1">
+                            <h4>Segueix-nos!</h4>
+                        </div>
+                        <div class="box3__2">
+                            <a href="https://www.youtube.com/channel/UCt7xZYV7KMwYgfXusWGV8Pw" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            
+                            <!-- Icono de Instagram -->
+                            <a href="https://www.instagram.com/" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            
+                            <!-- Icono de Facebook -->
+                            <a href="https://www.facebook.com/" target="_blank">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://www.facebook.com/" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
                     </div>
                     <div class="box box4">
-                        <h4>Seguei-nos a les xarxes!</h4>
+                        <div class="box4__1">
+                            <h4>Contacte</h4>
+                        </div>
+                        <div class="box4__2">
+                            <a href="mailto:info@xavidemelo.com" target="_blank">info@xavidemelo.com</a>
+                            <a href="tel:653 246 340" target="_blank">653 246 340</a>
+                        </div>   
                     </div>
                 </div>        
             </div>

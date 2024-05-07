@@ -187,4 +187,29 @@ document.addEventListener("DOMContentLoaded", function() {
 
     window.addEventListener('scroll', changeColor);
     changeColor();
+
+
+// ANIMACION TALLERES //
+    // Selecciona todos los elementos .tallers__imagen y .tallers__descripcion
+    const elementos = document.querySelectorAll('.tallers__imagen, .tallers__descripcion');
+
+    // Opciones para el Intersection Observer
+    const opciones = {
+        threshold: 0.6 // Cuando el 50% del elemento es visible
+    };
+
+    // Crear un Intersection Observer
+    const observer = new IntersectionObserver((entradas, observer) => {
+        entradas.forEach(entrada => {
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add('show'); // Agrega la clase 'show' cuando el elemento es visible
+                observer.unobserve(entrada.target); // Deja de observar el elemento una vez que se ha hecho visible
+            }
+        });
+    }, opciones);
+
+    // Observa cada elemento
+    elementos.forEach(elemento => {
+        observer.observe(elemento);
+    });
 });

@@ -7,7 +7,7 @@
 
 <main class="snap-scroll-container-parent">  
         <section class="home-hero hero-wrap contenedor snap-scroll-section panel panel-custom">
-            <div class="hero__bg" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/img/Hero-12.webp' ); ?>');">
+            <div class="hero__bg" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/img/home/Hero-12.webp' ); ?>');">
                 <div class="contenedor">
                     <div class="hero">
                         <img src="<?php the_field('imagen_hero')?>">
@@ -42,7 +42,34 @@
                 </div>
             </div>
         </section>
-        <section class="seccio-destacats contenedor panel panel-custom" data-color="violet">
+        <section class="presentacio">
+            <div class="contenedor__presentacio" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/img/home/XD-presentacion.webp' ); ?>'); background-repeat: no-repeat; background-size: cover;">
+                <div class="presentacio__contenido">
+                    <div class="presentacio__central">
+                        <div class="presentacio__central--titulo">
+                            <h1 class="text-center">Presentació</h1>
+                        </div>
+                        <div class="presentacio__central--contenido">
+                            <p class="text-center">Fes clic per veure el video</p>
+                            <button class="btn text-center">Video</button>
+                        </div>  
+                    </div>
+                    <div class="presentacio__contenido--texto text-center">
+                        <div class="horizontal-scrolling-items">
+
+                            <div class="horizontal-scrolling-items__item">
+                            <h1>FEMINISME  IGUALTAT  ECOLOGISME  HUMOR  SENSIBILITZACIÓ LGTBI+Q &nbsp</h1>
+                            </div>
+
+                            <div class="horizontal-scrolling-items__item">
+                            <h1>FEMINISME  IGUALTAT  ECOLOGISME  HUMOR  SENSIBILITZACIÓ LGTBI+Q &nbsp</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="seccio-destacats contenedor panel panel-custom" data-color="blue">
             <div class="destacats__in">
                 <div class="destacats__titulo">
                     <h2 class="subrayado">Espectacles destacats</h2>
@@ -71,7 +98,7 @@
                         <p>Tallers basats en la expressió artística i destinats a millorar les nostres capacitats. Com per exemple treballar la por escènica, alliberar la creativitat a través de la literatura i la gestalt, trobar l’humor dins nostre o re-aprendre a mirar les pantalles amb una mirada de gènere diferent.
                         </p>
                         <p>I en tenim més…!</p>
-                        <button class="btn" role="button">Veure Tallers</button>
+                        <button class="btn-sm" role="button">Veure Tallers</button>
                     </div>
                 </div>
 

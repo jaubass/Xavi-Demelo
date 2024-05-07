@@ -150,9 +150,11 @@
 
 .quisom__column--one {
     padding-top: 2rem;
+
     @include m.tablet {
         padding-top: 8rem;
     }
+
     p {
         color: v.$verde-oscuro;
         font-size: 3.4rem;
@@ -180,6 +182,87 @@
     
 }
 
+/*  PRESENTACIO */
+.contenedor__presentacio {
+    padding-top: 24rem;
+    background-color: linear-gradient(v.$verde, v.$blanco-roto, v.$lila);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.presentacio__central {
+    padding-bottom: 12rem;
+}
+
+.presentacio__central--titulo h1 {
+    margin: 0;
+}
+
+.presentacio__central--contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Centra horizontalmente los elementos
+    justify-content: center; // Centra verticalmente los elementos
+    height: 100%; // Ocupa toda la altura del contenedor padre
+}
+
+
+.presentacio__contenido--texto {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 2px v.$verde; /* Grosor del borde */
+    text-stroke: 2px v.$verde; /* Grosor del borde */
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-bottom: 2rem;
+    text-align: center; 
+    overflow: hidden; 
+    height: 9.2rem; // Establecer una altura fija
+    h1 {
+        font-size: 9.2rem;
+        white-space: nowrap; /* Evita el salto de línea */
+        margin-top: auto; 
+    }
+}
+
+.horizontal-scrolling-items__item h1 {
+    word-spacing: 40px; /* Ajusta el valor según lo que desees */
+}
+
+
+.presentacio__contenido--texto h1 {
+    animation: scrollText 20s linear infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes scrollText {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(calc(-100% + 100vw));
+    }
+}
+
+@keyframes infiniteScroll {
+    from {transform: translateX(0)}
+    to {transform: translateX(-50%)}
+  }
+  .horizontal-scrolling-items {
+    display: flex;
+    font-size: 40px;
+    width: 2600px;
+    animation-name: infiniteScroll;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  .horizontal-scrolling-items__item {
+    white-space: nowrap;
+  }
+
+
 // Destacats
 .seccio-destacats {
     width: 80%;
@@ -200,12 +283,12 @@
 .destacats__titulo {
     h2 {
         font-size: 4.8rem;
-        color: v.$lila-fuerte;
+        color: v.$azul-oscuro;
         margin-bottom: 0;
     }
 
     p {
-        color: v.$lila-fuerte;
+        color: v.$azul-oscuro;
     }
 }
 
@@ -302,9 +385,27 @@
     margin-bottom: 8rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding-top: 12rem;
-    padding-bottom: 12rem;
+    padding-top: 15rem;
+    padding-bottom: 15rem;
   }
+
+.tallers__imagen,
+.tallers__descripcion {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+}
+  
+.tallers__imagen.show,
+.tallers__descripcion.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tallers__imagen:hover,
+.tallers__descripcion:hover {
+    transform: scale(1.05);
+}
 
   .tallers__imagen {
     padding-right: 2.4rem;
@@ -325,5 +426,8 @@
 
     h2 {
         margin: 1rem 0rem;
+    }
+    .btn-sm {
+        background-color: v.$rosa;
     }
   }

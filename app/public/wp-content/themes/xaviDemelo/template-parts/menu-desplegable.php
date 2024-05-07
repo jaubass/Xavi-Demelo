@@ -45,6 +45,17 @@
             <a href="https://www.linkedin.com/in/★-xavi-demelo-0487b843/" target="_blank">LINKEDIN</a>
     </div>
     <div class="header__p--special text-center">
+        <div class="horizontal-scrolling-items">
+
+            <div class="horizontal-scrolling-items__item">
+            Here is some horizontally scrolling text used for a tutorial. It will loop smoothly.&nbsp
+            </div>
+
+            <div class="horizontal-scrolling-items__item">
+            Here is some horizontally scrolling text used for a tutorial. It will loop smoothly.&nbsp
+            </div>
+
+        </div>
         <p>FEMINISME IGUALTAT ECOLOGISME homofòbia sensibilització música ciberassetjament LGTBIQ</p>
     </div>
 </div>
