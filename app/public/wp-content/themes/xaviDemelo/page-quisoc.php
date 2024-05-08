@@ -60,17 +60,14 @@
                     <img src="<?php echo esc_url( get_template_directory_uri() . '/img/quisoc/Xavi_Demelo-F002.webp' ); ?>" alt="teatre">
 
                     <p>Fins que, el 2017, vaig deixar el món de l’espiritualitat, mantenint-lo només a nivell privat i per a mi (una de les millors decisions que he pres a la meva vida) i vaig reprendre el meu idil·li amb el món del show bussiness, i vaig fundar una nova productora, sota el nom d’Espectacles Xavi Demelo (ho reconec, se’m va acabar la creativitat a l’hora de posar-hi nom).
-                    <p> 
+                    <br><br>
+                    I aquí estem novament, intentant convèncer les institucions públiques (els nostres grans clients) que programin espectacles de qualitat, senzills, barats, adaptables a tot tipus d’espais i públics i que donin prioritat al missatge, fugint de grans muntatges i costoses escenografies que limitarien el propòsit fonamental d’aquest projecte.
 
-            </div>
-            <div class="quisoc__final">
-                <p>I aquí estem novament, intentant convèncer les institucions públiques (els nostres grans clients) que programin espectacles de qualitat, senzills, barats, adaptables a tot tipus d’espais i públics i que donin prioritat al missatge, fugint de grans muntatges i costoses escenografies que limitarien el propòsit fonamental d’aquest projecte.</p>
-                <p>
-                Aprofito per demanar ajuda des d’aquí a programadors i programadores perquè ens feu un forat als vostres espais i poblacions.
-                </p>
-                <p>
-                No us penedireu.
-                </p>
+                    Aprofito per demanar ajuda des d’aquí a programadors i programadores perquè ens feu un forat als vostres espais i poblacions.
+                    </p>
+                    <p>
+                    No us penedireu.
+                    </p>
             </div>
            
         </div>

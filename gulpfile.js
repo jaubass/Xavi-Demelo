@@ -68,9 +68,11 @@ function watchScss() {
     watch('src/scss/**/*.scss', css);
 }
 
-function dedaultTask() {
-
+function defaultTask() {
+    watch('src/scss/**/*.scss', css);
+    watch('src/js/**/*.js', scripts);
 }
+
 
 exports.dev = dev;
 exports.css = css;

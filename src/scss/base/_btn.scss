@@ -88,10 +88,10 @@
 
 
 .btn-destacats {
-  background-color: v.$rosa;
-  border: 2px solid v.$lila-fuerte;
-  border-radius: v.$radius;
-  box-shadow: v.$lila-fuerte 4px 4px 0 0;
+  background-color: v.$verde;
+  border: 2px solid v.$verde-oscuro;
+  border-radius: v.$m-radius;
+  box-shadow: v.$azul-oscuro 4px 4px 0 0;
   color: v.$negro;
   cursor: pointer;
   display: inline-block;
@@ -114,6 +114,10 @@
 .btn-destacats:hover {
   background-color: v.$rosa;
   color: v.$negro;
+}
+
+.btn-destacats:active {
+
   box-shadow: v.$negro 1px 1px 0 0;
   transform: translate(1px, 1px);
 }
