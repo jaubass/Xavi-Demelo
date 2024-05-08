@@ -103,6 +103,33 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+        // BACKGROUND ANIMATION
+        let panels = document.querySelectorAll('.panel');
+        let footer = document.querySelector('.footer');
+    
+        function changeColor() {
+            let scroll = window.scrollY + (window.innerHeight / 3);
+    
+            panels.forEach(function(panel) {
+                let top = panel.offsetTop;
+                let bottom = top + panel.offsetHeight;
+    
+                if (top <= scroll && bottom > scroll) {
+                    let colorClass = 'color-' + panel.getAttribute('data-color');
+                    document.body.className = colorClass;
+    
+                    // Retrasar el cambio de color del footer para que sea más suave
+                    setTimeout(function() {
+                        footer.style.backgroundColor = getComputedStyle(document.body).getPropertyValue('--panel-color-' + panel.getAttribute('data-color'));
+                    }, 50); // Ajusta el tiempo según tus necesidades
+                }
+            });
+        }
+    
+        window.addEventListener('scroll', changeColor);
+        changeColor();
+    
+
     // CARRUSEL DESTACATS
     let container = document.querySelector('.destacats-grid-container');
     let flechaIzquierda = document.querySelector('.flecha-izquierda');
@@ -160,34 +187,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
         lastScrollPosition = scrollPosition;
     });
-
-    
-    // BACKGROUND ANIMATION
-    let panels = document.querySelectorAll('.panel');
-    let footer = document.querySelector('.footer');
-
-    function changeColor() {
-        let scroll = window.scrollY + (window.innerHeight / 3);
-
-        panels.forEach(function(panel) {
-            let top = panel.offsetTop;
-            let bottom = top + panel.offsetHeight;
-
-            if (top <= scroll && bottom > scroll) {
-                let colorClass = 'color-' + panel.getAttribute('data-color');
-                document.body.className = colorClass;
-
-                // Retrasar el cambio de color del footer para que sea más suave
-                setTimeout(function() {
-                    footer.style.backgroundColor = getComputedStyle(document.body).getPropertyValue('--panel-color-' + panel.getAttribute('data-color'));
-                }, 50); // Ajusta el tiempo según tus necesidades
-            }
-        });
-    }
-
-    window.addEventListener('scroll', changeColor);
-    changeColor();
-
 
 // ANIMACION TALLERES //
     // Selecciona todos los elementos .tallers__imagen y .tallers__descripcion

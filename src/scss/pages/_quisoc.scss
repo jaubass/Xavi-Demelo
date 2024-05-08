@@ -10,6 +10,15 @@
     padding: 4rem;
 }
 
+.quisoc-imagen img {
+    display: flex;
+    margin: 0 auto;
+    width: 600px;
+    align-items: center;
+    border-radius: v.$m-radius;
+    margin-bottom: 12rem;
+}
+
 .card__quisoc {
     position: sticky;
     border: 1px solid v.$negro;
@@ -102,4 +111,55 @@
 
 .card__quisoc--6 {
     background-color: v.$blanco-roto;
+}
+
+.quisoc__twoColumns--part1 {
+    column-gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 9.6rem;
+}
+
+.quisoc__twoColumns {
+
+    h2 {
+        color: v.$verde-oscuro;
+        text-align: center;
+        padding: 0;
+    }
+    p {
+        color: v.$verde-oscuro;
+        padding-top: 4rem;
+    }
+    span {
+        display: block;
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: v.$rosa;
+    }
+}
+
+.part1--c1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.part1--c1 img {
+    border-radius: v.$m-radius;
+    border: 1px solid v.$negro;
+    width: 320px;
+}
+
+.last {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.last img {
+    border-radius: v.$m-radius;
+    width: 600px;
+    align-self: center; /* Centrar verticalmente */
+    justify-self: center; /* Centrar horizontalmente */
 }
