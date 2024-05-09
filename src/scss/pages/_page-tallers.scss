@@ -10,9 +10,13 @@
 }
 
 .talleres__columns {
-    padding: 4.8rem;
+    margin-top: 8rem;
+    padding: 2rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    h2 {
+        margin: 0;
+    }
 }
 
 .talleres__column--1 {
@@ -23,6 +27,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    h2 {
+        margin: 0;
+    }
 }
 
 .talleres__column--1 img {
@@ -31,15 +38,15 @@
 }
 
 .columna-roja {
-    background-color: v.$negro;
+    background-color: v.$blanco-roto;
     border-radius: v.$b-radius;
-    border: 1px solid v.$blanco-roto;
+    border: 1px solid v.$negro;
     h2 {
-        color: v.$blanco-roto;
+        color: v.$negro;
         margin: 0;
     }
     p {
-        color: v.$blanco-roto;
+        color: v.$negro;
     }
 }
 

@@ -47,9 +47,9 @@
                 <div class="presentacio__contenido">
                     <div class="presentacio__central">
                         <div class="presentacio__central--titulo">
-                            <h1 class="text-center">Presentació</h1>
+                            <h1 class="text-center fade__fx">Presentació</h1>
                         </div>
-                        <div class="presentacio__central--contenido">
+                        <div class="presentacio__central--contenido fade__fx">
                             <p class="text-center">Fes clic per veure el video</p>
                             <button class="btn text-center">Video</button>
                         </div>  
@@ -90,10 +90,10 @@
         <section class="tallers panel panel-custom" data-color="blanco">
         <div class="contenedor-tallers" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/img/home/XD-interpretacion-UCDM01.webp' ); ?>'); background-repeat: no-repeat; background-size: cover;">
                 <div class="contenido--tallers contenedor">
-                    <div class="tallers__imagen">
+                    <div class="tallers__imagen fade__fx">
                         <img src="<?php echo esc_url( get_template_directory_uri() . '/img/home/tallers-home-01.webp' ); ?>" alt="teatre">
                     </div>
-                    <div class="tallers__descripcion">
+                    <div class="tallers__descripcion fade__fx">
                         <h2>Tallers</h2>
                         <p>Tallers basats en la expressió artística i destinats a millorar les nostres capacitats. Com per exemple treballar la por escènica, alliberar la creativitat a través de la literatura i la gestalt, trobar l’humor dins nostre o re-aprendre a mirar les pantalles amb una mirada de gènere diferent.
                         </p>

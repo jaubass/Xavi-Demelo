@@ -1,0 +1,121 @@
+@use 'base/variables' as v;
+@use '../base/mixins' as m;
+
+.contacte__contenedor {
+    padding-top: 6rem;
+}
+
+.contacte__content {
+    text-align: center;
+    h1 {
+        margin-bottom: 1rem;
+    }
+}
+
+.conatcte__titol {
+    margin-top: 3.6rem;
+    font-size: 16rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.contacte__columns {
+    margin: 6rem 0;
+
+    @include m.tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 48px;
+    }
+    
+    
+    h3 {
+        margin: 0;
+        font-size: 2.4rem;
+        font-weight: 400;
+        color: v.$verde-oscuro;
+    }
+    p {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1.8rem;
+        color: v.$verde-oscuro;
+    }
+    a {
+        color: v.$verde-oscuro;
+    }
+}
+
+.contacte__column--1 {
+
+    margin-bottom: 3rem;
+
+    @include m.tablet {
+        margin-bottom: 0rem;
+    }
+    background-color: v.$verde;
+    border: 1px solid v.$negro;
+    border-radius: v.$m-radius;
+    padding: 2rem;
+    &:hover {
+        transition-property: background-color;
+        transition-duration: .5s;
+        background-color: v.$rosa;
+        box-shadow: v.$negro -4px 4px 0 0;
+        transition-property: box-shadow;
+        transition-duration: .3s;
+        transform-style: preserve-3d;       
+        transition: .3s ease-out;
+        transform: translate3d(4px,-4px,0);
+        p, h3 {
+            color: v.$lila-fuerte;
+        }
+        a {
+            color: v.$blanco-roto;
+        }
+    }
+    &:active {
+        box-shadow: none; 
+        transition-property: background-color;
+        transition-duration: .3s;
+        transition-property: box-shadow;
+        transition-duration: .3s;
+    }
+}
+
+.contacte__column--2 {
+    background-color: v.$verde;
+    border: 1px solid v.$negro;
+    border-radius: v.$m-radius;
+    padding: 2rem;
+
+    &:hover {
+        transition-property: background-color;
+        transition-duration: .5s;
+        background-color: v.$rosa;
+        box-shadow: v.$negro -4px 4px 0 0;
+        transition-property: box-shadow;
+        transition-duration: .3s;
+        transform-style: preserve-3d;       
+        transition: .3s ease-out;
+        transform: translate3d(4px,-4px,0);
+        p, h3 {
+            color: v.$lila-fuerte;
+        }
+        a {
+            color: v.$blanco-roto;
+        }
+    }
+    &:active {
+        box-shadow: none; 
+        transition-property: background-color;
+        transition-duration: .3s;
+        transition-property: box-shadow;
+        transition-duration: .3s;
+    }
+}
+
+.contacte__img {
+    border: 1px solid v.$negro;
+    border-radius: v.$m-radius;
+}

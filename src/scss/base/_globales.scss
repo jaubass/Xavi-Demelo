@@ -36,5 +36,11 @@ ul, menu, dir {
     padding-inline-start: 0px;
 }
 
+.fade__fx {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
 
-
+.fade__fx.show {
+    opacity: 1;
+}

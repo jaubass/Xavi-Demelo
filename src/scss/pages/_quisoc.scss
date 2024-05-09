@@ -151,6 +151,10 @@
     width: 320px;
 }
 
+.part1--c2 {
+    padding: 4rem;
+}
+
 .last {
     display: grid;
     align-items: center;
@@ -159,7 +163,17 @@
 
 .last img {
     border-radius: v.$m-radius;
+    border: 2px solid v.$negro;
     width: 600px;
     align-self: center; /* Centrar verticalmente */
     justify-self: center; /* Centrar horizontalmente */
+    transition-property: background-color;
+    transition-duration: .5s;
+    background-color: v.$rosa;
+    box-shadow: v.$rosa -4px 4px 0 0;
+    transition-property: box-shadow;
+    transition-duration: .4s;
+    transform-style: preserve-3d;       
+    transition: .5s ease-out;
+    transform: translate3d(4px,-4px,0);
 }

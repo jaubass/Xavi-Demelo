@@ -190,7 +190,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // ANIMACION TALLERES //
     // Selecciona todos los elementos .tallers__imagen y .tallers__descripcion
-    const elementos = document.querySelectorAll('.tallers__imagen, .tallers__descripcion');
+    const elementos = document.querySelectorAll('.fade__fx');
 
     // Opciones para el Intersection Observer
     const opciones = {
