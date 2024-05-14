@@ -25,13 +25,7 @@
 }
 
 .sticky__contenido .header__contenido {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
 
-    @include m.tablet {
-      display: flex;
-      }
-    justify-content: space-between;
     align-items: center;
     margin-top: .5rem;
     padding: 1.5rem 2rem;
@@ -40,7 +34,12 @@
     border: 2px solid v.$negro;
     box-shadow: v.$negro 1.5px 1.5px 0 0;
     transform: translate(1.5px, 1.5px);
-        box-shadow: 0 0 rgba(0, 0, 0, 0), 0 1px .4px rgba(0, 0, 0, .03), 0 2px .8px rgba(0, 0, 0, .04), 0 3px 1.6px rgba(0, 0, 0, .043), 0 5px 2.9px rgba(0, 0, 0, .047), 0 9px 5.3px rgba(0, 0, 0, .047), 0 15px 10.4px rgba(0, 0, 0, .05), 0 31px 22.8px rgba(0, 0, 0, .055);
+    box-shadow: 0 0 rgba(0, 0, 0, 0), 0 1px .4px rgba(0, 0, 0, .03), 0 2px .8px rgba(0, 0, 0, .04), 0 3px 1.6px rgba(0, 0, 0, .043), 0 5px 2.9px rgba(0, 0, 0, .047), 0 9px 5.3px rgba(0, 0, 0, .047), 0 15px 10.4px rgba(0, 0, 0, .05), 0 31px 22.8px rgba(0, 0, 0, .055);
+
+      @include m.tablet {
+        display: flex;
+        justify-content: space-between;
+        }
 
     .logo {
         width: 100px;

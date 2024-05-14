@@ -11,7 +11,7 @@
 <header class="header header-inicio">
     <div class="header__contenido contenedor">
             <div class="logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/Xavi_demelo-Log07.jpg">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/Xavi_demelo-Log07.jpg" width="180px">
             </div>
             <div class="header__menu">
                 <div class="hamburguesa">
@@ -40,7 +40,7 @@
     <div class="menu-desplegable">
         <div class="zona-superior contenedor">
             <div class="logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/Xavi_demelo-Log01.png">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/Xavi_demelo-Log01.png" width="180px">
             </div>
             
             <div class="col-central">

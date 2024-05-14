@@ -91,7 +91,7 @@
         <div class="contenedor-tallers" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/img/home/XD-interpretacion-UCDM01.webp' ); ?>'); background-repeat: no-repeat; background-size: cover;">
                 <div class="contenido--tallers contenedor">
                     <div class="tallers__imagen fade__fx">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/img/home/tallers-home-01.webp' ); ?>" alt="teatre">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/img/home/tallers-home-01.webp' ); ?>" alt="teatre" width="600px">
                     </div>
                     <div class="tallers__descripcion fade__fx">
                         <h2>Tallers</h2>

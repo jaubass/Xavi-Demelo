@@ -7,7 +7,7 @@
     <main>
         <div class="espectacles__hero">     
             <div class="espectacles__sub">
-                <p>Fes click per filtrar per temática</p>
+                <p>Fes <span>click</span> per filtrar per temática</p>
             </div>
         <?php    
             get_template_part('template-parts/llista-espectacles');

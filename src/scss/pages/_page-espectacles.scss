@@ -16,4 +16,11 @@
 
 .espectacles__sub p {
     text-align: center;
+
+    span {
+        text-decoration: underline;
+        text-decoration-color: v.$rosa;
+        text-decoration-thickness: 2.4px;
+    }
+
 }

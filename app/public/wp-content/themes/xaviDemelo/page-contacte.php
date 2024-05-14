@@ -8,8 +8,9 @@
                 <div class="contenedor">
                     <div class="contacte__contenedor">
                         <div class="contacte__content">
-                            <h1 class="hero__content--title" id="title">Contacta'ns</span></h1>   
-                            <p>Si tens dubtes sobre algun espectacle o taller, si vols contractar-ne algun o senzillament vols més informació envia’ns un missatge i ens posarem en contacte amb com més aviat millor.</p>
+                            <h1 id="title">Contacta'ns<span class="emoticono"> &#x1F44B;</span></span></h1>   
+                            <p>Si tens dubtes <i class="fa-solid fa-question"></i> sobre algun espectacle o taller, si vols contractar-ne algun o senzillament vols més informació envia’ns un missatge i ens posarem en contacte amb com més aviat millor.
+                            <i class="fa-solid fa-file-signature"></i></p>
                         </div>
                         <div class="contacte__columns">
                             <div class="contacte__column--1">
@@ -33,7 +34,6 @@
                         </div>
                     </div>
                 </div>
-
 </section>
 
 

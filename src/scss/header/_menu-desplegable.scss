@@ -24,9 +24,17 @@
 
     .zona-superior {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        padding: 1rem;
+        flex-direction: column;
+        justify-content: center;
+
+        @include m.tablet {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+        }
     }
 
     .col-central {
@@ -61,19 +69,17 @@
     cursor: pointer;
     background-color: v.$rosa;
 
-    .pildora__texto-desplegado p {
-        font-size: 2rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        color: v.$verde;
-    }
-
     .pildora__tresRallas-desplegado {
+        margin-top: 16px;
         width: 40px;
         height: 15px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        @include m.tablet {
+            margin-top: 0;
+        }
+        
     
         .linea {
             width: 100%;
@@ -93,6 +99,24 @@
         .linea:nth-child(3) {
             transform: rotate(-45deg) translate(5px, -4px); // Ajustamos la posición para formar la parte inferior de la X
         }
+    }
+}
+
+.pildora__texto-desplegado p {
+    display: none;
+
+    @include m.tablet {
+        display: flex;
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: v.$verde;
+    }
+    @include m.desktopSM {
+        font-size: 2.4rem;
+    }
+    @include m.desktop {
+        font-size: 4rem;
     }
 }
 
