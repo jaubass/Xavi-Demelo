@@ -14,7 +14,7 @@
                         <div class="hero__content">
                             <h1 class="hero__content--title" id="title">Espectacles i tallers de<br><span>sensibilització social.</span></h1>
                             <div class="typing-animation-container">
-                                <p class="hero__content--subtitle">Especialistes en propostes per a la igualtat i contra la violència de gènere, però no només.</p>
+                                <p class="hero__content--subtitle">Especialistes en <span class="hero__content--span--1">propostes per a la igualtat</span> <br>i <span class="hero__content--span--2">contra la violència de gènere</span><br>però no només.</p>
                             </div>
                             <div class="hero__content--btn">
                                 <button class="btn" role="button">Veure Espectacles</button>

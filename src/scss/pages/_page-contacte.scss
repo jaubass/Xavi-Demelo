@@ -3,6 +3,7 @@
 
 .contacte__contenedor {
     padding-top: 6rem;
+    margin-bottom: 6rem;
 }
 
 .contacte__content {
@@ -40,13 +41,13 @@
     }
     p {
         font-size: 1.6rem;
-        font-weight: 400;
-        line-height: 1.8rem;
+        font-weight: 300;
+        line-height: 2rem;
         color: v.$verde-oscuro;
     }
     a {
         color: v.$verde-oscuro;
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 }
 
@@ -61,6 +62,7 @@
     border: 1px solid v.$negro;
     border-radius: v.$m-radius;
     padding: 2rem;
+    
     &:hover {
         transition-property: background-color;
         transition-duration: .5s;
@@ -125,9 +127,11 @@
 }
 
 .fa-phone {
-    padding: .4rem;
-    border: 1px solid v.$lila-fuerte;
+    padding: .6rem;
+    border: 1px solid v.$verde-oscuro;
     border-radius: v.$radius;
+    margin-right: .6rem;
+
     &:hover {
         transition-property: background-color;
         transition-duration: .5s;
@@ -142,9 +146,10 @@
 }
 
 .fa-envelope {
-    padding: .4rem;
-    border: 1px solid v.$lila-fuerte;
+    padding: .6rem;
+    border: 1px solid v.$verde-oscuro;
     border-radius: v.$radius;
+    margin-right: .6rem;
     &:hover {
         transition-property: background-color;
         transition-duration: .5s;

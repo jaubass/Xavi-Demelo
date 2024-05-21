@@ -110,7 +110,7 @@
             </div>
             <div class="btn-sm" id="btnScrollToTop">
             <button class="flecha-arriba" title="Volver arriba">
-                 ↑
+                <a href="#">↑</a>
             </button>
             </div>
         </div>

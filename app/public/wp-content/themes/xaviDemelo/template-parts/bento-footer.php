@@ -14,7 +14,7 @@
                         <h4>Espectacles de sensibilització social.</h4>
                         <div class="box1-1">
                             <div class="box-1-1--text">
-                                <p>Teatre, Monòlegs, Música, Dansa, Clown, Tallers i molt més amb el nostre toc especial.</p>
+                                <p>Teatre, Monòlegs, Música, Dansa, Clown, Tallers i molt més amb el nostre toc especial. <span class="emoticono">&#x1f308;</span></p>
                             </div>
                                 <div class="box-1-1__btn">
                                     <div class="box-1-1__btn--svg">
@@ -23,7 +23,6 @@
                                         </path>
                                         </svg>
                                     </div>
-                                
                                 </div>
                         </div>
                     </div>    
@@ -82,7 +81,7 @@
                 </div>        
             </div>
             <div class="footer--img">
-                <img src="<?php echo esc_url( get_template_directory_uri() . '/img/footer-img-01.webp' ); ?>" alt="">
+                <img claa="footer--img__img" src="<?php echo esc_url( get_template_directory_uri() . '/img/footer-img-01.webp' ); ?>" alt="imagen del pie de pagina">
             </div>
         </div>
 </section>

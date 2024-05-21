@@ -5,7 +5,7 @@
 /* CSS */
 .btn {
     background-color: v.$verde;
-    border: 2px solid v.$negro;
+    border: v.$border solid v.$negro;
     border-radius: v.$m-radius;
     box-shadow: v.$negro 4px 4px 0 0;
     color: v.$negro;
@@ -54,7 +54,7 @@
 .btn-sm {
   background-color: v.$verde;
   border-radius: v.$m-radius;
-  border: 2px solid v.$negro;
+  border: v.$border solid v.$negro;
   box-shadow: v.$negro 1.5px;
   color: v.$negro;
   cursor: pointer;
@@ -89,7 +89,7 @@
 
 .btn-destacats {
   background-color: v.$verde;
-  border: 2px solid v.$verde-oscuro;
+  border: v.$border solid v.$verde-oscuro;
   border-radius: v.$m-radius;
   box-shadow: v.$azul-oscuro 4px 4px 0 0;
   color: v.$negro;

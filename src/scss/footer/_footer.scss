@@ -21,18 +21,20 @@
 .footer__contenedor {
     margin: 0 auto;
     margin-top: 3rem;
-    margin-bottom: 12rem;
+    margin-bottom: 54px;
     border-radius: v.$b-radius;  
     color: v.$negro;
     width: 80%;
 
     @include m.tablet {
-        margin-bottom: 7rem;
-        height: 90vh;
+        margin-bottom: 48px;
     }
 
     @include m.desktopSM {
-        margin-bottom: 1rem;
-        height: 85vh;
+        margin-bottom: 12px;
+    }
+
+    @include m.desktop {
+        margin-bottom: 18px;
     }
 }

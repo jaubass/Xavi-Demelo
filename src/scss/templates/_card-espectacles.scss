@@ -1,5 +1,6 @@
 @use '../base/variables' as v;
 @use '../base/utilidades' as u;
+@use '../base/mixins' as m;
 
 .espectacles__card {
   position: relative;
@@ -12,8 +13,12 @@
   transform: translate(1.5px, 1.5px);
   box-shadow: 0 0 rgba(0, 0, 0, 0), 0 1px .4px rgba(0, 0, 0, .03), 0 2px .8px rgba(0, 0, 0, .04), 0 3px 1.6px rgba(0, 0, 0, .043), 0 5px 2.9px rgba(0, 0, 0, .047), 0 9px 5.3px rgba(0, 0, 0, .047), 0 15px 10.4px rgba(0, 0, 0, .05), 0 31px 22.8px rgba(0, 0, 0, .055);
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   transition: opacity 0.4s ease-in-out;
+
+  @include m.tablet {
+    margin-bottom: 0px;
+  }
 }
 
 .espectacles__card img {
