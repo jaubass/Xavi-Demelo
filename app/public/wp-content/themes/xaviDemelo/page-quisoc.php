@@ -35,14 +35,18 @@
     </div>
     <div class="quisoc__contenedor panel panel-custom" data-color="green">
         <div class="quisoc__twoColumns">
-            <h2><span>Capitol #5</span>Humorista terapèutic</h2>
+            <div class="quisoc__twocolumns--1">
+                <h2><span>Capitol #5</span>Humorista terapèutic</h2>
+                    <p>Deu anys i un altre fill (aquesta vegada una deliciosa nena) després, havent-me donat la volta com un mitjó i reinventat en repetides ocasions, i considerant-me una persona moderadament feliç i connectada amb la vida, va tornar a mi la pruïja d’escriure i, des dels meus coneixements com a terapeuta essencial, pacient profund i altres títols adquirits no sense esforç al supermercat espiritual, vaig decidir donar llum a <b>El Camino del Perdedor</b>, amb el qual pretenia donar eines a les persones que, com jo a la primera etapa de la meva vida, escullen, en aquesta societat de l’abundància i del benestar, transitar per l’altre camí, el del perdedor. Eines perquè fracassin del tot, amb coneixement de causa i llibertat de triar. Un llibre que em va valer, per part del meu editor, el qualificatiu de “humorista terapèutic”, denominació amb què últimament em defineixo quan em fan aquella típica i tòpica pregunta de “I tu a què et dediques?”.
+                    </p>
+            </div>
+         
             <div class="quisoc__twoColumns--part1">   
                 <div class="part1--c1"> 
                     <img src="<?php echo esc_url( get_template_directory_uri() . '/img/quisoc/El_Camino_del_perdedor.webp' ); ?>" alt="teatre">
                 </div>
                 <div class="part1--c2 contenedor-text">
-                    <p>Deu anys i un altre fill (aquesta vegada una deliciosa nena) després, havent-me donat la volta com un mitjó i reinventat en repetides ocasions, i considerant-me una persona moderadament feliç i connectada amb la vida, va tornar a mi la pruïja d’escriure i, des dels meus coneixements com a terapeuta essencial, pacient profund i altres títols adquirits no sense esforç al supermercat espiritual, vaig decidir donar llum a <b>El Camino del Perdedor</b>, amb el qual pretenia donar eines a les persones que, com jo a la primera etapa de la meva vida, escullen, en aquesta societat de l’abundància i del benestar, transitar per l’altre camí, el del perdedor. Eines perquè fracassin del tot, amb coneixement de causa i llibertat de triar. Un llibre que em va valer, per part del meu editor, el qualificatiu de “humorista terapèutic”, denominació amb què últimament em defineixo quan em fan aquella típica i tòpica pregunta de “I tu a què et dediques?”.
-                    </p>
+        
                 </div>
             </div>       
         </div>

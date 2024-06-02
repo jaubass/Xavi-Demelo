@@ -5,7 +5,7 @@
                     <div class="footer__col1--title">
                         <h2>Descobreix un món d'art compromès amb la igualtat i la diversitat.</h2>
                     </div>
-                    <div class="ooter__col1--logo">
+                    <div class="footer__col1--logo">
                         <img src="<?php echo esc_url( get_template_directory_uri() . '/img/Xavi_demelo-Log07.jpg' ); ?>" alt="logotipo footer" width="240px">
                     </div>
                 </div>
@@ -49,18 +49,19 @@
                             <h4>Segueix-nos!</h4>
                         </div>
                         <div class="box3__2">
-                            <a href="https://www.youtube.com/channel/UCt7xZYV7KMwYgfXusWGV8Pw" target="_blank">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                            <a href="https://www.instagram.com/" target="_blank">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="https://www.facebook.com/" target="_blank">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href="https://www.facebook.com/" target="_blank">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
+                        <a href="https://www.youtube.com/channel/UCt7xZYV7KMwYgfXusWGV8Pw" target="_blank" aria-label="Visítanos en YouTube">
+                            <?php echo get_svg_icon('youtube'); ?>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" aria-label="Visítanos en instagram">
+                            <?php echo get_svg_icon('instagram'); ?>
+                        </a>
+                        <a href="https://www.facebook.com/" target="_blank" aria-label="Visítanos en facebook">
+                            <?php echo get_svg_icon('facebook'); ?>
+                        </a>
+                        <a href="https://www.linkedin.com/" target="_blank" aria-label="Visítanos en LinkedIn">
+                            <?php echo get_svg_icon('linkedin'); ?>
+                        </a>
+
                         </div>
                     </div>
                     <div class="box box4">
@@ -69,13 +70,30 @@
                             <p>Si necessites més informació envia’ns un missatge.</p>
                         </div>
                         <div class="box4__2">
-                            <a href="mailto:info@xavidemelo.com" target="_blank">
-                                <i class="fa-solid fa-envelope"></i>                                
-                                info@xavidemelo.com
-                            </a>
-                            <a href="tel:653 246 340" target="_blank">
-                                <i class="fa-solid fa-phone"></i>                                
-                                653 246 340</a>
+                            <div class="box4__2--1">
+                                <div class="svg__icon">
+                                    <a href="mailto:info@xavidemelo.com" target="_blank"> 
+                                     <?php echo get_svg_icon('envelope-solid'); ?>  
+                                    </a>
+                                </div>
+                                <div class="svg__link">
+                                    <a href="mailto:info@xavidemelo.com" target="_blank">                              
+                                    info@xavidemelo.com
+                                 </a>
+                                </div>                   
+                            </div>
+                            <div class="box4__2--1">
+                                <div class="svg__icon">
+                                    <a href="tel:653 246 340" target="_blank"> 
+                                     <?php echo get_svg_icon('phone-solid'); ?>  
+                                    </a>
+                                </div>
+                                <div class="svg__link">
+                                    <a href="tel:653 246 340" target="_blank">                              
+                                    653 246 340
+                                 </a>
+                                </div>                   
+                            </div>
                         </div>   
                     </div>
                 </div>        

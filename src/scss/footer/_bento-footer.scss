@@ -46,13 +46,18 @@
 }
 
 .footer__col1 {
-    padding: 30px;
+    padding: 6rem 3rem;
     display: grid;
     justify-content: space-between;
 
     h2 {
         color: v.$rosa;
     }
+}
+
+.footer__col1--logo {
+    display: flex;
+    align-items: flex-end;
 }
 
 .box {
@@ -173,31 +178,29 @@
 
 .box3__2 {
     text-align: center;
-}
-
-.box3__2 i {
-    font-size: 2.4rem;
-    margin: 0 4px; /* Espacio entre los iconos */
-    padding: .4rem;
-    border: 1px solid v.$lila-fuerte;
-    border-radius: v.$radius;
-    &:hover {
-        transition-property: background-color;
-        transition-duration: .5s;
-        background-color: v.$rosa-pastel;
-        box-shadow: v.$negro -4px 4px 0 0;
-        transition-property: box-shadow;
-        transition-duration: .4s;
-        transform-style: preserve-3d;       
-        transition: .5s ease-out;
-        transform: translate3d(4px,-4px,0);
-    }
+    display: flex;
 }
 
 .box3__2 a {
-    color: v.$negro; /* Color del enlace */
-    text-decoration: none; /* Quita el subrayado del enlace */
+    margin-right: .8rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: .4rem;
+    border: 1px solid v.$lila-fuerte;
+    border-radius: v.$radius;
+    text-decoration: none; /* Para eliminar el subrayado del enlace */
+    
+    &:hover {
+        transition-property: background-color, box-shadow, transform;
+        transition-duration: .5s;
+        background-color: v.$rosa-pastel;
+        box-shadow: v.$negro -4px 4px 0 0;
+        transform-style: preserve-3d;       
+        transform: translate3d(4px, -4px, 0);
+    }
 }
+
 
 .box4 {
     display: flex;
@@ -216,12 +219,16 @@
     }
 }
 
+.svg__link {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+
 .box4__2 a {
+    display: flex;
     font-size: 1.6rem;
-    line-height: 3rem;
-    padding-top: 1rem;
     font-weight: 300;
-    display: block;
 }
 
 .box-1-1__btn {
@@ -277,24 +284,55 @@
     p {
         font-size: 1.6rem;
         line-height: 1.8rem;
-        color:v.$azul-oscuro;
+        color: v.$amarillo-fuerte;
     }
 }
 
 .box4__2 i {
-    font-size: 2.4rem;
-    margin: 0 4px; /* Espacio entre los iconos */
     padding: .4rem;
     border: 1px solid v.$lila-fuerte;
     border-radius: v.$radius;
     &:hover {
         transition-property: background-color;
         transition-duration: .5s;
-        background-color: v.$rosa-pastel;        box-shadow: v.$negro -4px 4px 0 0;
+        background-color: v.$rosa-pastel;        
+        box-shadow: v.$negro -4px 4px 0 0;
         transition-property: box-shadow;
         transition-duration: .4s;
         transform-style: preserve-3d;       
         transition: .5s ease-out;
         transform: translate3d(4px,-4px,0);
     }
+}
+
+.box4__2--1 {
+    display: flex;
+
+    &:first-child {
+        margin-bottom: 1rem;
+    }
+}
+
+
+.svg__icon {
+    padding: .4rem;
+    border: 1px solid v.$lila-fuerte;
+    border-radius: v.$radius;
+    &:hover {
+        transition-property: background-color;
+        transition-duration: .5s;
+        background-color: v.$rosa-pastel;        
+        box-shadow: v.$negro -4px 4px 0 0;
+        transition-property: box-shadow;
+        transition-duration: .4s;
+        transform-style: preserve-3d;       
+        transition: .5s ease-out;
+        transform: translate3d(4px,-4px,0);
+    }
+}
+
+a svg {
+    width: 32px; /* Ajusta según el tamaño que necesites */
+    height: 32px; /* Ajusta según el tamaño que necesites */
+    fill: currentColor; /* Para que herede el color del enlace */
 }

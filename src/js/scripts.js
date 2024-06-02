@@ -72,36 +72,36 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
 
+// FILTROS
+const filtroBtns = document.querySelectorAll('.filtro-btn');
+const publicacionesContainer = document.getElementById('publicaciones-container');
 
-    // FILTROS
-    const filtroBtns = document.querySelectorAll('.filtro-btn');
-    const publicacionesContainer = document.getElementById('publicaciones-container');
-
-    filtroBtns.forEach(function(btn) {
-        btn.addEventListener('click', function() {
-            const categoria = this.getAttribute('data-categoria');
-            filtrarPublicaciones(categoria);
-        });
+filtroBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        const categoria = this.getAttribute('data-categoria');
+        filtrarPublicaciones(categoria);
     });
+});
 
-    function filtrarPublicaciones(categoria) {
-        const publicaciones = document.querySelectorAll('.espectacles__card');
-        publicaciones.forEach(function(publicacion) {
-            const categoriasPublicacion = publicacion.querySelectorAll('.espectacles__categoria');
-            let mostrarPublicacion = false;
-            categoriasPublicacion.forEach(function(cat) {
-                if (categoria === 'todas' || cat.classList.contains('espectacles__categoria--' + categoria)) {
-                    mostrarPublicacion = true;
-                }
-            });
-            // Mostrar u ocultar la publicación según la categoría seleccionada
-            if (mostrarPublicacion) {
-                publicacion.style.display = 'block';
-            } else {
-                publicacion.style.display = 'none';
+function filtrarPublicaciones(categoria) {
+    const publicaciones = document.querySelectorAll('.espectacles__card');
+    publicaciones.forEach(function(publicacion) {
+        const categoriasPublicacion = publicacion.querySelectorAll('.espectacles__categoria');
+        let mostrarPublicacion = false;
+        categoriasPublicacion.forEach(function(cat) {
+            if (categoria === 'todas' || cat.classList.contains('espectacles__categoria--' + categoria)) {
+                mostrarPublicacion = true;
             }
         });
-    }
+        // Mostrar u ocultar la publicación según la categoría seleccionada
+        if (mostrarPublicacion || categoria === 'todas') {
+            publicacion.style.display = 'block';
+        } else {
+            publicacion.style.display = 'none';
+        }
+    });
+}
+
 
         // BACKGROUND ANIMATION
         let panels = document.querySelectorAll('.panel');
@@ -128,8 +128,9 @@ document.addEventListener("DOMContentLoaded", function() {
     
         window.addEventListener('scroll', changeColor);
         changeColor();
-    
 
+// Verificar si estamos en la Home page
+if (typeof isHomePage !== 'undefined' && isHomePage) {
     // CARRUSEL DESTACATS
     let container = document.querySelector('.destacats-grid-container');
     let flechaIzquierda = document.querySelector('.flecha-izquierda');
@@ -161,7 +162,9 @@ document.addEventListener("DOMContentLoaded", function() {
             currentSection.scrollIntoView({ behavior: "smooth" });
         });
     });
+}
 
+if (typeof isHomePage !== 'undefined' && isHomePage) {
     // CAMBIO COLOR TEXTO
     let lastScrollPosition = 0;
     let greenThreshold = 20;
@@ -187,6 +190,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         lastScrollPosition = scrollPosition;
     });
+}
 
 // ANIMACION TALLERES //
     // Selecciona todos los elementos .tallers__imagen y .tallers__descripcion
@@ -201,13 +205,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const observer = new IntersectionObserver((entradas, observer) => {
         entradas.forEach(entrada => {
             if (entrada.isIntersecting) {
-                entrada.target.classList.add('show'); // Agrega la clase 'show' cuando el elemento es visible
-                observer.unobserve(entrada.target); // Deja de observar el elemento una vez que se ha hecho visible
+                entrada.target.classList.add('show'); 
+                observer.unobserve(entrada.target); 
             }
         });
     }, opciones);
 
-    // Observa cada elemento
     elementos.forEach(elemento => {
         observer.observe(elemento);
     });

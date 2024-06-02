@@ -26,7 +26,6 @@
   height: auto;
   max-height: 400px;
   object-fit: cover;
-  margin-bottom: -8px;
 }
 
 .espectacles__contenido {
@@ -65,14 +64,20 @@
   display: flex;
   padding: .3rem;
   margin: 0;
+  img {
+    width: 16px; /* Ajusta según el tamaño que necesites */
+    height: 16px;
+    fill: currentColor;
+  }
 }
 
 /* Estilos para el contenedor del contenido que se muestra al hacer hover */
 .espectacles__hover {
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
   left: 0;
   right: 0;
+  padding-bottom: 16px;
   z-index: 1;
   border-top: 1px solid v.$negro;
   border-radius: v.$m-radius; 
@@ -85,6 +90,7 @@
 }
 
 .espectacles__hover h3 {
+  margin-top: .8rem;
   text-align: center;
   color: v.$negro;
   text-decoration: underline;
@@ -151,9 +157,7 @@
 }
 
 .peu__card--categorias {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: none;
 }
 
 /* -------- ICONOS -------- */
@@ -162,11 +166,6 @@
 // INFANTIL
 // CONTES
 // MONOLEGS
-
-.fas {
-  align-items: center;
-  padding-right: .8rem;
-}
 
 // TEATRE
 .espectacles__categoria--teatre {
@@ -192,10 +191,11 @@
   &:hover {
     background-color: v.$amarillo;
   }
+
 }
-.fa-music {
-  font-size: v.$icon;
-  color: v.$amarillo;
+
+.espectacles__categoria li {
+  background-color: transparent;
 }
 
 /* INFANTIL */
@@ -290,19 +290,6 @@
   position: relative; /* Añadimos position: relative; para alinear el icono */
   transition: background-color 0.3s ease; /* Aplicamos una transición suave al color de fondo */
 }
-/* Estilo del icono cuando no está en hover */
-.fa-equals {
-  font-size: v.$icon;
-  color: v.$rosa;
-  transition: color 0.3s ease; /* Aplicamos una transición suave al color del icono */
-}
-/* Estilo del icono cuando está en hover */
-.espectacles__categoria--igualtat:hover {
-  background-color: v.$rosa; /* Al hacer hover, el fondo del botón toma el color del icono */
-}
-.espectacles__categoria--igualtat:hover .fa-equals {
-  color: v.$rosa-pastel; /* Al hacer hover, el color del icono toma el color del fondo del botón */
-}
 
 
 .espectacles__categoria--ecologia {
@@ -323,18 +310,41 @@
   }
 }
 
-/* ADULTS */
 
-.fa-user {
-  font-size: v.$icon;
-  color: v.$verde;
-  transition: color 0.3s ease; 
+/* Estilos para el icono SVG */
+.icono-svg {
+  display: flex;
+  align-items: center;
+  padding: 0rem .4rem 0rem 0rem;
 }
 
-.espectacles__categoria--adults:hover {
-  background-color: v.$verde;
+.icono-svg svg {
+  width: 20px; 
+  height: 20px; 
 }
 
-.espectacles__categoria--adults:hover .fa-user {
-  color: v.$verde-pastel; 
+.espectacles__icon svg {
+  width: 16px; 
+  height: 16px;
+  fill: currentColor; 
+}
+
+/* Color específico para cada categoría */
+.espectacles__card__categoria--teatre .espectacles__icon svg {
+  fill: v.$orange; /* Cambia el color del icono de la categoría 'teatre' */
+}
+
+.espectacles__card__categoria--musica .espectacles__icon svg {
+  fill: blue; /* Cambia el color del icono de la categoría 'musica' */
+}
+
+.espectacles__card__categoria--infantil .espectacles__icon svg {
+  fill: green; /* Cambia el color del icono de la categoría 'infantil' */
+}
+
+.espectacles__boton {
+  .arrow-down {
+      width: 16px;
+      height: 16px;
+  }
 }

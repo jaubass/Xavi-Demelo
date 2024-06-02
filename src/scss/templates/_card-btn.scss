@@ -1,25 +1,40 @@
 @use '../base/variables' as v;
 
 .espectacles__boton {
+  margin-bottom: 1rem;
+  padding: 1.6rem .6rem;
   display: inline-block;
   outline: 0;
   cursor: pointer;
-  border: 2px solid v.$negro;
+  border: 1px solid v.$negro;
   border-radius: v.$m-radius;
-  color: v.$negro;
-  background: v.$verde;
-  font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 16px;
-  padding: 8px 14px;
-  text-align:center;
-  transition-duration: .15s;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  background-color: v.$blanco-roto;
+  transition-property: background-color;
+  transition-duration: .5s;
+  transition-property: box-shadow;
+  transition-duration: .3s;
+  transform-style: preserve-3d;       
+  transition: .5s ease-out;
+  transform: translate3d(0px,0px,0);
 }
 
 .espectacles__boton:hover {
-  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 8%);
-  background: rgba(248,248,248,1);
+  transition-property: background-color;
+  transition-duration: .5s;
+  background-color: v.$rosa;
+  box-shadow: v.$negro -4px 4px 0 0;
+  transition-property: box-shadow;
+  transition-duration: .3s;
+  transform-style: preserve-3d;       
+  transition: .3s ease-out;
+  transform: translate3d(4px,-4px,0);
+  &:active {
+    box-shadow: none; 
+    transition-property: background-color;
+    transition-duration: .5s;
+    transition-property: box-shadow;
+    transition-duration: .3s;
+}
+
   
 }

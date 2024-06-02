@@ -3,15 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xavi Demelo - Espectacles</title>
     <?php wp_head(); ?>
 </head>
 <body>
+
+<?php if (is_home() || is_front_page()): ?>
+<script>
+    var isHomePage = true;
+</script>
+<?php else: ?>
+<script>
+    var isHomePage = false;
+</script>
+<?php endif; ?>
+
 
 <!-- HEADER -->
 <header class="header header-inicio">
     <div class="header__contenido contenedor">
             <div class="logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/Xavi_demelo-Log07.jpg" width="180px">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/Xavi_demelo-Log07.jpg" width="180px" alt="logotipo Xavi Demelo">
             </div>
             <div class="header__menu">
                 <div class="hamburguesa">
@@ -40,7 +52,7 @@
     <div class="menu-desplegable">
         <div class="zona-superior contenedor">
             <div class="logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/Xavi_demelo-Log01.png" width="180px">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/Xavi_demelo-Log01.png" width="180px" alt="logotipo Xavi Demelo">
             </div>
             
             <div class="col-central">
@@ -73,7 +85,7 @@
         </div>
         <div class="zona-inferior">
             <div class="logo-grande">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/Xavi_demelo-Log01.png">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/Xavi_demelo-Log01.png" alt="logotipo Xavi Demelo">
             </div>
         </div>
 
@@ -94,7 +106,7 @@
     <div class="sticky__contenido">
         <div class="header__contenido contenedor">
             <div class="logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/Xavi_demelo-Log07.jpg">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/Xavi_demelo-Log07.jpg" alt="logotipo Xavi Demelo">
             </div>
             <div class="header__menu">
                 <div class="hamburguesa">

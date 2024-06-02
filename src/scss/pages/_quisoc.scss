@@ -171,12 +171,26 @@
         font-weight: 500;
         color: v.$rosa;
     }
+    @include m.tablet {
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
+}
+
+.quisoc__twocolumns--1 {
+    padding: 3rem;
+}
+
+.quisoc__twocolumns--1 h2 {
+    margin: 0px;
+    text-align: left;
 }
 
 .part1--c1 {
+    padding: 10rem 3rem 0rem 0rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
 }
 
 .part1--c1 img {
